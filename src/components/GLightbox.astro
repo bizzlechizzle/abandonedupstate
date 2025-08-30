@@ -1,0 +1,71 @@
+---
+// GLightbox component for image galleries
+---
+
+<script>
+  import GLightbox from 'glightbox';
+  import 'glightbox/dist/css/glightbox.min.css';
+  
+  function initGLightbox() {
+    // Initialize GLightbox
+    const lightbox = GLightbox({
+      touchNavigation: true,
+      loop: true,
+      autoplayVideos: true,
+      plyr: {
+        css: 'https://cdn.plyr.io/3.6.8/plyr.css',
+        js: 'https://cdn.plyr.io/3.6.8/plyr.js',
+        config: {
+          ratio: '16:9',
+          youtube: {
+            noCookie: true,
+            rel: 0,
+            showinfo: 0,
+            iv_load_policy: 3
+          },
+          vimeo: {
+            byline: false,
+            portrait: false,
+            title: false,
+            speed: true,
+            transparent: false
+          }
+        }
+      }
+    });
+
+    // Re-initialize when navigating (for Astro transitions)
+    document.addEventListener('astro:page-load', () => {
+      lightbox.reload();
+    });
+  }
+
+  // Initialize on page load
+  document.addEventListener('DOMContentLoaded', initGLightbox);
+  
+  // Re-initialize after page transitions
+  document.addEventListener('astro:page-load', initGLightbox);
+</script>
+
+<style>
+  /* Custom GLightbox styles for Abandoned Upstate theme */
+  .glightbox-clean .gslide-description {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 15px;
+    font-size: 14px;
+    line-height: 1.4;
+    border-radius: 4px;
+  }
+  
+  .glightbox-clean .gprev,
+  .glightbox-clean .gnext {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+  }
+  
+  .glightbox-clean .gprev:hover,
+  .glightbox-clean .gnext:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+</style>

@@ -286,3 +286,182 @@ const nextPost =
     window.scrollTo({ left: 0, top: 0, behavior: "instant" })
   );
 </script>
+
+<style is:global>
+/* Gallery layout */
+.gallery-item {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.gallery-image {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover .gallery-image {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Right-click protection */
+.gallery-image, .glightbox img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+</style>
+
+<script is:inline>
+// Enhanced right-click protection
+(function() {
+  function disableRightClick(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
+  }
+  
+  function disableDrag(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
+  }
+  
+  function disableSelect(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
+  }
+  
+  function disableKeyShortcuts(e) {
+    // F12, Ctrl+Shift+I, Ctrl+U, Ctrl+S
+    if (e.keyCode === 123 || 
+        (e.ctrlKey && e.shiftKey && e.keyCode === 73) || 
+        (e.ctrlKey && e.keyCode === 85) ||
+        (e.ctrlKey && e.keyCode === 83)) {
+      e.preventDefault();
+      e.stopPropagation();
+      return false;
+    }
+  }
+  
+  // Apply protection when page loads
+  document.addEventListener('DOMContentLoaded', function() {
+    applyProtection();
+  });
+  
+  // Apply protection after a delay to catch dynamically loaded content
+  setTimeout(applyProtection, 1000);
+  
+  // Monitor for GLightbox modal opening and apply protection
+  const observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      if (mutation.addedNodes.length > 0) {
+        mutation.addedNodes.forEach(function(node) {
+          if (node.nodeType === 1 && (node.classList?.contains('glightbox-container') || node.querySelector?.('.glightbox-container'))) {
+            setTimeout(applyGLightboxProtection, 100);
+          }
+        });
+      }
+    });
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+  
+  function applyProtection() {
+    const images = document.querySelectorAll('.gallery-image, .glightbox img, img[src*="dw-winkleman"]');
+    
+    images.forEach(img => {
+      img.addEventListener('contextmenu', disableRightClick, true);
+      img.addEventListener('dragstart', disableDrag, true);
+      img.addEventListener('selectstart', disableSelect, true);
+      img.addEventListener('mousedown', function(e) {
+        if (e.button === 2) { // right click
+          disableRightClick(e);
+        }
+      }, true);
+      
+      // Additional CSS protection
+      img.style.userSelect = 'none';
+      img.style.webkitUserSelect = 'none';
+      img.style.mozUserSelect = 'none';
+      img.style.msUserSelect = 'none';
+      img.style.webkitUserDrag = 'none';
+      img.style.webkitTouchCallout = 'none';
+    });
+    
+    // Also protect the gallery containers
+    const galleryItems = document.querySelectorAll('.gallery-item, .glightbox');
+    galleryItems.forEach(item => {
+      item.addEventListener('contextmenu', disableRightClick, true);
+    });
+  }
+  
+  function applyGLightboxProtection() {
+    // Protect GLightbox modal images and containers
+    const glightboxElements = document.querySelectorAll(
+      '.glightbox-container img, .gslide img, .gslide-image img, ' +
+      '.glightbox-container, .gslide, .gslide-image, .gslide-media, ' +
+      '.ginner-container, .gslide-description'
+    );
+    
+    glightboxElements.forEach(element => {
+      element.addEventListener('contextmenu', disableRightClick, true);
+      element.addEventListener('dragstart', disableDrag, true);
+      element.addEventListener('selectstart', disableSelect, true);
+      element.addEventListener('mousedown', function(e) {
+        if (e.button === 2) {
+          disableRightClick(e);
+        }
+      }, true);
+      
+      // Additional CSS protection for GLightbox
+      if (element.tagName === 'IMG') {
+        element.style.userSelect = 'none';
+        element.style.webkitUserSelect = 'none';
+        element.style.mozUserSelect = 'none';
+        element.style.msUserSelect = 'none';
+        element.style.webkitUserDrag = 'none';
+        element.style.webkitTouchCallout = 'none';
+      }
+    });
+    
+    // Protect the entire GLightbox overlay
+    const overlay = document.querySelector('.glightbox-container');
+    if (overlay) {
+      overlay.addEventListener('contextmenu', disableRightClick, true);
+    }
+  }
+  
+  // Global keyboard protection
+  document.addEventListener('keydown', disableKeyShortcuts, true);
+  
+  // Disable print screen
+  document.addEventListener('keyup', function(e) {
+    if (e.keyCode === 44) {
+      e.preventDefault();
+      return false;
+    }
+  }, true);
+})();
+</script>

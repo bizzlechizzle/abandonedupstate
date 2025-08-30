@@ -1,10 +1,11 @@
 import type { Props } from "astro";
 import IconMail from "@/assets/icons/IconMail.svg";
-import IconGitHub from "@/assets/icons/IconGitHub.svg";
-import IconBrandX from "@/assets/icons/IconBrandX.svg";
-import IconLinkedin from "@/assets/icons/IconLinkedin.svg";
-import IconWhatsapp from "@/assets/icons/IconWhatsapp.svg";
+import IconInstagram from "@/assets/icons/IconInstagram.svg";
+import IconTikTok from "@/assets/icons/IconTikTok.svg";
+import IconYoutube from "@/assets/icons/IconYoutube.svg";
 import IconFacebook from "@/assets/icons/IconFacebook.svg";
+import IconWhatsapp from "@/assets/icons/IconWhatsapp.svg";
+import IconBrandX from "@/assets/icons/IconBrandX.svg";
 import IconTelegram from "@/assets/icons/IconTelegram.svg";
 import IconPinterest from "@/assets/icons/IconPinterest.svg";
 import { SITE } from "@/config";
@@ -18,26 +19,32 @@ interface Social {
 
 export const SOCIALS: Social[] = [
   {
-    name: "GitHub",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on GitHub`,
-    icon: IconGitHub,
+    name: "Instagram",
+    href: "https://instagram.com/abandonedupstate",
+    linkTitle: `${SITE.title} on Instagram`,
+    icon: IconInstagram,
   },
   {
-    name: "X",
-    href: "https://x.com/username",
-    linkTitle: `${SITE.title} on X`,
-    icon: IconBrandX,
+    name: "TikTok",
+    href: "https://tiktok.com/@abandonedupstate",
+    linkTitle: `${SITE.title} on TikTok`,
+    icon: IconTikTok,
   },
   {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/in/username/",
-    linkTitle: `${SITE.title} on LinkedIn`,
-    icon: IconLinkedin,
+    name: "YouTube",
+    href: "https://youtube.com/@abandonedupstate",
+    linkTitle: `${SITE.title} on YouTube`,
+    icon: IconYoutube,
+  },
+  {
+    name: "Facebook",
+    href: "https://facebook.com/abandonedupstateproject",
+    linkTitle: `${SITE.title} on Facebook`,
+    icon: IconFacebook,
   },
   {
     name: "Mail",
-    href: "mailto:yourmail@gmail.com",
+    href: "mailto:info@abandonedupstate.com",
     linkTitle: `Send an email to ${SITE.title}`,
     icon: IconMail,
   },
