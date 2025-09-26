@@ -1,19 +1,26 @@
 ---
-title: "The Slave House"
-pubDatetime: 2023-01-07T02:59:00-05:00
-description: "Printshop-Filled Ransom Homestead"
-featured: false
+title: The Slave House
+pubDatetime: 2023-01-07 02:59:00-05:00
+description: Upstate New York’s Last Slave Home
+featured: true
+featuredCaption: The Slave House is an abandoned residence in Tioga County, New York.
+  Once rumored to shelter the enslaved workers of Colonel William Ransom, it later
+  housed Marvin and Beatrice Godfrey's print shop.
 draft: false
 tags:
-  - tioga county
-  - print shop
-  - residence
+- new york
+- house
+- print shop
 ogImage: ../../assets/images/the-slave-house-0zlel/historic-aerial-photograph-1990-slave-house.jpg
+author: Bryant Neal
 ---
 
+
 import { Image } from "astro:assets";
+import VideoEmbed from '@/components/VideoEmbed.astro';
 
 import heroImage from '../../assets/images/the-slave-house-0zlel/historic-aerial-photograph-1990-slave-house.jpg';
+import abandonedSlaveHouseThumbnailImage from '../../assets/images/the-slave-house-0zlel/abandoned-slave-house.jpg';
 import historicDronePhotographSlaveHouse2023Image from '../../assets/images/the-slave-house-0zlel/historic-drone-photograph-slave-house-2023.jpg';
 import exploringAbandonedSlaveHouseUpstateNewYorkImage from '../../assets/images/the-slave-house-0zlel/exploring-abandoned-slave-house-upstate-new-york.jpg';
 import kitchenSinkAbandonedSlaveHouseNyImage from '../../assets/images/the-slave-house-0zlel/kitchen-sink-abandoned-slave-house-ny.jpg';
@@ -34,32 +41,29 @@ import colesServicesNicholsNyRecieptPadImage from '../../assets/images/the-slave
 import linotypeTypeFacesAbandonedPrintShopImage from '../../assets/images/the-slave-house-0zlel/linotype-type-faces-abandoned-print-shop.jpg';
 import abandonedHistoricPrintingPressImage from '../../assets/images/the-slave-house-0zlel/abandoned-historic-printing-press.jpg';
 
-<a href={heroImage.src} className="glightbox" data-title={"The Slave House"}>
-  <Image 
-    src={heroImage} 
-    alt={"Aerial Photo - 1990"}
-    style={{width: '100%', borderRadius: '8px', margin: '2rem 0'}}
-    quality={85}
-    loading="eager"
-    fetchpriority="high"
-  />
-</a>
+<VideoEmbed
+  videoUrl="https://player.vimeo.com/video/1122354596?badge=0&autopause=0&player_id=0&app_id=58479"
+  title="The Slave House Walkthrough"
+  thumbnail={abandonedSlaveHouseThumbnailImage}
+  aspectRatio="2:1"
+/>
 
-# The Slave House
-## Tioga County, New York
+# {frontmatter.title}
+<p className="post-tagline" style={{ color: "#b9975c" }}>{frontmatter.description}</p>
+
+## History
 
 The Slave House is an abandoned residence located in Tioga County, New York. Constructed in 1830, it is alleged to have been the former home of slaves owned by Colonel William Ransom. The last occupants, Marvin and Beatrice Godfrey, operated a print shop from the house for decades. "Marvelous Marv" gained local notoriety for his eccentricity and involvement in various ventures within the community.
 
 ## Photo Gallery
 
-<div className="gallery gallery--two">
+<div className="gallery gallery--two" data-no-anchor="true">
 
 <a href={heroImage.src} className="glightbox gallery-item" data-gallery="the-slave-house-0zlel" data-title={"Aerial Photo - 1990"}>
   <Image 
     src={heroImage} 
     alt={"Aerial Photo - 1990"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -73,7 +77,6 @@ The Slave House is an abandoned residence located in Tioga County, New York. Con
     src={historicDronePhotographSlaveHouse2023Image} 
     alt={"Drone Photo - 2023"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -86,7 +89,6 @@ The Slave House is an abandoned residence located in Tioga County, New York. Con
     src={exploringAbandonedSlaveHouseUpstateNewYorkImage} 
     alt={"Historic 1800's Slave Home"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -99,7 +101,6 @@ The Slave House is an abandoned residence located in Tioga County, New York. Con
     src={kitchenSinkAbandonedSlaveHouseNyImage} 
     alt={"\"Basic\" Kitchen Sink"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -112,7 +113,6 @@ The Slave House is an abandoned residence located in Tioga County, New York. Con
     src={livingRoomAbandonedSlaveHouseImage} 
     alt={"Living Room/Marv's Office"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -125,7 +125,6 @@ The Slave House is an abandoned residence located in Tioga County, New York. Con
     src={rotaryPhoneFiveLineTankerDeskOwegoImage} 
     alt={"FIVE LINE - \"Round After Round, Your Real Long-Distance\" Champion"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -138,7 +137,6 @@ The Slave House is an abandoned residence located in Tioga County, New York. Con
     src={vintageIbmTankerDeskAbandonedSlaveHouseImage} 
     alt={"IBM Tanker Desk"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -151,7 +149,6 @@ The Slave House is an abandoned residence located in Tioga County, New York. Con
     src={printRollersAbandonedPrintersHouseImage} 
     alt={"Ink Stained Brayer Rollers"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -164,7 +161,6 @@ The Slave House is an abandoned residence located in Tioga County, New York. Con
     src={printersDeskTiogaCountySlaveHouseAbandonedDeskImage} 
     alt={"Beatrice's Home Printing Press Office"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -177,7 +173,6 @@ The Slave House is an abandoned residence located in Tioga County, New York. Con
     src={smallHandpressAbandonedHouseTiogaCenterImage} 
     alt={"8 x 5 Letter Press"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -190,7 +185,6 @@ The Slave House is an abandoned residence located in Tioga County, New York. Con
     src={printShopSuppliesAbandonedShopImage} 
     alt={"Ink, Hand Tools, and Stamps on Workbench"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -203,7 +197,6 @@ The Slave House is an abandoned residence located in Tioga County, New York. Con
     src={fullBookshelfMarvinGodfreyRansomImage} 
     alt={"Marvelous Marv's Mysteries"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -216,7 +209,6 @@ The Slave House is an abandoned residence located in Tioga County, New York. Con
     src={mysteryBooksBookshelfAbandonedSlaveHouseNyImage} 
     alt={"Murder Mysteries"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -229,7 +221,6 @@ The Slave House is an abandoned residence located in Tioga County, New York. Con
     src={historicPrintShopNicholsNyImage} 
     alt={"Antique Printing Press Workshop"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -242,7 +233,6 @@ The Slave House is an abandoned residence located in Tioga County, New York. Con
     src={abandonedPrintingPressTiogaCountyImage} 
     alt={"Hand Operated Printing Press"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -255,7 +245,6 @@ The Slave House is an abandoned residence located in Tioga County, New York. Con
     src={linotypePrintMachineAbandonedNewYorkImage} 
     alt={"Linotype Model 29 - Built 1936"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -268,7 +257,6 @@ The Slave House is an abandoned residence located in Tioga County, New York. Con
     src={ninteyCharacterLinotypeKeyboardSlaveHouseImage} 
     alt={"90 Character Linotype Keyboard"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -281,7 +269,6 @@ The Slave House is an abandoned residence located in Tioga County, New York. Con
     src={colesServicesNicholsNyRecieptPadImage} 
     alt={"1980's Gas Station Slips"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -294,7 +281,6 @@ The Slave House is an abandoned residence located in Tioga County, New York. Con
     src={linotypeTypeFacesAbandonedPrintShopImage} 
     alt={"Gothic Script Typeface"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -307,7 +293,6 @@ The Slave House is an abandoned residence located in Tioga County, New York. Con
     src={abandonedHistoricPrintingPressImage} 
     alt={"A. B. Dick Model 350 Offset Printing Press (1956)"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"

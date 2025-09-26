@@ -95,6 +95,7 @@ const nextPost =
       { "mt-8": !SITE.showBackButton },
     ]}
     data-pagefind-body
+    data-post-slug={post.id}
   >
     {showLayoutTitle && (
       <div class="post-header">
@@ -218,9 +219,19 @@ const nextPost =
   /** Attaches links to headings in the document,
    *  allowing sharing of sections easily */
   function addHeadingLinks() {
+    const postSlug =
+      document.body?.dataset?.postSlug ??
+      document.querySelector('[data-post-slug]')?.dataset?.postSlug;
+    const disableAnchorsFor = new Set([
+      'cadis-baptist-church',
+      'the-slave-house',
+    ]);
+    if (postSlug && disableAnchorsFor.has(postSlug)) {
+      return;
+    }
     const headings = Array.from(
       document.querySelectorAll("h2, h3, h4, h5, h6")
-    );
+    ).filter(heading => heading.dataset.noAnchor !== 'true');
     for (const heading of headings) {
       heading.classList.add("group");
       const link = document.createElement("a");
@@ -308,7 +319,9 @@ const nextPost =
 .gallery-image {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto !important;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
   border-radius: inherit;
   box-shadow: 0 8px 18px rgba(17, 24, 39, 0.12);
   transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
