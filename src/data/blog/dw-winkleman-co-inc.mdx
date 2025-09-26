@@ -14,11 +14,11 @@ ogImage: ../../assets/images/dw-winkleman/dw-winkleman-interior-stripped-chevy-c
 import { Image } from 'astro:assets';
 
 import heroImage from '../../assets/images/dw-winkleman/dw-winkelman-co-inc-abandoned-exterior.jpg';
-import collapsingGarages from '../../assets/images/dw-winkleman/dw-winkleman-exterior-collapsing-garages.jpg';
-import crumblingWalls from '../../assets/images/dw-winkleman/dw-winkelman-interior-crumbling-walls.jpg';
+import exterior1 from '../../assets/images/dw-winkleman/dw-winkleman-exterior-collapsing-garages.jpg';
+import interior2 from '../../assets/images/dw-winkleman/dw-winkelman-interior-crumbling-walls.jpg';
 import crushedSedan from '../../assets/images/dw-winkleman/dw-winkleman-interior-crushed-blue-sedan.jpg';
 import heavyTrucks from '../../assets/images/dw-winkleman/dw-winkelman-interior-heavy-trucks.jpg';
-import southEntrance from '../../assets/images/dw-winkleman/dw-winkelman-interior-south-entrance.jpg';
+import interior1 from '../../assets/images/dw-winkleman/dw-winkelman-interior-south-entrance.jpg';
 import abandonedInterior from '../../assets/images/dw-winkleman/abandoned-dw-winkelman-interior-syracuse.jpg';
 import collapsingOffice from '../../assets/images/dw-winkleman/dw-winkleman-interior-collapsing-office.jpg';
 import strippedChevy from '../../assets/images/dw-winkleman/dw-winkleman-interior-stripped-chevy-c60.jpg';
@@ -27,10 +27,10 @@ import aerialView2014 from '../../assets/images/dw-winkleman/dw-winkelman-co-201
 import aerialView1938 from '../../assets/images/dw-winkleman/dw-winkelman-co-1938-aerial-view.jpg';
 import newspaper1945 from '../../assets/images/dw-winkleman/dw-winkleman-newspaper-1945-state-bid.jpg';
 
-<a href={heroImage.src} className="glightbox" data-title="Abandoned exterior of D.W. Winkelman Co. Inc.">
+<a href={heroImage.src} className="glightbox" data-title="Abandoned D.W. Winkelman Co. Inc. Exterior">
   <Image 
     src={heroImage} 
-    alt="Abandoned exterior of D.W. Winkelman Co. Inc. warehouse building in Syracuse, New York" 
+    alt="Exterior of the abandoned D. W. Winkelman Co. warehouse with painted logo, East Side of Syracuse, New York" 
     style={{width: '100%', borderRadius: '8px', margin: '2rem 0'}}
     quality={85}
     loading="eager"
@@ -40,7 +40,7 @@ import newspaper1945 from '../../assets/images/dw-winkleman/dw-winkleman-newspap
 
 # D.W. Winkelman Co. Inc.
 
-**Syracuse's Most Tax-Delinquent Property**
+Syracuse's Most Tax-Delinquent Property
 
 D.W. Winkelman Co. Inc is an abandoned warehouse located on the East Side of Syracuse, NY. Owned and operated by Dwight W. Winkelman, the company originated in Chicago in 1924. Relocating to New York in 1930 for projects in the Adirondacks, Winkelman settled in Syracuse and established an office in 1937.
 
@@ -48,12 +48,12 @@ Specializing in heavy construction, the company undertook projects ranging from 
 
 ## Photo Gallery
 
-<div className="gallery" style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1rem', margin: '2rem 0'}}>
+<div className="gallery gallery--two">
 
-<a href={collapsingGarages.src} className="glightbox gallery-item" data-gallery="dw-winkleman" data-title="Collapsing Garages">
+<a href={exterior1.src} className="glightbox gallery-item" data-gallery="dw-winkleman" data-title="South Side Garage Doors">
   <Image 
-    src={collapsingGarages} 
-    alt="Collapsing exterior garages at D.W. Winkelman Co." 
+    src={exterior1} 
+    alt="Dilapidated south-side garage doors of the abandoned D. W. Winkelman Co. warehouse in Syracuse, New York" 
     className="gallery-image" 
     style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={75}
@@ -64,10 +64,10 @@ Specializing in heavy construction, the company undertook projects ranging from 
   />
 </a>
 
-<a href={southEntrance.src} className="glightbox gallery-item" data-gallery="dw-winkleman" data-title="South Entrance Interior">
+<a href={interior1.src} className="glightbox gallery-item" data-gallery="dw-winkleman" data-title="Sawtooth Roof">
   <Image 
-    src={southEntrance} 
-    alt="Interior view of the south entrance to D.W. Winkelman Co. warehouse" 
+    src={interior1} 
+    alt="South entrance interior of the D. W. Winkelman Co. warehouse with sawtooth clerestory windows and stacked tires" 
     className="gallery-image" 
     style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={75}
@@ -77,10 +77,10 @@ Specializing in heavy construction, the company undertook projects ranging from 
   />
 </a>
 
-<a href={crumblingWalls.src} className="glightbox gallery-item" data-gallery="dw-winkleman" data-title="Crumbling Interior Walls">
+<a href={interior2.src} className="glightbox gallery-item" data-gallery="dw-winkleman" data-title="Collapsing Walls">
   <Image 
-    src={crumblingWalls} 
-    alt="Crumbling interior walls" 
+    src={interior2} 
+    alt="Crumbling interior masonry walls and exposed framing inside the abandoned D. W. Winkelman Co. warehouse in Syracuse" 
     className="gallery-image" 
     style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={75}
@@ -94,7 +94,7 @@ Specializing in heavy construction, the company undertook projects ranging from 
 <a href={crushedSedan.src} className="glightbox gallery-item" data-gallery="dw-winkleman" data-title="Crushed Blue Sedan">
   <Image 
     src={crushedSedan} 
-    alt="Crushed blue sedan inside the warehouse" 
+    alt="Crushed blue late-1980s sedan inside the D. W. Winkelman Co. warehouse amid debris" 
     className="gallery-image" 
     style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={75}
@@ -108,7 +108,7 @@ Specializing in heavy construction, the company undertook projects ranging from 
 <a href={collapsingOffice.src} className="glightbox gallery-item" data-gallery="dw-winkleman" data-title="Collapsing Office">
   <Image 
     src={collapsingOffice} 
-    alt="Collapsing office interior" 
+    alt="Collapsed two-story interior office structure inside the abandoned D. W. Winkelman Co. warehouse in Syracuse, NY" 
     className="gallery-image" 
     style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={75}
@@ -121,7 +121,7 @@ Specializing in heavy construction, the company undertook projects ranging from 
 <a href={heavyTrucks.src} className="glightbox gallery-item" data-gallery="dw-winkleman" data-title="Heavy Trucks">
   <Image 
     src={heavyTrucks} 
-    alt="Heavy trucks abandoned inside the warehouse" 
+    alt="Heavy trucks left inside the D. W. Winkelman Co. warehouse, partially stripped and covered in dust" 
     className="gallery-image" 
     style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={75}
@@ -131,10 +131,10 @@ Specializing in heavy construction, the company undertook projects ranging from 
   />
 </a>
 
-<a href={strippedChevy.src} className="glightbox gallery-item" data-gallery="dw-winkleman" data-title="Stripped Chevy C60">
+<a href={strippedChevy.src} className="glightbox gallery-item" data-gallery="dw-winkleman" data-title="Stripped Chevy C60 Dump Truck">
   <Image 
     src={strippedChevy} 
-    alt="Stripped Chevy C60 truck" 
+    alt="Stripped red Chevrolet C60 dump truck parked inside the former D. W. Winkelman Co. warehouse in Upstate New York" 
     className="gallery-image" 
     style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={75}
@@ -144,10 +144,10 @@ Specializing in heavy construction, the company undertook projects ranging from 
   />
 </a>
 
-<a href={abandonedInterior.src} className="glightbox gallery-item" data-gallery="dw-winkleman" data-title="Abandoned Interior Syracuse">
+<a href={abandonedInterior.src} className="glightbox gallery-item" data-gallery="dw-winkleman" data-title="Empty Warehouse">
   <Image 
     src={abandonedInterior} 
-    alt="Abandoned interior view of D.W. Winkelman Co. warehouse in Syracuse showing deterioration" 
+    alt="Wide interior view of the D. W. Winkelman Co. warehouse showing open bays, peeling paint, and floor debris" 
     className="gallery-image" 
     style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={75}
@@ -157,10 +157,10 @@ Specializing in heavy construction, the company undertook projects ranging from 
   />
 </a>
 
-<a href={syracuseArticle.src} className="glightbox gallery-item" data-gallery="dw-winkleman" data-title="D.W. Winkelman Co. Inc. - *Photo courtesy of The Post-Standard*">
+<a href={syracuseArticle.src} className="glightbox gallery-item" data-gallery="dw-winkleman" data-title="D.W. Winkelman Co. Inc. - *Photo Courtesy of The Post-Standard*">
   <Image 
     src={syracuseArticle} 
-    alt="D.W. Winkelman Co. Inc. building exterior showing tax delinquent property" 
+    alt="2014 newspaper clipping about the D. W. Winkelman Co. tax-delinquent property in Syracuse" 
     className="gallery-image" 
     style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={75}
@@ -170,10 +170,10 @@ Specializing in heavy construction, the company undertook projects ranging from 
   />
 </a>
 
-<a href={aerialView2014.src} className="glightbox gallery-item" data-gallery="dw-winkleman" data-title="2014 Oblique Aerial View - *Photo courtesy of EagleView Technology Corp*">
+<a href={aerialView2014.src} className="glightbox gallery-item" data-gallery="dw-winkleman" data-title="2014 Oblique Aerial View - *Image Courtesy of EagleView Technology Corp*">
   <Image 
     src={aerialView2014} 
-    alt="2014 oblique aerial photograph of D.W. Winkelman Co. property" 
+    alt="2014 oblique aerial photograph of the D. W. Winkelman Co. property and surrounding East Side blocks in Syracuse" 
     className="gallery-image" 
     style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={75}
@@ -183,10 +183,10 @@ Specializing in heavy construction, the company undertook projects ranging from 
   />
 </a>
 
-<a href={aerialView1938.src} className="glightbox gallery-item" data-gallery="dw-winkleman" data-title="1938 Aerial View - *Photo courtesy of Cornell University*">
+<a href={aerialView1938.src} className="glightbox gallery-item" data-gallery="dw-winkleman" data-title="1938 Aerial View - *Image Courtesy of Cornell University*">
   <Image 
     src={aerialView1938} 
-    alt="1938 aerial photograph showing D.W. Winkelman Co. property development" 
+    alt="1938 vertical aerial photograph showing early development of the D. W. Winkelman Co. site in Syracuse, New York" 
     className="gallery-image" 
     style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={75}
@@ -196,10 +196,10 @@ Specializing in heavy construction, the company undertook projects ranging from 
   />
 </a>
 
-<a href={newspaper1945.src} className="glightbox gallery-item" data-gallery="dw-winkleman" data-title="1945 State Bid Newspaper Article - *Photo courtesy of Dunkirk Evening Observer*">
+<a href={newspaper1945.src} className="glightbox gallery-item" data-gallery="dw-winkleman" data-title="1945 State Bid Article - *Newspaper Courtesy of Dunkirk Evening Observer*">
   <Image 
     src={newspaper1945} 
-    alt="1945 newspaper article about D.W. Winkelman Co. state bid" 
+    alt="1945 Dunkirk Evening Observer article announcing a New York State bid involving D. W. Winkelman Co." 
     className="gallery-image" 
     style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={75}

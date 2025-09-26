@@ -4,12 +4,23 @@ import LinkButton from "./LinkButton.astro";
 
 export interface Props {
   centered?: boolean;
+  align?: "start" | "center" | "end";
 }
 
-const { centered = false } = Astro.props;
+const { centered = false, align = "center" } = Astro.props;
 ---
 
-<div class:list={["flex-wrap justify-center gap-1", { flex: centered }]}>
+<div
+  class:list={[
+    "flex flex-wrap gap-1",
+    {
+      "justify-start": align === "start",
+      "justify-center": align === "center",
+      "justify-end": align === "end",
+      "w-full": centered,
+    },
+  ]}
+>
   {
     SOCIALS.map(social => (
       <LinkButton

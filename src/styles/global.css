@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Lora:wght@400;500;600;700&display=swap');
+
+@layer base {
+  .bg-header-light {
+    background-color: #45372b;
+  }
+  .text-header-light-foreground {
+    color: #fbfbfb;
+  }
+}
+
 @import "tailwindcss";
 @import "./typography.css";
 
@@ -5,19 +16,26 @@
 
 :root,
 html[data-theme="light"] {
-  --background: #fdfdfd;
-  --foreground: #282728;
-  --accent: #006cac;
+  --background: #fffbf7;
+  --foreground: #454545;
+  --accent: #b9975c;
   --muted: #e6e6e6;
-  --border: #ece9e9;
+  --border: #b9975c;
+  --font-heading: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-body: "Lora", Georgia, serif;
+  --step--1: clamp(0.88rem, 0.82rem + 0.3vw, 0.95rem);
+  --step-0: clamp(1rem, 0.95rem + 0.4vw, 1.125rem);
+  --step-1: clamp(1.25rem, 1.1rem + 1.2vw, 1.6rem);
+  --step-2: clamp(1.6rem, 1.3rem + 2vw, 2.25rem);
+  --step-3: clamp(2.25rem, 1.6rem + 3.5vw, 3.5rem);
 }
 
 html[data-theme="dark"] {
-  --background: #212737;
-  --foreground: #eaedf3;
-  --accent: #ff6b01;
+  --background: #474747;
+  --foreground: #fffbf7;
+  --accent: #b9975c;
   --muted: #343f60;
-  --border: #ab4b08;
+  --border: #b9975c;
 }
 
 @theme inline {
@@ -38,7 +56,52 @@ html[data-theme="dark"] {
     @apply overflow-y-scroll scroll-smooth;
   }
   body {
-    @apply flex min-h-svh flex-col bg-background font-mono text-foreground selection:bg-accent/75 selection:text-background;
+    @apply flex min-h-svh flex-col bg-background text-foreground selection:bg-accent/75 selection:text-background;
+    font-family: var(--font-body);
+    font-size: var(--step-0);
+    line-height: 1.65;
+    color: var(--foreground);
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.05em;
+    text-wrap: balance;
+    margin: 0 0 0.5em;
+  }
+  h1 {
+    font-size: var(--step-3);
+    text-transform: uppercase;
+  }
+  h2 {
+    font-size: var(--step-2);
+  }
+  h3 {
+    font-size: var(--step-1);
+  }
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: 0.04em;
+    margin: 0 0 0.5em;
+  }
+  p {
+    margin: 0 0 1.25em;
+    font-size: var(--step-0);
+  }
+  .site-title {
+    font-family: var(--font-heading);
+    font-size: var(--step-3);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    line-height: 1.1;
+    text-transform: uppercase;
   }
   a,
   button {
@@ -52,14 +115,28 @@ html[data-theme="dark"] {
   footer {
     @apply mx-auto max-w-app px-4;
   }
+  .gallery {
+    display: grid;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .gallery.gallery--two {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  @media (min-width: 48rem) {
+    .gallery.gallery--two {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
 }
 
 @utility max-w-app {
-  @apply max-w-3xl;
+  @apply max-w-5xl;
 }
 
 .active-nav {
-  @apply underline decoration-2 underline-offset-4;
+  @apply underline decoration-2 underline-offset-4 decoration-accent;
 }
 
 /* Source: https://piccalil.li/blog/a-more-modern-css-reset/ */
