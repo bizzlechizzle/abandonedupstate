@@ -33,7 +33,10 @@ const {
   timezone,
   tags,
   hideEditPost,
+  displayTitleInLayout,
 } = post.data;
+
+const showLayoutTitle = displayTitleInLayout !== false;
 
 const { Content } = await render(post);
 
@@ -93,28 +96,32 @@ const nextPost =
     ]}
     data-pagefind-body
   >
-    <h1
-      transition:name={slugifyStr(title)}
-      class="inline-block text-2xl font-bold text-foreground sm:text-3xl"
-    >
-      {title}
-    </h1>
-    <div class="my-2 flex items-center gap-2">
-      <Datetime {pubDatetime} {modDatetime} {timezone} size="lg" />
-      <span
-        aria-hidden="true"
-        class:list={[
-          "max-sm:hidden",
-          { hidden: !SITE.editPost.enabled || hideEditPost },
-        ]}>|</span
-      >
-      <EditPost {hideEditPost} {post} class="max-sm:hidden" />
-    </div>
+    {showLayoutTitle && (
+      <div class="post-header">
+        <h1
+          transition:name={slugifyStr(title)}
+          class="inline-block text-2xl font-bold text-foreground sm:text-3xl"
+        >
+          {title}
+        </h1>
+        <div class="my-2 flex items-center gap-2">
+          <Datetime {pubDatetime} {modDatetime} {timezone} size="lg" />
+          <span
+            aria-hidden="true"
+            class:list={[
+              "max-sm:hidden",
+              { hidden: !SITE.editPost.enabled || hideEditPost },
+            ]}>|</span
+          >
+          <EditPost {hideEditPost} {post} class="max-sm:hidden" />
+        </div>
+      </div>
+    )}
     <article
       id="article"
       class="app-prose mx-auto mt-8 max-w-app prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)"
     >
-      <Content />
+      <Content pubDatetime={pubDatetime} modDatetime={modDatetime} timezone={timezone} hideEditPost={hideEditPost} />
     </article>
 
     <hr class="my-8 border-dashed border-accent" />
@@ -294,16 +301,23 @@ const nextPost =
   display: block;
   overflow: hidden;
   cursor: pointer;
+  border-radius: 0.75rem;
+  background-color: var(--background);
 }
 
 .gallery-image {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  box-shadow: 0 8px 18px rgba(17, 24, 39, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
 }
 
 .gallery-item:hover .gallery-image {
-  transform: scale(1.05);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+  box-shadow: 0 16px 32px rgba(17, 24, 39, 0.16);
+  filter: saturate(1.02);
 }
 
 @media (max-width: 768px) {

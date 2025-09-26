@@ -95,6 +95,14 @@ html[data-theme="dark"] {
     margin: 0 0 1.25em;
     font-size: var(--step-0);
   }
+  .post-tagline {
+    color: var(--post-tagline-color, var(--accent));
+    font-family: var(--font-heading);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin: 0.75rem 0 1.5rem;
+    font-size: clamp(1.05rem, 0.95rem + 0.6vw, 1.35rem);
+  }
   .site-title {
     font-family: var(--font-heading);
     font-size: var(--step-3);
