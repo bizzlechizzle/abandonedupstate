@@ -98,14 +98,14 @@ const nextPost =
     data-post-slug={post.id}
   >
     {showLayoutTitle && (
-      <div class="post-header">
+      <div class="post-header space-y-4">
         <h1
           transition:name={slugifyStr(title)}
           class="inline-block text-2xl font-bold text-foreground sm:text-3xl"
         >
           {title}
         </h1>
-        <div class="my-2 flex items-center gap-2">
+        <div class="flex items-center gap-2">
           <Datetime {pubDatetime} {modDatetime} {timezone} size="lg" />
           <span
             aria-hidden="true"
@@ -129,9 +129,17 @@ const nextPost =
 
     <EditPost class="sm:hidden" {hideEditPost} {post} />
 
-    <ul class="mt-4 mb-8 sm:my-8">
-      {tags.map(tag => <Tag tag={slugifyStr(tag)} tagName={tag} />)}
-    </ul>
+    <div class="mt-4 mb-8 flex flex-col gap-3 sm:my-8 sm:flex-row sm:items-center sm:justify-between">
+      <ul class="flex flex-wrap items-center gap-2">
+        {tags.map(tag => <Tag tag={slugifyStr(tag)} tagName={tag} />)}
+      </ul>
+      <a
+        class="text-xs uppercase tracking-[0.2em] text-accent underline-offset-4 hover:underline sm:text-sm"
+        href={`/authors/${slugifyStr(author)}/`}
+      >
+        {author}
+      </a>
+    </div>
 
     <BackToTopButton />
 

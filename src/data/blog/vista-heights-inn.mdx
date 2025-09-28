@@ -29,23 +29,20 @@ import stairwellAbandonedMotelRochesterImage from '../../assets/images/vista-hei
 import redDoorAbandonedMotelImage from '../../assets/images/vista-heights-inn/red-door-abandoned-motel.jpg';
 import abandonedMotelVistaHeightsInnHenriettaImage from '../../assets/images/vista-heights-inn/abandoned-motel-vista-heights-inn-henrietta.jpg';
 
-<a href={heroImage.src} className="glightbox" data-title={"Vista Heights Inn"}>
-  <Image 
-    src={heroImage} 
-    alt={"Vista Heights Inn"}
-    style={{width: '100%', borderRadius: '8px', margin: '2rem 0'}}
-    quality={85}
-    loading="eager"
-    fetchpriority="high"
-  />
-</a>
+<Image 
+  src={heroImage} 
+  alt={"Vista Heights Inn"}
+  style={{width: '100%', borderRadius: '8px', margin: '2rem 0'}}
+  quality={85}
+  loading="eager"
+  fetchpriority="high"
+/>
 
-# Vista Heights Inn
-## Henrietta, New York
+# {frontmatter.title}
+<p className="post-tagline" style={{ color: "#b9975c" }}>{frontmatter.description}</p>
 
 Vista Heights Inn is an abandoned motel situated in Henrietta, New York. Built in 1956, the motel boasts a semi-unique detached layout. During the 1960s and 1970s, it operated as the Highlander Motor Hotel. In its most recent years, the motel functioned under both the names Vista Heights Inn and the Red Roof Brand. While the exact closing date remains unknown, online reviews show a decline after 2016, with a noteworthy absence of positive reviews beyond 2010.
 
-## Photo Gallery
 
 <div className="gallery gallery--two">
 
@@ -54,7 +51,7 @@ Vista Heights Inn is an abandoned motel situated in Henrietta, New York. Built i
     src={historicPhotoVistaHeightsInn2021Image} 
     alt={"2021 Aerial Photo (Vista Heights Inn)"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -68,7 +65,7 @@ Vista Heights Inn is an abandoned motel situated in Henrietta, New York. Built i
     src={historicHighlanderHotelHenrietta1970SImage} 
     alt={"Highlander Motor Hotel (1970's Postcard)"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -81,7 +78,7 @@ Vista Heights Inn is an abandoned motel situated in Henrietta, New York. Built i
     src={historicHighlanderMotorHotelSwizzleStickImage} 
     alt={"Highlander Motor Hotel Swizzle Stick (Master Hosts)"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -94,7 +91,7 @@ Vista Heights Inn is an abandoned motel situated in Henrietta, New York. Built i
     src={frontDeskAbandonedMotelImage} 
     alt={"Motel Lobby"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -107,7 +104,7 @@ Vista Heights Inn is an abandoned motel situated in Henrietta, New York. Built i
     src={abandonedMotelLobbyImage} 
     alt={"\"Sluts Save Lives\""}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -120,7 +117,7 @@ Vista Heights Inn is an abandoned motel situated in Henrietta, New York. Built i
     src={abandonedMotelHallwayImage} 
     alt={"Indoor Motel Hallway"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -133,7 +130,7 @@ Vista Heights Inn is an abandoned motel situated in Henrietta, New York. Built i
     src={abandonedMotelRoomImage} 
     alt={"Deluxe Queen Room"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -146,7 +143,7 @@ Vista Heights Inn is an abandoned motel situated in Henrietta, New York. Built i
     src={motelHallwayAbandonedRochesterImage} 
     alt={"Cinderblock Motel Hallway"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -159,7 +156,7 @@ Vista Heights Inn is an abandoned motel situated in Henrietta, New York. Built i
     src={storageRoomLampsAbandonedMotelImage} 
     alt={"I Love Lamp"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -172,7 +169,7 @@ Vista Heights Inn is an abandoned motel situated in Henrietta, New York. Built i
     src={stairwellAbandonedMotelRochesterImage} 
     alt={"Detached Building Stairwell"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -185,7 +182,7 @@ Vista Heights Inn is an abandoned motel situated in Henrietta, New York. Built i
     src={redDoorAbandonedMotelImage} 
     alt={"Red Motel Door - Detached Building"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -198,7 +195,7 @@ Vista Heights Inn is an abandoned motel situated in Henrietta, New York. Built i
     src={abandonedMotelVistaHeightsInnHenriettaImage} 
     alt={"Detached Motel Building"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -207,3 +204,5 @@ Vista Heights Inn is an abandoned motel situated in Henrietta, New York. Built i
 </a>
 
 </div>
+
+

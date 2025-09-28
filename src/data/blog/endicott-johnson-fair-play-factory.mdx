@@ -37,21 +37,17 @@ import workshopDesk from '../../assets/images/fair-play-factory/work-bench-endic
 import fireDamagedHall from '../../assets/images/fair-play-factory/fire-damaged-ej-shoes-fair-play-factory.jpg';
 import exteriorStair from '../../assets/images/fair-play-factory/abandoned-ej-shoe-factory-west-endicott.jpg';
 
-<a href={heroImage.src} className="glightbox" data-title="Fair Play Factory - Main Entrance">
-  <Image 
-    src={heroImage} 
-    alt="Main entrance of the abandoned Endicott-Johnson Fair Play Factory in West Endicott, New York"
-    style={{width: '100%', borderRadius: '8px', margin: '2rem 0'}}
-    quality={85}
-    loading="eager"
-    fetchpriority="high"
-  />
-</a>
+<Image 
+  src={heroImage} 
+  alt="Main entrance of the abandoned Endicott-Johnson Fair Play Factory in West Endicott, New York"
+  style={{width: '100%', borderRadius: '8px', margin: '2rem 0'}}
+  quality={85}
+  loading="eager"
+  fetchpriority="high"
+/>
 
-# Endicott-Johnson Fair Play Factory
-## West Endicott, New York
-
-A flagship Endicott-Johnson shoe plant that once employed a thousand workers and later stood vacant before its 2018 demolition.
+# {frontmatter.title}
+<p className="post-tagline" style={{ color: "#b9975c" }}>{frontmatter.description}</p>
 
 ### Factory Background
 
@@ -72,7 +68,6 @@ Production slowed in the ensuing decades and the facility eventually sat idle by
 - **1970s** – Complex falls vacant as Endicott-Johnson’s regional footprint contracts.
 - **October 2018** – Buildings demolished for National Pipe & Plastics redevelopment.
 
-## Photo Gallery
 
 <div className="gallery gallery--two">
 
@@ -81,7 +76,7 @@ Production slowed in the ensuing decades and the facility eventually sat idle by
     src={heroImage} 
     alt="Facade of the Endicott-Johnson Fair Play Factory with the main entrance canopy in West Endicott"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={85}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -95,7 +90,7 @@ Production slowed in the ensuing decades and the facility eventually sat idle by
     src={frontJuly2016} 
     alt="Oblique July 2016 view of the Fair Play Factory stretching along North Page Avenue"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -109,7 +104,7 @@ Production slowed in the ensuing decades and the facility eventually sat idle by
     src={historic1930s} 
     alt="Historic 1930s postcard showing the Fair Play Factory complex in operation"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -123,7 +118,7 @@ Production slowed in the ensuing decades and the facility eventually sat idle by
     src={historic1950s} 
     alt="1950s era aerial photograph of the Fair Play Factory and surrounding Endicott-Johnson facilities"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -136,7 +131,7 @@ Production slowed in the ensuing decades and the facility eventually sat idle by
     src={historic1946} 
     alt="January 1946 photograph of workers entering the Fair Play Factory in West Endicott"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -149,7 +144,7 @@ Production slowed in the ensuing decades and the facility eventually sat idle by
     src={rearJuly2016} 
     alt="Rear elevation of the Fair Play Factory showing brick loading bays in July 2016"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -162,7 +157,7 @@ Production slowed in the ensuing decades and the facility eventually sat idle by
     src={entranceInterior} 
     alt="Red exit door and pendant lights inside the Fair Play Factory's main entrance foyer"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -175,7 +170,7 @@ Production slowed in the ensuing decades and the facility eventually sat idle by
     src={falloutSign} 
     alt="Hand-painted fallout shelter sign on a yellow column within the Fair Play Factory"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -188,7 +183,7 @@ Production slowed in the ensuing decades and the facility eventually sat idle by
     src={timeCardPunch} 
     alt="Rusting time card punch clock mounted to a brick column in the Fair Play Factory"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -201,7 +196,7 @@ Production slowed in the ensuing decades and the facility eventually sat idle by
     src={exteriorFacade} 
     alt="Exterior wall lettering identifying the Fair Play Factory as part of Endicott Johnson Shoe"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -214,7 +209,7 @@ Production slowed in the ensuing decades and the facility eventually sat idle by
     src={premiumInnerboot} 
     alt="Premium innerboot liner signage inside the Fair Play Factory"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -227,7 +222,7 @@ Production slowed in the ensuing decades and the facility eventually sat idle by
     src={sawToothRoof} 
     alt="Saw-tooth roof profile of the Fair Play Factory with clerestory glazing"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -240,7 +235,7 @@ Production slowed in the ensuing decades and the facility eventually sat idle by
     src={powerSwitch} 
     alt="Electrical switch bank on the north end of the Fair Play Factory"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -253,7 +248,7 @@ Production slowed in the ensuing decades and the facility eventually sat idle by
     src={dieCutRoom} 
     alt="Fourth-floor die cut room with debris and daylight streaming through tall windows"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -266,7 +261,7 @@ Production slowed in the ensuing decades and the facility eventually sat idle by
     src={retractableGate} 
     alt="Retractable steel security gate at a corridor intersection inside the Fair Play Factory"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -279,7 +274,7 @@ Production slowed in the ensuing decades and the facility eventually sat idle by
     src={roomFive} 
     alt="Room 5 production floor inside the Fair Play Factory with scattered debris"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -292,7 +287,7 @@ Production slowed in the ensuing decades and the facility eventually sat idle by
     src={wolfsHeadOil} 
     alt="Wolf's Head motor oil can left behind on a Fair Play Factory workbench"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -305,7 +300,7 @@ Production slowed in the ensuing decades and the facility eventually sat idle by
     src={peelingPaintDoor} 
     alt="Fire-rated door with peeling paint and faded signage inside the Fair Play Factory"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -318,7 +313,7 @@ Production slowed in the ensuing decades and the facility eventually sat idle by
     src={workshopDesk} 
     alt="Workshop desk and hand tools staged along a stairwell landing inside the Fair Play Factory"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -331,7 +326,7 @@ Production slowed in the ensuing decades and the facility eventually sat idle by
     src={fireDamagedHall} 
     alt="Fire-damaged stairwell with charred walls and beams inside the Fair Play Factory"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -344,7 +339,7 @@ Production slowed in the ensuing decades and the facility eventually sat idle by
     src={exteriorStair} 
     alt="Broad exterior facade of the Fair Play Factory with multi-level stair tower"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -353,4 +348,5 @@ Production slowed in the ensuing decades and the facility eventually sat idle by
 </a>
 
 </div>
+
 

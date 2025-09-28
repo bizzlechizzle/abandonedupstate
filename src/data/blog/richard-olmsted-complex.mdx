@@ -29,25 +29,22 @@ import somberStairwellAbandonedMentalAsylumImage from '../../assets/images/richa
 import historicHotelHenryBuffalo2019Image from '../../assets/images/richard-olmsted-complex/historic-hotel-henry-buffalo-2019.jpg';
 import hotelHenryHallway2019Image from '../../assets/images/richard-olmsted-complex/hotel-henry-hallway-2019.jpg';
 
-<a href={heroImage.src} className="glightbox" data-title={"Richardson Olmsted Complex"}>
-  <Image 
-    src={heroImage} 
-    alt={"Buffalo State Hospital - Aerial Photo 2022"}
-    style={{width: '100%', borderRadius: '8px', margin: '2rem 0'}}
-    quality={85}
-    loading="eager"
-    fetchpriority="high"
-  />
-</a>
+<Image 
+  src={heroImage} 
+  alt={"Buffalo State Hospital - Aerial Photo 2022"}
+  style={{width: '100%', borderRadius: '8px', margin: '2rem 0'}}
+  quality={85}
+  loading="eager"
+  fetchpriority="high"
+/>
 
-# Richardson Olmsted Complex
-## Buffalo, New York
+# {frontmatter.title}
+<p className="post-tagline" style={{ color: "#b9975c" }}>{frontmatter.description}</p>
 
 The Richardson Olmsted Complex, also known as the Buffalo State Asylum for the Insane, is an abandoned kirkbride hospital in Buffalo, New York. Erected in 1872, the building showcases an ominous architectural style now recognized as "Richardsonian Romanesque." The psychiatric facility ceased operations under state management in 1974, remaining shuttered for decades.
 
 In 2017, the complex underwent a partial restoration and was repurposed into a unique and historic hotel. This transformation breathed new life into the Richardson Olmsted Complex, allowing it to take on a different role while preserving its historic and architectural significance.
 
-## Photo Gallery
 
 <div className="gallery gallery--two">
 
@@ -56,7 +53,7 @@ In 2017, the complex underwent a partial restoration and was repurposed into a u
     src={buffaloStateAsylumForTheInsaneFallImage} 
     alt={"Buffalo State Hospital - Fall"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -70,7 +67,7 @@ In 2017, the complex underwent a partial restoration and was repurposed into a u
     src={theRichardOlmstedCampusBuffaloNyImage} 
     alt={"Overgrown Fall Vines"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -83,7 +80,7 @@ In 2017, the complex underwent a partial restoration and was repurposed into a u
     src={abandonedHospitalBedBuffaloStateHospitalImage} 
     alt={"Patient Bed"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -96,7 +93,7 @@ In 2017, the complex underwent a partial restoration and was repurposed into a u
     src={hallwayFireplaceAbandonedBuffaloImage} 
     alt={"Brick Fireplace in Collapsing Hallway"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -109,7 +106,7 @@ In 2017, the complex underwent a partial restoration and was repurposed into a u
     src={abandonedBuffaloStateHospitalClassroomPinkImage} 
     alt={"Desks in a Pink Room"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -122,7 +119,7 @@ In 2017, the complex underwent a partial restoration and was repurposed into a u
     src={redWheelchairFireplaceAbandonedBuffaloPsychiatricCenterImage} 
     alt={"Red Wheelchair and Brick Fireplace"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -135,7 +132,7 @@ In 2017, the complex underwent a partial restoration and was repurposed into a u
     src={exploringAbandonedHospitalBuffaloImage} 
     alt={"Patient Common Room"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -148,7 +145,7 @@ In 2017, the complex underwent a partial restoration and was repurposed into a u
     src={electroshockTherapyRoomAbandonedPsychiatricHospitalImage} 
     alt={"Electroshock Therapy Equipment"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -161,7 +158,7 @@ In 2017, the complex underwent a partial restoration and was repurposed into a u
     src={greenDesksAbandonedRichardOlmsteadKirkbrideImage} 
     alt={"Desks in a Green Room"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -174,7 +171,7 @@ In 2017, the complex underwent a partial restoration and was repurposed into a u
     src={somberStairwellAbandonedMentalAsylumImage} 
     alt={"Green Split Landing Stair Case"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -187,7 +184,7 @@ In 2017, the complex underwent a partial restoration and was repurposed into a u
     src={historicHotelHenryBuffalo2019Image} 
     alt={"Hotel Henry Main Entrance 2019"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -200,7 +197,7 @@ In 2017, the complex underwent a partial restoration and was repurposed into a u
     src={hotelHenryHallway2019Image} 
     alt={"Hotel Henry Hallway 2019"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -209,3 +206,5 @@ In 2017, the complex underwent a partial restoration and was repurposed into a u
 </a>
 
 </div>
+
+

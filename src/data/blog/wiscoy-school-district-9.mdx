@@ -5,8 +5,11 @@ description: Hoarded 1800s Two-Room Schoolhouse
 featured: false
 draft: false
 tags:
-- school
+- new york
 - wny
+- schools
+- schoolhouses
+- hoarded
 ogImage: ../../assets/images/wiscoy-school/wiscoy-school-exterior-overgrown-summer-2023.jpg
 author: Bryant Neal
 ---
@@ -26,26 +29,19 @@ import historic2 from '../../assets/images/wiscoy-school/wiscoy-school-exterior-
 import historic3 from '../../assets/images/wiscoy-school/wiscoy-school-exterior-tax-image-2015.jpg';
 import historic4 from '../../assets/images/wiscoy-school/wiscoy-school-exterior-tax-image-2022.jpg';
 
+<Image 
+  src={heroImage} 
+  alt="Abandoned Wiscoy School (District 9) exterior, April 2020, Allegany County, New York" 
+  style={{width: '100%', borderRadius: '8px', margin: '2rem 0'}}
+  quality={85}
+  loading="eager"
+  fetchpriority="high"
+/>
 
-
-<a href={heroImage.src} className="glightbox" data-title="Abandoned Exterior of Wiscoy School - April 2020">
-  <Image 
-    src={heroImage} 
-    alt="Abandoned Wiscoy School (District 9) exterior, April 2020, Allegany County, New York" 
-    style={{width: '100%', borderRadius: '8px', margin: '2rem 0'}}
-    quality={85}
-    loading="eager"
-    fetchpriority="high"
-  />
-</a>
-
-# Wiscoy School (District 9)
-
-Hoarded 1800s Two-Room Schoolhouse
+# {frontmatter.title}
+<p className="post-tagline" style={{ color: "#b9975c" }}>{frontmatter.description}</p>
 
 The Wiscoy School, also known as District #9, is a two room schoolhouse in Wiscoy, Caneadea, Allegany County, New York, built in 1880. It was last sold for $1,400 in 2020. Former student Gary Nevinger recalls his time there, and there's a shared desire among residents to restore it and transform it into a museum, but it currently serves as storage and is deteriorating.
-
-## Photo Gallery
 
 <div className="gallery gallery--two">
 
@@ -54,7 +50,7 @@ The Wiscoy School, also known as District #9, is a two room schoolhouse in Wisco
     src={exterior1} 
     alt="South exterior wall of the abandoned Wiscoy Schoolhouse in Allegany County, New York" 
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={75}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -68,7 +64,7 @@ The Wiscoy School, also known as District #9, is a two room schoolhouse in Wisco
     src={interior1} 
     alt="Hoarded side entrance at Wiscoy School with a vintage bandsaw and small gasoline engine" 
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={75}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -81,7 +77,7 @@ The Wiscoy School, also known as District #9, is a two room schoolhouse in Wisco
     src={interior2} 
     alt="Small classroom at Wiscoy School filled with boxes and stored items in Upstate, NY" 
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={75}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -94,7 +90,7 @@ The Wiscoy School, also known as District #9, is a two room schoolhouse in Wisco
     src={interior3} 
     alt="Wooden divider separating the two rooms of the Wiscoy two-room schoolhouse located in WNY" 
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={75}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -107,7 +103,7 @@ The Wiscoy School, also known as District #9, is a two room schoolhouse in Wisco
     src={interior4} 
     alt="Main classroom of the 1880 Wiscoy School, cluttered with materials and showing structural decay; separate entrances visible" 
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={75}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -120,7 +116,7 @@ The Wiscoy School, also known as District #9, is a two room schoolhouse in Wisco
     src={exterior2} 
     alt="Overgrown exterior of the Wiscoy two-room schoolhouse, summer 2023" 
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={75}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -133,7 +129,7 @@ The Wiscoy School, also known as District #9, is a two room schoolhouse in Wisco
     src={historic1} 
     alt="Abandoned Wiscoy Schoolhouse from Allegany Histocial Society - Winter 2006, Jim Gelser" 
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={75}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -146,7 +142,7 @@ The Wiscoy School, also known as District #9, is a two room schoolhouse in Wisco
     src={historic2} 
     alt="=Overgrown Wiscoy School (District 9) - Allegany County Tax Records - Summer 2009" 
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={75}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -159,7 +155,7 @@ The Wiscoy School, also known as District #9, is a two room schoolhouse in Wisco
     src={historic3} 
     alt="Abandoned Wiscoy School - Allegany County Tax Records - Summer 2015" 
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={75}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -172,7 +168,7 @@ The Wiscoy School, also known as District #9, is a two room schoolhouse in Wisco
     src={historic4} 
     alt="Historic Wiscoy Schoolhouse - Allegany County Tax Records - Summer 2022" 
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={75}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -182,7 +178,10 @@ The Wiscoy School, also known as District #9, is a two room schoolhouse in Wisco
 
 </div>
 
+<div aria-hidden="true" style={{ height: 0 }} />
+
 ## Sources
 
 - [Allegany County Historical Society - Hume Schools - Wiscoy School](https://www.alleganyhistory.org/places/schools/f-j238/town-of-hume/1726-wiscoy-school-district-9)
 - [Allegany County County Tax Records - Wiscoy School](https://www.alleganyco.gov/departments/real-property/)
+

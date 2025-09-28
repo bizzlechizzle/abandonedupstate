@@ -1,27 +1,20 @@
 ---
-title: Cadis Baptist Church
-pubDatetime: 2015-10-06 02:59:00-05:00
-description: Rural Pennsylvania’s Most Forgotten Church
+title: "Cadis Baptist Church"
+pubDatetime: 2015-10-06T02:59:00-05:00
+description: "Rural Pennsylvania’s Most Forgotten Church"
 featured: true
-featuredCaption: Cadis Baptist Church is a rural Baptist church located in Rome, Pennsylvania.
-  Founded in 1834, its congregation was initially known as the First Free Will Baptist
-  Church of Windham. The church building was constructed in 1881 in the town of Mecca,
-  retaining the same name.
+featuredCaption: "Cadis Baptist Church is a rural Baptist church located in Rome, Pennsylvania. Founded in 1834, its congregation was initially known as the First Free Will Baptist Church of Windham. The church building was constructed in 1881 in the town of Mecca, retaining the same name."
 draft: false
 tags:
-- pennsylvania
-- faith
-- churches
+  - pennsylvania
+  - faith
+  - churches
 ogImage: ../../assets/images/cadis-baptist-church/abandoned-rural-cadis-baptist-church-rome-pa.jpg
-author: Bryant Neal
 ---
-
 
 import { Image } from "astro:assets";
 
 import heroImage from '../../assets/images/cadis-baptist-church/abandoned-rural-cadis-baptist-church-rome-pa.jpg';
-import abandonedCadisThumbnailImage from '../../assets/images/cadis-baptist-church/abandoned-cadis-baptist-church.jpg';
-import VideoEmbed from '@/components/VideoEmbed.astro';
 import historicPhotoCadisBaptistChurchImage from '../../assets/images/cadis-baptist-church/historic-photo-cadis-baptist-church.jpg';
 import overgrownPorchImage from '../../assets/images/cadis-baptist-church/overgrown-porch-abandoned-rural-church.jpg';
 import pulpitPewsImage from '../../assets/images/cadis-baptist-church/pulpit-pews-abandoned-cadis-baptist-church.jpg';
@@ -46,11 +39,13 @@ import pastorRizzi1998Image from '../../assets/images/cadis-baptist-church/Pasto
 import historic2019Image from '../../assets/images/cadis-baptist-church/historic-2019-cadis-baptist-church.jpg';
 import historic1950Image from '../../assets/images/cadis-baptist-church/historic-1950-cadis-baptist-church.jpg';
 
-<VideoEmbed
-  videoUrl="https://player.vimeo.com/video/1122315412?badge=0&autopause=0&player_id=0&app_id=58479"
-  title="Cadis Baptist Church Walkthrough"
-  thumbnail={abandonedCadisThumbnailImage}
-  aspectRatio="2:1"
+<Image
+  src={heroImage}
+  alt={frontmatter.title}
+  style={{ width: '100%', borderRadius: '8px', margin: '2rem 0' }}
+  quality={85}
+  loading="eager"
+  fetchpriority="high"
 />
 
 # {frontmatter.title}
@@ -66,6 +61,7 @@ Regrettably, in March 2003, Cadis Baptist Church closed its doors due to a combi
     src={heroImage} 
     alt={"Overgrown exterior of Cadis Baptist Church with white clapboard siding"}
     className="gallery-image" 
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -79,6 +75,7 @@ Regrettably, in March 2003, Cadis Baptist Church closed its doors due to a combi
     src={historicPhotoCadisBaptistChurchImage} 
     alt={"Historic photograph showing Cadis Baptist Church with horse-drawn carriage"}
     className="gallery-image" 
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -91,6 +88,7 @@ Regrettably, in March 2003, Cadis Baptist Church closed its doors due to a combi
     src={overgrownPorchImage} 
     alt={"Covered front porch with overgrown shrubs and peeling paint"}
     className="gallery-image" 
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -103,6 +101,7 @@ Regrettably, in March 2003, Cadis Baptist Church closed its doors due to a combi
     src={pulpitPewsImage} 
     alt={"Pulpit featuring a 1970s cross with intact pews"}
     className="gallery-image" 
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -115,6 +114,7 @@ Regrettably, in March 2003, Cadis Baptist Church closed its doors due to a combi
     src={pewsImage} 
     alt={"Wooden pews transplanted from Warrenham Presbyterian Church"}
     className="gallery-image" 
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -127,6 +127,7 @@ Regrettably, in March 2003, Cadis Baptist Church closed its doors due to a combi
     src={religiousPamphletsImage} 
     alt={"Stack of religious pamphlets left on a table"}
     className="gallery-image" 
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -139,6 +140,7 @@ Regrettably, in March 2003, Cadis Baptist Church closed its doors due to a combi
     src={organImage} 
     alt={"Mason and Hamlin Style 800 pump organ inside the sanctuary"}
     className="gallery-image" 
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -151,6 +153,7 @@ Regrettably, in March 2003, Cadis Baptist Church closed its doors due to a combi
     src={birthdayRockImage} 
     alt={"Birthday rock keepsake resting on a wooden pew"}
     className="gallery-image" 
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -163,6 +166,7 @@ Regrettably, in March 2003, Cadis Baptist Church closed its doors due to a combi
     src={kineticBlowerImage} 
     alt={"Kinetic organ blower tucked away in the church basement"}
     className="gallery-image" 
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -175,6 +179,7 @@ Regrettably, in March 2003, Cadis Baptist Church closed its doors due to a combi
     src={sundaySchoolImage} 
     alt={"Sunday school brochures arranged on a wooden desk"}
     className="gallery-image" 
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -187,6 +192,7 @@ Regrettably, in March 2003, Cadis Baptist Church closed its doors due to a combi
     src={sundaySchoolPianoImage} 
     alt={"Sunlit upright piano used for Sunday school"}
     className="gallery-image" 
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -199,6 +205,7 @@ Regrettably, in March 2003, Cadis Baptist Church closed its doors due to a combi
     src={demolishedSiteImage} 
     alt={"Empty snowy lot where Cadis Baptist Church once stood"}
     className="gallery-image" 
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -211,6 +218,7 @@ Regrettably, in March 2003, Cadis Baptist Church closed its doors due to a combi
     src={pressSunBulletinImage} 
     alt={"Newspaper clipping announcing Rev. John W. Lee in 1957"}
     className="gallery-image" 
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -223,6 +231,7 @@ Regrettably, in March 2003, Cadis Baptist Church closed its doors due to a combi
     src={masonHamlinCatalogImage} 
     alt={"Catalog page describing the Mason & Hamlin Style 800 organ"}
     className="gallery-image" 
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -235,6 +244,7 @@ Regrettably, in March 2003, Cadis Baptist Church closed its doors due to a combi
     src={directory1900Image} 
     alt={"Directory listing for Rev. H.E. Mansfield in 1900"}
     className="gallery-image" 
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -247,6 +257,7 @@ Regrettably, in March 2003, Cadis Baptist Church closed its doors due to a combi
     src={historicRenderImage} 
     alt={"Illustrated rendering of Cadis Baptist Church before 1950"}
     className="gallery-image" 
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -259,6 +270,7 @@ Regrettably, in March 2003, Cadis Baptist Church closed its doors due to a combi
     src={abandonedChurch2019Image} 
     alt={"Wide interior photo of the church in winter"}
     className="gallery-image" 
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -271,6 +283,7 @@ Regrettably, in March 2003, Cadis Baptist Church closed its doors due to a combi
     src={starGazette1999Image} 
     alt={"Star Gazette clipping featuring Pastor Richard Curtis in 1999"}
     className="gallery-image" 
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -283,6 +296,7 @@ Regrettably, in March 2003, Cadis Baptist Church closed its doors due to a combi
     src={aerial1950Image} 
     alt={"PennDOT aerial image of Cadis Baptist Church from 1950"}
     className="gallery-image" 
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -295,6 +309,7 @@ Regrettably, in March 2003, Cadis Baptist Church closed its doors due to a combi
     src={google2021Image} 
     alt={"Google aerial view of the property in 2021"}
     className="gallery-image" 
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -307,6 +322,7 @@ Regrettably, in March 2003, Cadis Baptist Church closed its doors due to a combi
     src={mattGenovese2014Image} 
     alt={"Exterior photograph captured by Matt Genovese in 2014"}
     className="gallery-image" 
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -319,6 +335,7 @@ Regrettably, in March 2003, Cadis Baptist Church closed its doors due to a combi
     src={pastorRizzi1998Image} 
     alt={"1998 snow-covered photo taken by Pastor Richard Rizzi"}
     className="gallery-image" 
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -331,6 +348,7 @@ Regrettably, in March 2003, Cadis Baptist Church closed its doors due to a combi
     src={historic2019Image} 
     alt={"2019 photograph showing the church surrounded by trees"}
     className="gallery-image" 
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -343,6 +361,7 @@ Regrettably, in March 2003, Cadis Baptist Church closed its doors due to a combi
     src={historic1950Image} 
     alt={"1950 tax photograph documenting Cadis Baptist Church"}
     className="gallery-image" 
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -352,4 +371,11 @@ Regrettably, in March 2003, Cadis Baptist Church closed its doors due to a combi
 
 </div>
 
+<!-- Optional: include when citing sources -->
+<div aria-hidden="true" style={{ height: 0 }} />
+
+## Sources
+
+- [Source name](#)
+- [Source name](#)
 

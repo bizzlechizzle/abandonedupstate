@@ -29,26 +29,21 @@ import aerialView2014 from '../../assets/images/dw-winkleman/dw-winkelman-co-201
 import aerialView1938 from '../../assets/images/dw-winkleman/dw-winkelman-co-1938-aerial-view.jpg';
 import newspaper1945 from '../../assets/images/dw-winkleman/dw-winkleman-newspaper-1945-state-bid.jpg';
 
-<a href={heroImage.src} className="glightbox" data-title="Abandoned D.W. Winkelman Co. Inc. Exterior">
-  <Image 
-    src={heroImage} 
-    alt="Exterior of the abandoned D. W. Winkelman Co. warehouse with painted logo, East Side of Syracuse, New York" 
-    style={{width: '100%', borderRadius: '8px', margin: '2rem 0'}}
-    quality={85}
-    loading="eager"
-    fetchpriority="high"
-  />
-</a>
+<Image 
+  src={heroImage} 
+  alt="Exterior of the abandoned D. W. Winkelman Co. warehouse with painted logo, East Side of Syracuse, New York" 
+  style={{width: '100%', borderRadius: '8px', margin: '2rem 0'}}
+  quality={85}
+  loading="eager"
+  fetchpriority="high"
+/>
 
-# D.W. Winkelman Co. Inc.
-
-Syracuse's Most Tax-Delinquent Property
+# {frontmatter.title}
+<p className="post-tagline" style={{ color: "#b9975c" }}>{frontmatter.description}</p>
 
 D.W. Winkelman Co. Inc is an abandoned warehouse located on the East Side of Syracuse, NY. Owned and operated by Dwight W. Winkelman, the company originated in Chicago in 1924. Relocating to New York in 1930 for projects in the Adirondacks, Winkelman settled in Syracuse and established an office in 1937.
 
 Specializing in heavy construction, the company undertook projects ranging from airports and highways to buildings and military bases. In 1988, the site was designated as an inactive hazardous waste site due to the leakage of PCB-laden oil from three broken and vandalized transformers on the property, marking a significant event in the history of D.W. Winkelman Co. Inc.
-
-## Photo Gallery
 
 <div className="gallery gallery--two">
 
@@ -57,7 +52,7 @@ Specializing in heavy construction, the company undertook projects ranging from 
     src={exterior1} 
     alt="Dilapidated south-side garage doors of the abandoned D. W. Winkelman Co. warehouse in Syracuse, New York" 
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={75}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -71,7 +66,7 @@ Specializing in heavy construction, the company undertook projects ranging from 
     src={interior1} 
     alt="South entrance interior of the D. W. Winkelman Co. warehouse with sawtooth clerestory windows and stacked tires" 
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={75}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -84,7 +79,7 @@ Specializing in heavy construction, the company undertook projects ranging from 
     src={interior2} 
     alt="Crumbling interior masonry walls and exposed framing inside the abandoned D. W. Winkelman Co. warehouse in Syracuse" 
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={75}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -98,7 +93,7 @@ Specializing in heavy construction, the company undertook projects ranging from 
     src={crushedSedan} 
     alt="Crushed blue late-1980s sedan inside the D. W. Winkelman Co. warehouse amid debris" 
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={75}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -112,7 +107,7 @@ Specializing in heavy construction, the company undertook projects ranging from 
     src={collapsingOffice} 
     alt="Collapsed two-story interior office structure inside the abandoned D. W. Winkelman Co. warehouse in Syracuse, NY" 
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={75}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -125,7 +120,7 @@ Specializing in heavy construction, the company undertook projects ranging from 
     src={heavyTrucks} 
     alt="Heavy trucks left inside the D. W. Winkelman Co. warehouse, partially stripped and covered in dust" 
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={75}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -138,7 +133,7 @@ Specializing in heavy construction, the company undertook projects ranging from 
     src={strippedChevy} 
     alt="Stripped red Chevrolet C60 dump truck parked inside the former D. W. Winkelman Co. warehouse in Upstate New York" 
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={75}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -151,7 +146,7 @@ Specializing in heavy construction, the company undertook projects ranging from 
     src={abandonedInterior} 
     alt="Wide interior view of the D. W. Winkelman Co. warehouse showing open bays, peeling paint, and floor debris" 
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={75}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -164,7 +159,7 @@ Specializing in heavy construction, the company undertook projects ranging from 
     src={syracuseArticle} 
     alt="2014 newspaper clipping about the D. W. Winkelman Co. tax-delinquent property in Syracuse" 
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={75}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -177,7 +172,7 @@ Specializing in heavy construction, the company undertook projects ranging from 
     src={aerialView2014} 
     alt="2014 oblique aerial photograph of the D. W. Winkelman Co. property and surrounding East Side blocks in Syracuse" 
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={75}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -190,7 +185,7 @@ Specializing in heavy construction, the company undertook projects ranging from 
     src={aerialView1938} 
     alt="1938 vertical aerial photograph showing early development of the D. W. Winkelman Co. site in Syracuse, New York" 
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={75}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -203,7 +198,7 @@ Specializing in heavy construction, the company undertook projects ranging from 
     src={newspaper1945} 
     alt="1945 Dunkirk Evening Observer article announcing a New York State bid involving D. W. Winkelman Co." 
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={75}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -213,9 +208,12 @@ Specializing in heavy construction, the company undertook projects ranging from 
 
 </div>
 
+<div aria-hidden="true" style={{ height: 0 }} />
+
 ## Sources
 
 - [Syracuse.com - A tour of the top 10 tax-delinquent properties in Syracuse](https://www.syracuse.com/news/2014/04/a_tour_of_the_top_10_tax-delinquent_properties_in_syracuse.html)
 - [VHB Spatial - Onondaga County GIS](https://spatial.vhb.com/onondaga/)
 - [Cornell University Digital Library - Historical Aerial Photography](https://digital.library.cornell.edu/catalog/ss:203513)
 - [Newspapers.com - Dunkirk Evening Observer Archives](https://www.newspapers.com/image/56384738)
+

@@ -29,23 +29,20 @@ import senecaCountyFarmhouseAbandonedImage from '../../assets/images/the-cadilla
 import historicPhotographCadillacHouse1988Image from '../../assets/images/the-cadillac-house/historic-photograph-cadillac-house-1988.jpg';
 import historicCadillacHouse1938Image from '../../assets/images/the-cadillac-house/historic-cadillac-house-1938.jpg';
 
-<a href={heroImage.src} className="glightbox" data-title={"The Cadillac House"}>
-  <Image 
-    src={heroImage} 
-    alt={"The Cadillac House"}
-    style={{width: '100%', borderRadius: '8px', margin: '2rem 0'}}
-    quality={85}
-    loading="eager"
-    fetchpriority="high"
-  />
-</a>
+<Image 
+  src={heroImage} 
+  alt={"The Cadillac House"}
+  style={{width: '100%', borderRadius: '8px', margin: '2rem 0'}}
+  quality={85}
+  loading="eager"
+  fetchpriority="high"
+/>
 
-# The Cadillac House
-## Finger Lakes Region
+# {frontmatter.title}
+<p className="post-tagline" style={{ color: "#b9975c" }}>{frontmatter.description}</p>
 
 The Cadillac House is an abandoned residence situated in the Finger Lakes Region of Upstate New York. Constructed in 1840, the house follows the Farmhouse Greek Revival Style. The name "The Cadillac House" stems from the presence of a forgotten Cadillac Eldorado found in the garage. The property owner resides out of state and has a history of unpaid back taxes dating back to the 1980s. Evidently, this house, likely the owner's childhood home, has remained vacant since their parents passed away.
 
-## Photo Gallery
 
 <div className="gallery gallery--two">
 
@@ -54,7 +51,7 @@ The Cadillac House is an abandoned residence situated in the Finger Lakes Region
     src={abandonedOvergrownPorchCadillacHouseImage} 
     alt={"Overgrown Greek Revival Porch"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -68,7 +65,7 @@ The Cadillac House is an abandoned residence situated in the Finger Lakes Region
     src={upsideDownPianoCollapsedCadillacHouseImage} 
     alt={"Upside Down Piano"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -81,7 +78,7 @@ The Cadillac House is an abandoned residence situated in the Finger Lakes Region
     src={ornateFireplaceAbandonedCaddillacHouseImage} 
     alt={"Greek Key Fireplace Surround"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -94,7 +91,7 @@ The Cadillac House is an abandoned residence situated in the Finger Lakes Region
     src={retroRedDishwasherAbandonedCadillacHouseImage} 
     alt={"Red Vintage Dishwasher"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -107,7 +104,7 @@ The Cadillac House is an abandoned residence situated in the Finger Lakes Region
     src={trashedAbandoendCadilliacHouseImage} 
     alt={"White Greek Revival Farmhouse Door"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -120,7 +117,7 @@ The Cadillac House is an abandoned residence situated in the Finger Lakes Region
     src={abandonedCurvedStaircaseCadillacHouseImage} 
     alt={"Continuous Half-Turn Staircase"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -133,7 +130,7 @@ The Cadillac House is an abandoned residence situated in the Finger Lakes Region
     src={abandoned1971CadillacEldoradoConvertibleImage} 
     alt={"Overgrown Cadillac Convertible"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -146,7 +143,7 @@ The Cadillac House is an abandoned residence situated in the Finger Lakes Region
     src={abandonedLandYachtCaddyOvergrownHouseFingerLakesImage} 
     alt={"Cypress Green Metallic Cadillac"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -159,7 +156,7 @@ The Cadillac House is an abandoned residence situated in the Finger Lakes Region
     src={abandoned1971CadillacEldoradoConvertibleCypressGreenMetallicImage} 
     alt={"1971 Cadillac Eldorado Convertible"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -172,7 +169,7 @@ The Cadillac House is an abandoned residence situated in the Finger Lakes Region
     src={senecaCountyFarmhouseAbandonedImage} 
     alt={"Overgrown 1800s Farmhouse"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -185,7 +182,7 @@ The Cadillac House is an abandoned residence situated in the Finger Lakes Region
     src={historicPhotographCadillacHouse1988Image} 
     alt={"1988 Aerial Photo"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -198,7 +195,7 @@ The Cadillac House is an abandoned residence situated in the Finger Lakes Region
     src={historicCadillacHouse1938Image} 
     alt={"1938 Aerial Photo"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -207,3 +204,5 @@ The Cadillac House is an abandoned residence situated in the Finger Lakes Region
 </a>
 
 </div>
+
+

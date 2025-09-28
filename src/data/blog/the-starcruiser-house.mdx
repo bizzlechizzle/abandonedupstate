@@ -27,23 +27,20 @@ import relegiousBookAbandonedHouseImage from '../../assets/images/the-starcruise
 import upstairsBedroomTheStarcruiserHouseImage from '../../assets/images/the-starcruiser-house/upstairs-bedroom-the-starcruiser-house.jpg';
 import overgrownIndoorPoolTiogaCountyImage from '../../assets/images/the-starcruiser-house/overgrown-indoor-pool-tioga-county.jpg';
 
-<a href={heroImage.src} className="glightbox" data-title={"The Starcruiser House"}>
-  <Image 
-    src={heroImage} 
-    alt={"1870 Southern Tier Farmhouse"}
-    style={{width: '100%', borderRadius: '8px', margin: '2rem 0'}}
-    quality={85}
-    loading="eager"
-    fetchpriority="high"
-  />
-</a>
+<Image 
+  src={heroImage} 
+  alt={"1870 Southern Tier Farmhouse"}
+  style={{width: '100%', borderRadius: '8px', margin: '2rem 0'}}
+  quality={85}
+  loading="eager"
+  fetchpriority="high"
+/>
 
-# The Starcruiser House
-## Tioga County, New York
+# {frontmatter.title}
+<p className="post-tagline" style={{ color: "#b9975c" }}>{frontmatter.description}</p>
 
 The Starcruiser House is an abandoned rural residence situated in southern Tioga County, New York. Constructed in 1870, it follows the vernacular farmhouse architectural style. While not historically significant, what adds intrigue to this property is the presence of an abandoned Starcraft Starcruiser motor home. An aerial photograph from 1989 capture the RV parked alongside the house, adding a distinctive and intriguing element to its story.
 
-## Photo Gallery
 
 <div className="gallery gallery--two">
 
@@ -52,7 +49,7 @@ The Starcruiser House is an abandoned rural residence situated in southern Tioga
     src={starcruiserHouse1989PhotoImage} 
     alt={"1989 Aerial Photograph (Starcruiser)"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -66,7 +63,7 @@ The Starcruiser House is an abandoned rural residence situated in southern Tioga
     src={abandoned1973StarcraftStarcruiserMotorhomeImage} 
     alt={"1973 Starcraft Starcruiser Motorhome"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -79,7 +76,7 @@ The Starcruiser House is an abandoned rural residence situated in southern Tioga
     src={interiorAbandonedStarcraftRvImage} 
     alt={"Starcraft Starcruiser Interior"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -92,7 +89,7 @@ The Starcruiser House is an abandoned rural residence situated in southern Tioga
     src={starcruiserHouseTaxPhotoImage} 
     alt={"Tax Photograph (Date Unknown)"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -105,7 +102,7 @@ The Starcruiser House is an abandoned rural residence situated in southern Tioga
     src={livingRoomTaxidermyAbandonedHouseImage} 
     alt={"Framed Deer"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -118,7 +115,7 @@ The Starcruiser House is an abandoned rural residence situated in southern Tioga
     src={framedPekingesePhotographsStaircaseImage} 
     alt={"Framed Pekingese"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -131,7 +128,7 @@ The Starcruiser House is an abandoned rural residence situated in southern Tioga
     src={abandonedMasterBedroomStuffedDogImage} 
     alt={"Stuffed Pekingese"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -144,7 +141,7 @@ The Starcruiser House is an abandoned rural residence situated in southern Tioga
     src={relegiousBookAbandonedHouseImage} 
     alt={"\"Every Day With Jesus\""}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -157,7 +154,7 @@ The Starcruiser House is an abandoned rural residence situated in southern Tioga
     src={upstairsBedroomTheStarcruiserHouseImage} 
     alt={"Upstairs Framed Pekingese"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -170,7 +167,7 @@ The Starcruiser House is an abandoned rural residence situated in southern Tioga
     src={overgrownIndoorPoolTiogaCountyImage} 
     alt={"Overgrown Pool"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -179,3 +176,5 @@ The Starcruiser House is an abandoned rural residence situated in southern Tioga
 </a>
 
 </div>
+
+

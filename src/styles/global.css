@@ -129,11 +129,11 @@ html[data-theme="dark"] {
   .gallery {
     display: grid;
     column-gap: 1.5rem;
-    row-gap: 0.75rem;
-    margin: 2rem 0;
+    row-gap: 0.35rem;
+    margin: 0.5rem 0;
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
-  .gallery.gallery--two {
+.gallery.gallery--two {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
   @media (min-width: 48rem) {
@@ -141,6 +141,12 @@ html[data-theme="dark"] {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
+
+}
+
+/* Hide auto-generated heading anchors inside post content */
+.app-prose :is(h1, h2, h3, h4, h5, h6) > a[href^="#"] {
+  display: none !important;
 }
 
 @utility max-w-app {

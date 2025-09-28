@@ -29,23 +29,20 @@ import historicColiseumTrolleyPowerhouseImage from '../../assets/images/the-coli
 import historicColiseumRollerRinkAieral1986Image from '../../assets/images/the-coliseum/historic-coliseum-roller-rink-aieral-1986.jpg';
 import historicColisuemDrone2022Image from '../../assets/images/the-coliseum/historic-colisuem-drone-2022.jpg';
 
-<a href={heroImage.src} className="glightbox" data-title={"The Coliseum"}>
-  <Image 
-    src={heroImage} 
-    alt={"The Coliseum Powerhouse & Skating Rink"}
-    style={{width: '100%', borderRadius: '8px', margin: '2rem 0'}}
-    quality={85}
-    loading="eager"
-    fetchpriority="high"
-  />
-</a>
+<Image 
+  src={heroImage} 
+  alt={"The Coliseum Powerhouse & Skating Rink"}
+  style={{width: '100%', borderRadius: '8px', margin: '2rem 0'}}
+  quality={85}
+  loading="eager"
+  fetchpriority="high"
+/>
 
-# The Coliseum
-## Ceres, New York
+# {frontmatter.title}
+<p className="post-tagline" style={{ color: "#b9975c" }}>{frontmatter.description}</p>
 
 The Coliseum stands as an abandoned roller rink in Ceres, New York. Initially constructed in 1902, this brick structure served as a natural gas steam powerhouse to fuel the Olean - Bradford trolley line. In 1928, the building underwent a transformation, shedding its industrial past to become "The Coliseum at Ceres, Allegany County's newest and finest ballroom." Over the years, the structure hosted various businesses and venues before eventually settling into its role as the roller rink known today as "The Coliseum." However, the business met an unfortunate end in June 2005 when a tractor-trailer veered off the road, colliding with the north side brick wall and erupting into flames.
 
-## Photo Gallery
 
 <div className="gallery gallery--two">
 
@@ -54,7 +51,7 @@ The Coliseum stands as an abandoned roller rink in Ceres, New York. Initially co
     src={overgrownBenchAbandonedRollerRinkImage} 
     alt={"Overgrown Green Benches"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -68,7 +65,7 @@ The Coliseum stands as an abandoned roller rink in Ceres, New York. Initially co
     src={collapsedOvergrownRollerRinkImage} 
     alt={"Collapsed North Wall"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -81,7 +78,7 @@ The Coliseum stands as an abandoned roller rink in Ceres, New York. Initially co
     src={overgrownRollerSkatingRinkNyImage} 
     alt={"Mossy Roller Rink Barrier"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -94,7 +91,7 @@ The Coliseum stands as an abandoned roller rink in Ceres, New York. Initially co
     src={abandonedRollerBladeWheelsImage} 
     alt={"Seiko Inline Skate Wheels - 82A"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -107,7 +104,7 @@ The Coliseum stands as an abandoned roller rink in Ceres, New York. Initially co
     src={abandonedRollerRinkLockerImage} 
     alt={"Roller Rink Locker #13"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -120,7 +117,7 @@ The Coliseum stands as an abandoned roller rink in Ceres, New York. Initially co
     src={abandonedRollerSkatesImage} 
     alt={"\"Skate Room\" Rental Shop"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -133,7 +130,7 @@ The Coliseum stands as an abandoned roller rink in Ceres, New York. Initially co
     src={childRollerSkatesCollapsedRollerSkatingRinkImage} 
     alt={"Infant Roller Skate"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -146,7 +143,7 @@ The Coliseum stands as an abandoned roller rink in Ceres, New York. Initially co
     src={skateShopSignAbandonedRollerRinkImage} 
     alt={"\"Visit Our Skate Style Shop\""}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -159,7 +156,7 @@ The Coliseum stands as an abandoned roller rink in Ceres, New York. Initially co
     src={abandonedRollerRinkSignImage} 
     alt={"NO LIABILITY FOR WANTING TO EXPLORE"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -172,7 +169,7 @@ The Coliseum stands as an abandoned roller rink in Ceres, New York. Initially co
     src={historicColiseumTrolleyPowerhouseImage} 
     alt={"Ceres \"Coliseum\" Trolley Powerhouse (Date Unknown)"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -185,7 +182,7 @@ The Coliseum stands as an abandoned roller rink in Ceres, New York. Initially co
     src={historicColiseumRollerRinkAieral1986Image} 
     alt={"1986 Aerial Photograph"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -198,7 +195,7 @@ The Coliseum stands as an abandoned roller rink in Ceres, New York. Initially co
     src={historicColisuemDrone2022Image} 
     alt={"2022 Drone Photograph"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -207,3 +204,5 @@ The Coliseum stands as an abandoned roller rink in Ceres, New York. Initially co
 </a>
 
 </div>
+
+

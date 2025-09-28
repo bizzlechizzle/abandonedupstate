@@ -33,25 +33,22 @@ import chandelierCeiling from '../../assets/images/congregation-bnai-israel/syna
 import rottingStairs from '../../assets/images/congregation-bnai-israel/synogague-rotting-wood-stairs.jpg';
 import newspaper1928 from '../../assets/images/congregation-bnai-israel/1928-newspaper-clipping-democrat-chronicle-synagogue.jpg';
 
-<a href={heroImage.src} className="glightbox" data-title="Congregation B'Nai Israel Synagogue">
-  <Image 
-    src={heroImage} 
-    alt="Front elevation of the abandoned Congregation B'Nai Israel Synagogue on Joseph Avenue, Rochester"
-    style={{width: '100%', borderRadius: '8px', margin: '2rem 0'}}
-    quality={85}
-    loading="eager"
-    fetchpriority="high"
-  />
-</a>
+<Image 
+  src={heroImage} 
+  alt="Front elevation of the abandoned Congregation B'Nai Israel Synagogue on Joseph Avenue, Rochester"
+  style={{width: '100%', borderRadius: '8px', margin: '2rem 0'}}
+  quality={85}
+  loading="eager"
+  fetchpriority="high"
+/>
 
-# Congregation B'Nai Israel Synagogue
-## Rochester, New York
+# {frontmatter.title}
+<p className="post-tagline" style={{ color: "#b9975c" }}>{frontmatter.description}</p>
 
 Historic Joseph Avenue synagogue poised for adaptive reuse as the neighborhood pursues cultural revitalization.
 
 The Congregation B’Nai Israel (Congregation Ahavas Achim Anshi Austria) synagogue, located at 692 Joseph Avenue in Rochester, New York, is a significant historical and cultural landmark. Established in 1928, it has been a central part of the Jewish community, serving as a hub for religious and social activities. The synagogue is one of the oldest existing structures from the 20th century in the area. Recently, there have been plans to renovate the building into a performing arts center, which is part of a broader initiative to revitalize the Joseph Avenue area. This transformation aims to breathe new life into the historic structure while preserving its cultural heritage.
 
-## Photo Gallery
 
 <div className="gallery gallery--two">
 
@@ -60,7 +57,7 @@ The Congregation B’Nai Israel (Congregation Ahavas Achim Anshi Austria) synago
     src={historic1928} 
     alt="August 1928 photograph of Congregation Ahavas Achim Anshi Austria on Joseph Avenue"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -74,7 +71,7 @@ The Congregation B’Nai Israel (Congregation Ahavas Achim Anshi Austria) synago
     src={taxPhoto1995} 
     alt="1995 tax photograph documenting Congregation B'Nai Israel Synagogue"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -88,7 +85,7 @@ The Congregation B’Nai Israel (Congregation Ahavas Achim Anshi Austria) synago
     src={march2017} 
     alt="2017 streetscape view of Congregation B'Nai Israel Synagogue in Rochester"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -101,7 +98,7 @@ The Congregation B’Nai Israel (Congregation Ahavas Achim Anshi Austria) synago
     src={exteriorStreetscape} 
     alt="Exterior of Congregation B'Nai Israel Synagogue along Joseph Avenue"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -114,7 +111,7 @@ The Congregation B’Nai Israel (Congregation Ahavas Achim Anshi Austria) synago
     src={basementHallway} 
     alt="Basement corridor with exposed pipes inside Congregation B'Nai Israel Synagogue"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -127,7 +124,7 @@ The Congregation B’Nai Israel (Congregation Ahavas Achim Anshi Austria) synago
     src={numberedPews} 
     alt="Close view of numbered wooden pews within the abandoned synagogue"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -140,7 +137,7 @@ The Congregation B’Nai Israel (Congregation Ahavas Achim Anshi Austria) synago
     src={numberedPewsWide} 
     alt="Wide view of sanctuary seating rows at Congregation B'Nai Israel"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -153,7 +150,7 @@ The Congregation B’Nai Israel (Congregation Ahavas Achim Anshi Austria) synago
     src={mainPews} 
     alt="Main sanctuary pews facing the bimah inside the synagogue"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -166,7 +163,7 @@ The Congregation B’Nai Israel (Congregation Ahavas Achim Anshi Austria) synago
     src={sanctuaryPillar} 
     alt="Painted column supporting the balcony inside Congregation B'Nai Israel"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -179,7 +176,7 @@ The Congregation B’Nai Israel (Congregation Ahavas Achim Anshi Austria) synago
     src={entranceFacade} 
     alt="Street-level entrance detail of Congregation B'Nai Israel Synagogue"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -192,7 +189,7 @@ The Congregation B’Nai Israel (Congregation Ahavas Achim Anshi Austria) synago
     src={stainedGlass} 
     alt="Stained glass windows over the main sanctuary pews"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -205,7 +202,7 @@ The Congregation B’Nai Israel (Congregation Ahavas Achim Anshi Austria) synago
     src={brokenStarWindow} 
     alt="Broken stained-glass window featuring a Star of David motif"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -218,7 +215,7 @@ The Congregation B’Nai Israel (Congregation Ahavas Achim Anshi Austria) synago
     src={balconySeating} 
     alt="Balcony seating overlooking the sanctuary of Congregation B'Nai Israel"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -231,7 +228,7 @@ The Congregation B’Nai Israel (Congregation Ahavas Achim Anshi Austria) synago
     src={chandelierCeiling} 
     alt="Decorative ceiling and chandelier inside the synagogue"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -244,7 +241,7 @@ The Congregation B’Nai Israel (Congregation Ahavas Achim Anshi Austria) synago
     src={rottingStairs} 
     alt="Rotting wooden staircase leading toward the synagogue balcony"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -257,7 +254,7 @@ The Congregation B’Nai Israel (Congregation Ahavas Achim Anshi Austria) synago
     src={newspaper1928} 
     alt="May 1928 Democrat and Chronicle clipping announcing the synagogue dedication"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -274,4 +271,5 @@ The Congregation B’Nai Israel (Congregation Ahavas Achim Anshi Austria) synago
 <div style={{textAlign: 'center', fontSize: '0.85rem', color: 'var(--color-text-muted)', marginBottom: '3rem'}}>
   Copyright © 2024 The Abandoned Upstate Project. All Rights Reserved.
 </div>
+
 

@@ -27,25 +27,22 @@ import galleryPool from '../../assets/images/lafayette-hills-country-club/abando
 import gallerySnackShack from '../../assets/images/lafayette-hills-country-club/snack-shack-lafayette-hills-golf-country-club.jpg';
 import galleryTennis from '../../assets/images/lafayette-hills-country-club/tennis-court-lafayette-hills-golf-country-club-syr-ny.jpg';
 
-<a href={heroImage.src} className="glightbox" data-title="LaFayette Hills Golf Country Club">
-  <Image 
-    src={heroImage} 
-    alt="View of the LaFayette Hills Golf Country Club clubhouse from the course"
-    style={{width: '100%', borderRadius: '8px', margin: '2rem 0'}}
-    quality={85}
-    loading="eager"
-    fetchpriority="high"
-  />
-</a>
+<Image 
+  src={heroImage} 
+  alt="View of the LaFayette Hills Golf Country Club clubhouse from the course"
+  style={{width: '100%', borderRadius: '8px', margin: '2rem 0'}}
+  quality={85}
+  loading="eager"
+  fetchpriority="high"
+/>
 
-# LaFayette Hills Golf Country Club
-## Jamesville, New York
+# {frontmatter.title}
+<p className="post-tagline" style={{ color: "#b9975c" }}>{frontmatter.description}</p>
 
 Historic Jamesville course dating to 1923 yet closed after membership collapse and tax disputes.
 
 LaFayette Hills Golf & Country Club, nestled in Jamesville, New York, was a semi-private golf course established in 1923. It featured an 18-hole layout designed by Seymour Dunn, covering a span of 6550 yards with a par of 71. Despite its historical charm and available amenities like a driving range and clubhouse facilities, the club faced a sharp decline in membership, culminating in its closure. The club’s last known operations suggest dwindling support and financial instability, which was exacerbated by a tax dispute with the city of Syracuse and a significant drop in membership from 350 to zero by 2013
 
-## Photo Gallery
 
 <div className="gallery gallery--two">
 
@@ -54,7 +51,7 @@ LaFayette Hills Golf & Country Club, nestled in Jamesville, New York, was a semi
     src={galleryExterior} 
     alt="Exterior of the LaFayette Hills Golf & Country Club clubhouse"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -68,7 +65,7 @@ LaFayette Hills Golf & Country Club, nestled in Jamesville, New York, was a semi
     src={galleryLobby} 
     alt="Lobby space inside the LaFayette Hills clubhouse with lounge chairs"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -81,7 +78,7 @@ LaFayette Hills Golf & Country Club, nestled in Jamesville, New York, was a semi
     src={galleryShoeRental} 
     alt="Golf shoe rental shelves inside the abandoned country club"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -94,7 +91,7 @@ LaFayette Hills Golf & Country Club, nestled in Jamesville, New York, was a semi
     src={galleryShoes} 
     alt="Abandoned golf shoes left on the pro shop floor"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -107,7 +104,7 @@ LaFayette Hills Golf & Country Club, nestled in Jamesville, New York, was a semi
     src={galleryBar} 
     alt="Abandoned bar counter inside the LaFayette Hills country club"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -120,7 +117,7 @@ LaFayette Hills Golf & Country Club, nestled in Jamesville, New York, was a semi
     src={galleryBoardRoom} 
     alt="Board room table and chairs left in disarray"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -133,7 +130,7 @@ LaFayette Hills Golf & Country Club, nestled in Jamesville, New York, was a semi
     src={galleryCourse} 
     alt="Overgrown golf course at LaFayette Hills"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -146,7 +143,7 @@ LaFayette Hills Golf & Country Club, nestled in Jamesville, New York, was a semi
     src={galleryPool} 
     alt="Abandoned swimming pool at LaFayette Hills Golf & Country Club"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -159,7 +156,7 @@ LaFayette Hills Golf & Country Club, nestled in Jamesville, New York, was a semi
     src={gallerySnackShack} 
     alt="Snack shack service window along the golf course"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -172,7 +169,7 @@ LaFayette Hills Golf & Country Club, nestled in Jamesville, New York, was a semi
     src={galleryTennis} 
     alt="Tennis court with overgrown surface at the club"
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -189,4 +186,5 @@ LaFayette Hills Golf & Country Club, nestled in Jamesville, New York, was a semi
 <div style={{textAlign: 'center', fontSize: '0.85rem', color: 'var(--color-text-muted)', marginBottom: '3rem'}}>
   Copyright © 2024 The Abandoned Upstate Project. All Rights Reserved.
 </div>
+
 

@@ -5,9 +5,9 @@ description: Rome's Lockerless Elementary Relic
 featured: false
 draft: false
 tags:
-- rome
-- school
-- education
+- new york
+- cny
+- schools
 ogImage: ../../assets/images/columbus-school/historic-exploring-abandoned-columbus-school.jpg
 author: Bryant Neal
 ---
@@ -29,23 +29,20 @@ import brokenDoorsColumbusElementarySchoolImage from '../../assets/images/columb
 import chairLadderAbandonedRomeNewYorkSchoolImage from '../../assets/images/columbus-school/chair-ladder-abandoned-rome-new-york-school.jpg';
 import basketballHoopAbandonedColumbusSchoolImage from '../../assets/images/columbus-school/basketball-hoop-abandoned-columbus-school.jpg';
 
-<a href={heroImage.src} className="glightbox" data-title={"Columbus School"}>
-  <Image 
-    src={heroImage} 
-    alt={"Columbus School"}
-    style={{width: '100%', borderRadius: '8px', margin: '2rem 0'}}
-    quality={85}
-    loading="eager"
-    fetchpriority="high"
-  />
-</a>
+<Image 
+  src={heroImage} 
+  alt={"Columbus School"}
+  style={{width: '100%', borderRadius: '8px', margin: '2rem 0'}}
+  quality={85}
+  loading="eager"
+  fetchpriority="high"
+/>
 
-# Columbus School
-## Rome, New York
+# {frontmatter.title}
+<p className="post-tagline" style={{ color: "#b9975c" }}>{frontmatter.description}</p>
 
 Columbus School is an abandoned elementary school situated on the east side of Rome, New York. Established in 1923, it was named Columbus School following written requests from students in November of the same year. Operating for several decades, the school remained open until the late 1990s and continued to serve various purposes for the local community, including functioning as an interim place station into the early 2000s. Despite its closure, Columbus School has been bought and relisted for sale multiple times, yet it remains unrepurposed.
 
-## Photo Gallery
 
 <div className="gallery gallery--two">
 
@@ -54,7 +51,7 @@ Columbus School is an abandoned elementary school situated on the east side of R
     src={historicPhotoColumbusSchool1945Image} 
     alt={"Columbus School - 1945"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -68,7 +65,7 @@ Columbus School is an abandoned elementary school situated on the east side of R
     src={historicColumbusSchoolRoomClassPhotoImage} 
     alt={"1955 Class Photograph"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -81,7 +78,7 @@ Columbus School is an abandoned elementary school situated on the east side of R
     src={historicPhotoColumbusSchool2012Image} 
     alt={"2012 For Sale Listing"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -94,7 +91,7 @@ Columbus School is an abandoned elementary school situated on the east side of R
     src={abandonedCafetoriumColumbusSchoolImage} 
     alt={"Elementary Auditorium & Cafeteria"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -107,7 +104,7 @@ Columbus School is an abandoned elementary school situated on the east side of R
     src={abandonedCafetoriumElementarySchoolRomeImage} 
     alt={"Blue Cafetorium"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -120,7 +117,7 @@ Columbus School is an abandoned elementary school situated on the east side of R
     src={abandonedStaircaseColumbusSchoolImage} 
     alt={"Yellow and Blue Stairwell"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -133,7 +130,7 @@ Columbus School is an abandoned elementary school situated on the east side of R
     src={abandonedHallwayAbandonedColumbusSchoolImage} 
     alt={"Wall Hooks Only (No Lockers)"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -146,7 +143,7 @@ Columbus School is an abandoned elementary school situated on the east side of R
     src={classroomDeskAbandonedColumbusSchoolImage} 
     alt={"Metal Desk in Upstairs Classroom"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -159,7 +156,7 @@ Columbus School is an abandoned elementary school situated on the east side of R
     src={abandonedHallwayCoatHooksElementarySchoolImage} 
     alt={"Projection Room Hallway"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -172,7 +169,7 @@ Columbus School is an abandoned elementary school situated on the east side of R
     src={brokenDoorsColumbusElementarySchoolImage} 
     alt={"Paint Peeled Hallway"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -185,7 +182,7 @@ Columbus School is an abandoned elementary school situated on the east side of R
     src={chairLadderAbandonedRomeNewYorkSchoolImage} 
     alt={"Modern Chair Art Display"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -198,7 +195,7 @@ Columbus School is an abandoned elementary school situated on the east side of R
     src={basketballHoopAbandonedColumbusSchoolImage} 
     alt={"Columbus Cougars Gymnasium"}
     className="gallery-image" 
-    style={{width: '100%', height: '250px', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
+    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
     quality={80}
     widths={[300, 600, 900]}
     sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -207,3 +204,5 @@ Columbus School is an abandoned elementary school situated on the east side of R
 </a>
 
 </div>
+
+
