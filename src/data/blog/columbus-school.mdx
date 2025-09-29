@@ -1,14 +1,20 @@
 ---
 title: Columbus School
+seoTitle: Columbus School | Abandoned Rome NY Elementary School of the Cougars
 pubDatetime: 2020-05-27 02:59:00-05:00
-description: Rome's Lockerless Elementary Relic
+description: Home of the Columbus Cougars
+seoDescription: Walk through the demolished Columbus School in Rome, New York, where Cougars classrooms and hallways now echo with peeling paint.
 featured: false
 draft: false
 tags:
 - new york
 - cny
 - schools
-ogImage: ../../assets/images/columbus-school/historic-exploring-abandoned-columbus-school.jpg
+- demolished
+heroImage: ../../assets/images/columbus-school/historic-exploring-abandoned-columbus-school.jpg
+heroImageAlt: "Abandoned Columbus School exterior in Rome, New York"
+seoImage: ../../assets/images/columbus-school/historic-exploring-abandoned-columbus-school.jpg
+canonicalURL: https://abandonedupstate.com/posts/columbus-school/
 author: Bryant Neal
 ---
 
@@ -31,7 +37,7 @@ import basketballHoopAbandonedColumbusSchoolImage from '../../assets/images/colu
 
 <Image 
   src={heroImage} 
-  alt={"Columbus School"}
+  alt={frontmatter.heroImageAlt ?? frontmatter.title}
   style={{width: '100%', borderRadius: '8px', margin: '2rem 0'}}
   quality={85}
   loading="eager"
@@ -204,5 +210,4 @@ Columbus School is an abandoned elementary school situated on the east side of R
 </a>
 
 </div>
-
 

@@ -1,14 +1,21 @@
 ---
 title: Richardson Olmsted Complex
+seoTitle: Richardson Olmsted Complex | Buffalo State Hospital Reborn as Hotel Henry
 pubDatetime: 2019-10-27 02:59:00-05:00
-description: Buffalo's Haunted Asylum Hotel
+description: From Asylum to Historic Hotel
+seoDescription: Follow Buffalo's Richardson Olmsted Complex from its origins as a Kirkbride psychiatric hospital to its rebirth as the Hotel Henry and Richardson Hospitality campus.
 featured: false
 draft: false
 tags:
+- new york
 - buffalo
-- kirkbride
-- hospital
-ogImage: ../../assets/images/richard-olmsted-complex/hotel-henry-drone-2022.jpg
+- wny
+- hospitals
+- renovated
+heroImage: ../../assets/images/richard-olmsted-complex/hotel-henry-drone-2022.jpg
+heroImageAlt: "Aerial photograph of Buffalo's Richardson Olmsted Complex taken in 2022"
+seoImage: ../../assets/images/richard-olmsted-complex/hotel-henry-drone-2022.jpg
+canonicalURL: https://abandonedupstate.com/posts/richard-olmsted-complex/
 author: Bryant Neal
 ---
 
@@ -31,7 +38,7 @@ import hotelHenryHallway2019Image from '../../assets/images/richard-olmsted-comp
 
 <Image 
   src={heroImage} 
-  alt={"Buffalo State Hospital - Aerial Photo 2022"}
+  alt={frontmatter.heroImageAlt ?? frontmatter.title}
   style={{width: '100%', borderRadius: '8px', margin: '2rem 0'}}
   quality={85}
   loading="eager"
@@ -206,5 +213,4 @@ In 2017, the complex underwent a partial restoration and was repurposed into a u
 </a>
 
 </div>
-
 

@@ -24,9 +24,13 @@ const { post, posts } = Astro.props;
 
 const {
   title,
+  seoTitle,
   author,
   description,
-  ogImage: initOgImage,
+  seoDescription,
+  heroImage: initHeroImage,
+  seoImage: initSeoImage,
+  ogImage: legacyOgImage,
   canonicalURL,
   pubDatetime,
   modDatetime,
@@ -40,34 +44,40 @@ const showLayoutTitle = displayTitleInLayout !== false;
 
 const { Content } = await render(post);
 
-let ogImageUrl: string | undefined;
+const resolveImageUrl = (image?: { src?: string } | string) => {
+  if (typeof image === "string") return image;
+  if (image?.src) return image.src;
+  return undefined;
+};
 
-// Determine OG image source
-if (typeof initOgImage === "string") {
-  ogImageUrl = initOgImage; // Remote OG image (absolute URL)
-} else if (initOgImage?.src) {
-  ogImageUrl = initOgImage.src; // Local asset
-}
+const heroImageUrl = resolveImageUrl(initHeroImage ?? legacyOgImage);
 
-// Use dynamic OG image if enabled and no remote|local ogImage
+let ogImageUrl =
+  resolveImageUrl(initSeoImage ?? legacyOgImage) ?? heroImageUrl;
+
+// Use dynamic OG image if enabled and we still do not have an explicit image
 if (!ogImageUrl && SITE.dynamicOgImage) {
   ogImageUrl = `${getPath(post.id, post.filePath)}/index.png`;
 }
 
-// Resolve OG image URL (or fallback to SITE.ogImage / default `og.png`)
 const ogImage = ogImageUrl
   ? new URL(ogImageUrl, Astro.url.origin).href
   : undefined;
 
+const canonicalUrl =
+  canonicalURL ??
+  new URL(getPath(post.id, post.filePath), SITE.website).href;
+
 const layoutProps = {
-  title: `${title} | ${SITE.title}`,
+  title: seoTitle ?? `${title} | ${SITE.title}`,
   author,
-  description,
+  description: seoDescription ?? description,
   pubDatetime,
   modDatetime,
-  canonicalURL,
+  canonicalURL: canonicalUrl,
   ogImage,
   scrollSmooth: true,
+  schemaHeadline: title,
 };
 
 /* ========== Prev/Next Locations ========== */
@@ -328,7 +338,7 @@ const nextPost =
   display: block;
   width: 100%;
   height: auto !important;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: inherit;
   box-shadow: 0 8px 18px rgba(17, 24, 39, 0.12);

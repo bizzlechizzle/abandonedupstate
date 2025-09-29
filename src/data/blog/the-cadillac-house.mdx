@@ -1,14 +1,20 @@
 ---
 title: The Cadillac House
+seoTitle: The Cadillac House | Abandoned Finger Lakes Farmhouse With 1971 Eldorado
 pubDatetime: 2023-09-28 02:59:00-05:00
-description: Cadillac Convertible Farmhouse Timecapsule
+description: Farmhouse With Forgotten Cadillac
+seoDescription: Peek inside the Cadillac House in New York's Finger Lakes, a farmhouse hiding a 1971 Cadillac Eldorado and decades of rural collectibles.
 featured: false
 draft: false
 tags:
 - new york
+- finger lakes
 - houses
 - automobiles
-ogImage: ../../assets/images/the-cadillac-house/historic-cadillac-farmhouse-fingerlakes.jpg
+heroImage: ../../assets/images/the-cadillac-house/historic-cadillac-farmhouse-fingerlakes.jpg
+heroImageAlt: "Abandoned farmhouse known as the Cadillac House in New York's Finger Lakes region"
+seoImage: ../../assets/images/the-cadillac-house/historic-cadillac-farmhouse-fingerlakes.jpg
+canonicalURL: https://abandonedupstate.com/posts/the-cadillac-house/
 author: Bryant Neal
 ---
 
@@ -31,7 +37,7 @@ import historicCadillacHouse1938Image from '../../assets/images/the-cadillac-hou
 
 <Image 
   src={heroImage} 
-  alt={"The Cadillac House"}
+  alt={frontmatter.heroImageAlt ?? frontmatter.title}
   style={{width: '100%', borderRadius: '8px', margin: '2rem 0'}}
   quality={85}
   loading="eager"
@@ -204,5 +210,4 @@ The Cadillac House is an abandoned residence situated in the Finger Lakes Region
 </a>
 
 </div>
-
 

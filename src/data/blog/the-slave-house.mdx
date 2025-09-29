@@ -1,17 +1,23 @@
 ---
 title: The Slave House
+seoTitle: The Slave House | Abandoned Tioga County Print Shop and Folklore Landmark
 pubDatetime: 2023-01-07 02:59:00-05:00
-description: Upstate New York’s Last Slave Home
+description: Uncovering Tioga County’s Past
+seoDescription: Investigate the so-called Slave House in Tioga County, New York—a rural homestead tied to Underground Railroad lore and later home to a family print shop.
 featured: true
 featuredCaption: The Slave House is an abandoned residence in Tioga County, New York.
   Once rumored to shelter the enslaved workers of Colonel William Ransom, it later
   housed Marvin and Beatrice Godfrey's print shop.
+featuredDescription: A Tioga County homestead layered with Underground Railroad folklore and mid-century printing history.
 draft: false
 tags:
 - new york
-- house
-- print shop
-ogImage: ../../assets/images/the-slave-house-0zlel/historic-aerial-photograph-1990-slave-house.jpg
+- southern tier
+- houses
+heroImage: ../../assets/images/the-slave-house-0zlel/historic-aerial-photograph-1990-slave-house.jpg
+heroImageAlt: "1990 aerial photograph of the abandoned Slave House in Tioga County, New York"
+seoImage: ../../assets/images/the-slave-house-0zlel/historic-aerial-photograph-1990-slave-house.jpg
+canonicalURL: https://abandonedupstate.com/posts/the-slave-house/
 author: Bryant Neal
 ---
 
@@ -59,7 +65,7 @@ The Slave House is an abandoned residence located in Tioga County, New York. Con
 <a href={heroImage.src} className="glightbox gallery-item" data-gallery="the-slave-house-0zlel" data-title={"Aerial Photo - 1990"}>
   <Image 
     src={heroImage} 
-    alt={"Aerial Photo - 1990"}
+    alt={frontmatter.heroImageAlt ?? frontmatter.title}
     className="gallery-image" 
     quality={80}
     widths={[300, 600, 900]}
@@ -298,5 +304,4 @@ The Slave House is an abandoned residence located in Tioga County, New York. Con
 </a>
 
 </div>
-
 

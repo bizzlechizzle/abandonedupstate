@@ -1,14 +1,19 @@
 ---
 title: The Dog House (Barndominium)
+seoTitle: The Dog House Barndominium | Abandoned Cornell Barn Home in Owego NY
 pubDatetime: 2021-09-27 08:18:00-04:00
-description: Cornell Grad's Barn Hideout
+description: Cornell Grad’s Abandoned Dog House
+seoDescription: Explore the Dog House barndominium in Owego, New York, where a Cornell graduate converted a barn into an offbeat home now left to the elements.
 featured: false
 draft: false
 tags:
 - new york
-- houses
 - southern tier
-ogImage: ../../assets/images/the-dog-house-barndominium/historic-abandoned-barn-dog-house-owego.jpg
+- houses
+heroImage: ../../assets/images/the-dog-house-barndominium/historic-abandoned-barn-dog-house-owego.jpg
+heroImageAlt: "Abandoned Dog House barndominium near Owego in Tioga County, New York"
+seoImage: ../../assets/images/the-dog-house-barndominium/historic-abandoned-barn-dog-house-owego.jpg
+canonicalURL: https://abandonedupstate.com/posts/the-dog-house-barndominium/
 author: Bryant Neal
 ---
 
@@ -29,7 +34,7 @@ import abandonedRedHondaCx500Image from '../../assets/images/the-dog-house-barnd
 
 <Image 
   src={heroImage} 
-  alt={"Illegal Barn Dwelling - Tioga County, NY"}
+  alt={frontmatter.heroImageAlt ?? frontmatter.title}
   style={{width: '100%', borderRadius: '8px', margin: '2rem 0'}}
   quality={85}
   loading="eager"
@@ -178,5 +183,4 @@ The circumstances surrounding how a Cornell graduate came to reside in this unco
 </a>
 
 </div>
-
 

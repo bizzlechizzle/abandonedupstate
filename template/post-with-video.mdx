@@ -1,15 +1,21 @@
 ---
 title: "Cadis Baptist Church"
+seoTitle: "Cadis Baptist Church | Abandoned Rural Church in Rome Pennsylvania"
 pubDatetime: 2015-10-06T02:59:00-05:00
 description: "Rural Pennsylvania’s Most Forgotten Church"
+seoDescription: "Step inside Cadis Baptist Church in Rome, Pennsylvania, a forgotten Free Will Baptist congregation founded in 1834 and left to weather among the Endless Mountains."
 featured: true
 featuredCaption: "Cadis Baptist Church is a rural Baptist church located in Rome, Pennsylvania. Founded in 1834, its congregation was initially known as the First Free Will Baptist Church of Windham. The church building was constructed in 1881 in the town of Mecca, retaining the same name."
+featuredDescription: "A 19th-century Free Will Baptist church in rural Pennsylvania preserved in photographs before demolition."
 draft: false
 tags:
   - pennsylvania
   - faith
   - churches
-ogImage: ../../assets/images/cadis-baptist-church/abandoned-rural-cadis-baptist-church-rome-pa.jpg
+heroImage: ../../assets/images/cadis-baptist-church/abandoned-rural-cadis-baptist-church-rome-pa.jpg
+heroImageAlt: "Abandoned Cadis Baptist Church surrounded by overgrown grass in Rome, Pennsylvania"
+seoImage: ../../assets/images/cadis-baptist-church/abandoned-rural-cadis-baptist-church-rome-pa.jpg
+canonicalURL: https://abandonedupstate.com/posts/cadis-baptist-church/
 ---
 
 import { Image } from "astro:assets";
@@ -64,7 +70,7 @@ Regrettably, in March 2003, Cadis Baptist Church closed its doors due to a combi
 <a href={heroImage.src} className="glightbox gallery-item" data-gallery="cadis-baptist-church" data-title={"Cadis Baptist Church Exterior"}>
   <Image 
     src={heroImage} 
-    alt={"Overgrown exterior of Cadis Baptist Church with white clapboard siding"}
+    alt={frontmatter.heroImageAlt ?? frontmatter.title}
     className="gallery-image" 
     quality={80}
     widths={[300, 600, 900]}

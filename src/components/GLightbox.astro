@@ -6,7 +6,21 @@
   import GLightbox from 'glightbox';
   import 'glightbox/dist/css/glightbox.min.css';
   
+  function syncLightboxCaptions(root = document) {
+    const links = root.querySelectorAll('a.glightbox');
+    links.forEach(link => {
+      const img = link.querySelector('img');
+      if (!link.dataset.title && img?.alt) {
+        link.dataset.title = img.alt;
+      }
+      if (img?.alt && !link.dataset.description) {
+        link.dataset.description = img.alt;
+      }
+    });
+  }
+
   function initGLightbox() {
+    syncLightboxCaptions();
     // Initialize GLightbox
     const lightbox = GLightbox({
       touchNavigation: true,
@@ -35,6 +49,7 @@
 
     // Re-initialize when navigating (for Astro transitions)
     document.addEventListener('astro:page-load', () => {
+      syncLightboxCaptions();
       lightbox.reload();
     });
   }

@@ -1,14 +1,19 @@
 ---
 title: Charlotte Kenyon Elementary
+seoTitle: Charlotte Kenyon Elementary | Abandoned Riverside School in Chenango Forks NY
 pubDatetime: 2015-11-09 03:00:00-05:00
 description: Rural Riverside Central School
+seoDescription: Step inside Charlotte Kenyon Elementary in Chenango Forks, New York, a riverside school left with stacked chairs, art room sinks, and quiet hallways.
 featured: false
 draft: false
 tags:
 - new york
 - southern tier
 - schools
-ogImage: ../../assets/images/charlotte-kenyon-elementary/historic-charlotte-kenyon-school-chenago-forks.jpg
+heroImage: ../../assets/images/charlotte-kenyon-elementary/historic-charlotte-kenyon-school-chenago-forks.jpg
+heroImageAlt: "Abandoned Charlotte Kenyon Elementary School in Chenango Forks, New York"
+seoImage: ../../assets/images/charlotte-kenyon-elementary/historic-charlotte-kenyon-school-chenago-forks.jpg
+canonicalURL: https://abandonedupstate.com/posts/charlotte-kenyon-elementary/
 author: Bryant Neal
 ---
 
@@ -29,7 +34,7 @@ import charlotteKenyonElementarySchoolArtRoomSinkImage from '../../assets/images
 
 <Image 
   src={heroImage} 
-  alt={"Charlotte Kenyon Elementary School (Chenango Forks)"}
+  alt={frontmatter.heroImageAlt ?? frontmatter.title}
   style={{width: '100%', borderRadius: '8px', margin: '2rem 0'}}
   quality={85}
   loading="eager"
@@ -176,5 +181,4 @@ The Charlotte Kenyon Elementary School, also known as Chenango Forks Central Sch
 </a>
 
 </div>
-
 

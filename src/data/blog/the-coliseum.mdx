@@ -1,14 +1,20 @@
 ---
 title: The Coliseum
+seoTitle: The Coliseum | Abandoned Roller Rink and Powerhouse in Western New York
 pubDatetime: 2022-07-09 02:59:00-04:00
-description: Crumbling Coliseum Roller Rink
+description: Steam Powerhouse Turned Roller Rink
+seoDescription: See the Coliseum in Western New York—a former trolley powerhouse turned roller rink now collapsing into a moss-covered relic.
 featured: false
 draft: false
 tags:
-- ceres
-- roller rink
-- historic
-ogImage: ../../assets/images/the-coliseum/historic-coliseum-roller-rink-powerhouse.jpg
+- new york
+- wny
+- businesses
+- roller rinks
+heroImage: ../../assets/images/the-coliseum/historic-coliseum-roller-rink-powerhouse.jpg
+heroImageAlt: "Abandoned Coliseum roller rink and former trolley powerhouse in Western New York"
+seoImage: ../../assets/images/the-coliseum/historic-coliseum-roller-rink-powerhouse.jpg
+canonicalURL: https://abandonedupstate.com/posts/the-coliseum/
 author: Bryant Neal
 ---
 
@@ -31,7 +37,7 @@ import historicColisuemDrone2022Image from '../../assets/images/the-coliseum/his
 
 <Image 
   src={heroImage} 
-  alt={"The Coliseum Powerhouse & Skating Rink"}
+  alt={frontmatter.heroImageAlt ?? frontmatter.title}
   style={{width: '100%', borderRadius: '8px', margin: '2rem 0'}}
   quality={85}
   loading="eager"
@@ -204,5 +210,4 @@ The Coliseum stands as an abandoned roller rink in Ceres, New York. Initially co
 </a>
 
 </div>
-
 

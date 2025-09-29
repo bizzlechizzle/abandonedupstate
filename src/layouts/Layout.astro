@@ -15,6 +15,7 @@ export interface Props {
   pubDatetime?: Date;
   modDatetime?: Date | null;
   scrollSmooth?: boolean;
+  schemaHeadline?: string;
 }
 
 const {
@@ -27,6 +28,7 @@ const {
   pubDatetime,
   modDatetime,
   scrollSmooth = false,
+  schemaHeadline,
 } = Astro.props;
 
 const socialImageURL = new URL(ogImage, Astro.url);
@@ -34,7 +36,7 @@ const socialImageURL = new URL(ogImage, Astro.url);
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  headline: `${title}`,
+  headline: `${schemaHeadline ?? title}`,
   image: `${socialImageURL}`,
   datePublished: `${pubDatetime?.toISOString()}`,
   ...(modDatetime && { dateModified: modDatetime.toISOString() }),
