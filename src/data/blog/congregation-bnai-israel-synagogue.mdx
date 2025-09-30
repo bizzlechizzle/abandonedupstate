@@ -16,28 +16,78 @@ heroImageAlt: "Front elevation of the abandoned Congregation B'Nai Israel Synago
 seoImage: ../../assets/images/congregation-bnai-israel/stained-glass-windows-pews-rochester-synagogue.jpg
 canonicalURL: https://abandonedupstate.com/posts/congregation-bnai-israel-synagogue/
 author: Bryant Neal
+galleryImages:
+  - src: "@/assets/images/congregation-bnai-israel/historic-1928-692-joseph-ave-roc.jpg"
+    caption: "Congregation Ahavas Achim Anshi Austria - August 1928"
+    seoCaption: "August 1928 photograph of Congregation Ahavas Achim Anshi Austria on Joseph Avenue"
+  - src: "@/assets/images/congregation-bnai-israel/historic-1995-tax-photo-abandoned-synagogue.jpg"
+    caption: "Congregation B\u2019Nai Israel - Tax Photo 1995"
+    seoCaption: "1995 tax photograph documenting Congregation B'Nai Israel Synagogue"
+  - src: "@/assets/images/congregation-bnai-israel/historic-2017-abandoned-congregation-bnai-israel-synagogue-692-joseph-rochester.jpg"
+    caption: "Congregation B'Nai Israel Synagogue - March 2017"
+    seoCaption: "2017 streetscape view of Congregation B'Nai Israel Synagogue in Rochester"
+  - src: "@/assets/images/congregation-bnai-israel/692-joseph-ave-rochester-synagogue.jpg"
+    caption: "Joseph Avenue Streetscape"
+    seoCaption: "Exterior of Congregation B'Nai Israel Synagogue along Joseph Avenue"
+  - src: "@/assets/images/congregation-bnai-israel/basement-abandoned-congregation-bnai-israel-synogoue.jpg"
+    caption: "Basement Corridor"
+    seoCaption: "Basement corridor with exposed pipes inside Congregation B'Nai Israel Synagogue"
+  - src: "@/assets/images/congregation-bnai-israel/numbered-pews-abandoned-synagogue.jpg"
+    caption: "Numbered Pews"
+    seoCaption: "Close view of numbered wooden pews within the abandoned synagogue"
+  - src: "@/assets/images/congregation-bnai-israel/numbered-pews-synagogue-rochester-ny.jpg"
+    caption: "Sanctuary Seating"
+    seoCaption: "Wide view of sanctuary seating rows at Congregation B'Nai Israel"
+  - src: "@/assets/images/congregation-bnai-israel/pews-abandoned-synagogue-roc-ny.jpg"
+    caption: "Main Sanctuary"
+    seoCaption: "Main sanctuary pews facing the bimah inside the synagogue"
+  - src: "@/assets/images/congregation-bnai-israel/pillar-historic-joseph-ave-synagogue.jpg"
+    caption: "Sanctuary Columns"
+    seoCaption: "Painted column supporting the balcony inside Congregation B'Nai Israel"
+  - src: "@/assets/images/congregation-bnai-israel/rochester-ny-joseph-ave-synagogue.jpg"
+    caption: "Entrance Facade"
+    seoCaption: "Street-level entrance detail of Congregation B'Nai Israel Synagogue"
+  - src: "@/assets/images/congregation-bnai-israel/stained-glass-windows-pews-rochester-synagogue.jpg"
+    caption: "Stained Glass Sanctuary"
+    seoCaption: "Stained glass windows over the main sanctuary pews"
+  - src: "@/assets/images/congregation-bnai-israel/star-of-david-stained-glass-broken-window.jpg"
+    caption: "Broken Star of David Window"
+    seoCaption: "Broken stained-glass window featuring a Star of David motif"
+  - src: "@/assets/images/congregation-bnai-israel/synagogue-balcony-congregation-bnai-israel-synagogue.jpg"
+    caption: "Balcony Seating"
+    seoCaption: "Balcony seating overlooking the sanctuary of Congregation B'Nai Israel"
+  - src: "@/assets/images/congregation-bnai-israel/synagogue-ceiling-chandelier-abandoned.jpg"
+    caption: "Ceiling and Chandelier"
+    seoCaption: "Decorative ceiling and chandelier inside the synagogue"
+  - src: "@/assets/images/congregation-bnai-israel/synogague-rotting-wood-stairs.jpg"
+    caption: "Rotting Wood Stairs"
+    seoCaption: "Rotting wooden staircase leading toward the synagogue balcony"
+  - src: "@/assets/images/congregation-bnai-israel/1928-newspaper-clipping-democrat-chronicle-synagogue.jpg"
+    caption: "Democrat & Chronicle - May 1928"
+    seoCaption: "May 1928 Democrat and Chronicle clipping announcing the synagogue dedication"
 ---
 
 
 import { Image } from 'astro:assets';
+import GalleryLightbox from "@/components/GalleryLightbox.astro";
 
 import heroImage from '../../assets/images/congregation-bnai-israel/abandoned-congregation-bnai-israel-synagogue-692-joseph-rochester.jpg';
-import historic1928 from '../../assets/images/congregation-bnai-israel/historic-1928-692-joseph-ave-roc.jpg';
-import taxPhoto1995 from '../../assets/images/congregation-bnai-israel/historic-1995-tax-photo-abandoned-synagogue.jpg';
-import march2017 from '../../assets/images/congregation-bnai-israel/historic-2017-abandoned-congregation-bnai-israel-synagogue-692-joseph-rochester.jpg';
-import exteriorStreetscape from '../../assets/images/congregation-bnai-israel/692-joseph-ave-rochester-synagogue.jpg';
-import basementHallway from '../../assets/images/congregation-bnai-israel/basement-abandoned-congregation-bnai-israel-synogoue.jpg';
-import numberedPews from '../../assets/images/congregation-bnai-israel/numbered-pews-abandoned-synagogue.jpg';
-import numberedPewsWide from '../../assets/images/congregation-bnai-israel/numbered-pews-synagogue-rochester-ny.jpg';
-import mainPews from '../../assets/images/congregation-bnai-israel/pews-abandoned-synagogue-roc-ny.jpg';
-import sanctuaryPillar from '../../assets/images/congregation-bnai-israel/pillar-historic-joseph-ave-synagogue.jpg';
-import entranceFacade from '../../assets/images/congregation-bnai-israel/rochester-ny-joseph-ave-synagogue.jpg';
-import stainedGlass from '../../assets/images/congregation-bnai-israel/stained-glass-windows-pews-rochester-synagogue.jpg';
-import brokenStarWindow from '../../assets/images/congregation-bnai-israel/star-of-david-stained-glass-broken-window.jpg';
-import balconySeating from '../../assets/images/congregation-bnai-israel/synagogue-balcony-congregation-bnai-israel-synagogue.jpg';
-import chandelierCeiling from '../../assets/images/congregation-bnai-israel/synagogue-ceiling-chandelier-abandoned.jpg';
-import rottingStairs from '../../assets/images/congregation-bnai-israel/synogague-rotting-wood-stairs.jpg';
-import newspaper1928 from '../../assets/images/congregation-bnai-israel/1928-newspaper-clipping-democrat-chronicle-synagogue.jpg';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <Image 
   src={heroImage} 
@@ -54,219 +104,7 @@ import newspaper1928 from '../../assets/images/congregation-bnai-israel/1928-new
 The Congregation B’Nai Israel (Congregation Ahavas Achim Anshi Austria) synagogue, located at 692 Joseph Avenue in Rochester, New York, is a significant historical and cultural landmark. Established in 1928, it has been a central part of the Jewish community, serving as a hub for religious and social activities. The synagogue is one of the oldest existing structures from the 20th century in the area. Recently, there have been plans to renovate the building into a performing arts center, which is part of a broader initiative to revitalize the Joseph Avenue area. This transformation aims to breathe new life into the historic structure while preserving its cultural heritage.
 
 
-<div className="gallery gallery--two">
-
-<a href={historic1928.src} className="glightbox gallery-item" data-gallery="bnai-israel" data-title="Congregation Ahavas Achim Anshi Austria - August 1928">
-  <Image 
-    src={historic1928} 
-    alt="August 1928 photograph of Congregation Ahavas Achim Anshi Austria on Joseph Avenue"
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="eager"
-    fetchpriority="high"
-  />
-</a>
-
-<a href={taxPhoto1995.src} className="glightbox gallery-item" data-gallery="bnai-israel" data-title="Congregation B’Nai Israel - Tax Photo 1995">
-  <Image 
-    src={taxPhoto1995} 
-    alt="1995 tax photograph documenting Congregation B'Nai Israel Synagogue"
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="eager"
-    fetchpriority="high"
-  />
-</a>
-
-<a href={march2017.src} className="glightbox gallery-item" data-gallery="bnai-israel" data-title="Congregation B'Nai Israel Synagogue - March 2017">
-  <Image 
-    src={march2017} 
-    alt="2017 streetscape view of Congregation B'Nai Israel Synagogue in Rochester"
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={exteriorStreetscape.src} className="glightbox gallery-item" data-gallery="bnai-israel" data-title="Joseph Avenue Streetscape">
-  <Image 
-    src={exteriorStreetscape} 
-    alt="Exterior of Congregation B'Nai Israel Synagogue along Joseph Avenue"
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={basementHallway.src} className="glightbox gallery-item" data-gallery="bnai-israel" data-title="Basement Corridor">
-  <Image 
-    src={basementHallway} 
-    alt="Basement corridor with exposed pipes inside Congregation B'Nai Israel Synagogue"
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={numberedPews.src} className="glightbox gallery-item" data-gallery="bnai-israel" data-title="Numbered Pews">
-  <Image 
-    src={numberedPews} 
-    alt="Close view of numbered wooden pews within the abandoned synagogue"
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={numberedPewsWide.src} className="glightbox gallery-item" data-gallery="bnai-israel" data-title="Sanctuary Seating">
-  <Image 
-    src={numberedPewsWide} 
-    alt="Wide view of sanctuary seating rows at Congregation B'Nai Israel"
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={mainPews.src} className="glightbox gallery-item" data-gallery="bnai-israel" data-title="Main Sanctuary">
-  <Image 
-    src={mainPews} 
-    alt="Main sanctuary pews facing the bimah inside the synagogue"
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={sanctuaryPillar.src} className="glightbox gallery-item" data-gallery="bnai-israel" data-title="Sanctuary Columns">
-  <Image 
-    src={sanctuaryPillar} 
-    alt="Painted column supporting the balcony inside Congregation B'Nai Israel"
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={entranceFacade.src} className="glightbox gallery-item" data-gallery="bnai-israel" data-title="Entrance Facade">
-  <Image 
-    src={entranceFacade} 
-    alt="Street-level entrance detail of Congregation B'Nai Israel Synagogue"
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={stainedGlass.src} className="glightbox gallery-item" data-gallery="bnai-israel" data-title="Stained Glass Sanctuary">
-  <Image 
-    src={stainedGlass} 
-    alt="Stained glass windows over the main sanctuary pews"
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={brokenStarWindow.src} className="glightbox gallery-item" data-gallery="bnai-israel" data-title="Broken Star of David Window">
-  <Image 
-    src={brokenStarWindow} 
-    alt="Broken stained-glass window featuring a Star of David motif"
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={balconySeating.src} className="glightbox gallery-item" data-gallery="bnai-israel" data-title="Balcony Seating">
-  <Image 
-    src={balconySeating} 
-    alt="Balcony seating overlooking the sanctuary of Congregation B'Nai Israel"
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={chandelierCeiling.src} className="glightbox gallery-item" data-gallery="bnai-israel" data-title="Ceiling and Chandelier">
-  <Image 
-    src={chandelierCeiling} 
-    alt="Decorative ceiling and chandelier inside the synagogue"
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={rottingStairs.src} className="glightbox gallery-item" data-gallery="bnai-israel" data-title="Rotting Wood Stairs">
-  <Image 
-    src={rottingStairs} 
-    alt="Rotting wooden staircase leading toward the synagogue balcony"
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={newspaper1928.src} className="glightbox gallery-item" data-gallery="bnai-israel" data-title="Democrat & Chronicle - May 1928">
-  <Image 
-    src={newspaper1928} 
-    alt="May 1928 Democrat and Chronicle clipping announcing the synagogue dedication"
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-</div>
+<GalleryLightbox galleryId="bnai-israel" images={frontmatter.galleryImages} />
 
 <div style={{textAlign: 'center', margin: '3rem 0 1rem'}}>
   <em>Disclaimer: Exploring abandoned buildings can be dangerous and/or illegal. The Abandoned Upstate Project does not condone or encourage any illegal activities. All the places explored and documented are done so with the utmost caution and care. Explore only where it is legally allowed.</em>

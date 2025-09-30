@@ -16,24 +16,53 @@ heroImageAlt: "Abandoned Coliseum roller rink and former trolley powerhouse in W
 seoImage: ../../assets/images/the-coliseum/historic-coliseum-roller-rink-powerhouse.jpg
 canonicalURL: https://abandonedupstate.com/posts/the-coliseum/
 author: Bryant Neal
+galleryImages:
+  - src: "@/assets/images/the-coliseum/overgrown-bench-abandoned-roller-rink.jpg"
+    caption: "Overgrown Green Benches"
+    seoCaption: "Overgrown Green Benches"
+  - src: "@/assets/images/the-coliseum/collapsed-overgrown-roller-rink.jpg"
+    caption: "Collapsed North Wall"
+    seoCaption: "Collapsed North Wall"
+  - src: "@/assets/images/the-coliseum/overgrown-roller-skating-rink-ny.jpg"
+    caption: "Mossy Roller Rink Barrier"
+    seoCaption: "Mossy Roller Rink Barrier"
+  - src: "@/assets/images/the-coliseum/abandoned-roller-blade-wheels.jpg"
+    caption: "Seiko Inline Skate Wheels - 82A"
+    seoCaption: "Seiko Inline Skate Wheels - 82A"
+  - src: "@/assets/images/the-coliseum/abandoned-roller-rink-locker.jpg"
+    caption: "Roller Rink Locker #13"
+    seoCaption: "Roller Rink Locker #13"
+  - src: "@/assets/images/the-coliseum/child-roller-skates-collapsed-roller-skating-rink.jpg"
+    caption: "Infant Roller Skate"
+    seoCaption: "Infant Roller Skate"
+  - src: "@/assets/images/the-coliseum/abandoned-roller-rink-sign.jpg"
+    caption: "NO LIABILITY FOR WANTING TO EXPLORE"
+    seoCaption: "NO LIABILITY FOR WANTING TO EXPLORE"
+  - src: "@/assets/images/the-coliseum/historic-coliseum-roller-rink-aieral-1986.jpg"
+    caption: "1986 Aerial Photograph"
+    seoCaption: "1986 Aerial Photograph"
+  - src: "@/assets/images/the-coliseum/historic-colisuem-drone-2022.jpg"
+    caption: "2022 Drone Photograph"
+    seoCaption: "2022 Drone Photograph"
 ---
 
 
 import { Image } from "astro:assets";
+import GalleryLightbox from "@/components/GalleryLightbox.astro";
 
 import heroImage from '../../assets/images/the-coliseum/historic-coliseum-roller-rink-powerhouse.jpg';
-import overgrownBenchAbandonedRollerRinkImage from '../../assets/images/the-coliseum/overgrown-bench-abandoned-roller-rink.jpg';
-import collapsedOvergrownRollerRinkImage from '../../assets/images/the-coliseum/collapsed-overgrown-roller-rink.jpg';
-import overgrownRollerSkatingRinkNyImage from '../../assets/images/the-coliseum/overgrown-roller-skating-rink-ny.jpg';
-import abandonedRollerBladeWheelsImage from '../../assets/images/the-coliseum/abandoned-roller-blade-wheels.jpg';
-import abandonedRollerRinkLockerImage from '../../assets/images/the-coliseum/abandoned-roller-rink-locker.jpg';
+
+
+
+
+
 import abandonedRollerSkatesImage from '../../assets/images/the-coliseum/abandoned-roller-skates.jpg';
-import childRollerSkatesCollapsedRollerSkatingRinkImage from '../../assets/images/the-coliseum/child-roller-skates-collapsed-roller-skating-rink.jpg';
+
 import skateShopSignAbandonedRollerRinkImage from '../../assets/images/the-coliseum/skate-shop-sign-abandoned-roller-rink.jpg';
-import abandonedRollerRinkSignImage from '../../assets/images/the-coliseum/abandoned-roller-rink-sign.jpg';
+
 import historicColiseumTrolleyPowerhouseImage from '../../assets/images/the-coliseum/historic-coliseum-trolley-powerhouse.jpg';
-import historicColiseumRollerRinkAieral1986Image from '../../assets/images/the-coliseum/historic-coliseum-roller-rink-aieral-1986.jpg';
-import historicColisuemDrone2022Image from '../../assets/images/the-coliseum/historic-colisuem-drone-2022.jpg';
+
+
 
 <Image 
   src={heroImage} 
@@ -50,164 +79,5 @@ import historicColisuemDrone2022Image from '../../assets/images/the-coliseum/his
 The Coliseum stands as an abandoned roller rink in Ceres, New York. Initially constructed in 1902, this brick structure served as a natural gas steam powerhouse to fuel the Olean - Bradford trolley line. In 1928, the building underwent a transformation, shedding its industrial past to become "The Coliseum at Ceres, Allegany County's newest and finest ballroom." Over the years, the structure hosted various businesses and venues before eventually settling into its role as the roller rink known today as "The Coliseum." However, the business met an unfortunate end in June 2005 when a tractor-trailer veered off the road, colliding with the north side brick wall and erupting into flames.
 
 
-<div className="gallery gallery--two">
-
-<a href={overgrownBenchAbandonedRollerRinkImage.src} className="glightbox gallery-item" data-gallery="the-coliseum" data-title={"Overgrown Green Benches"}>
-  <Image 
-    src={overgrownBenchAbandonedRollerRinkImage} 
-    alt={"Overgrown Green Benches"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="eager"
-    fetchpriority="high"
-  />
-</a>
-
-<a href={collapsedOvergrownRollerRinkImage.src} className="glightbox gallery-item" data-gallery="the-coliseum" data-title={"Collapsed North Wall"}>
-  <Image 
-    src={collapsedOvergrownRollerRinkImage} 
-    alt={"Collapsed North Wall"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={overgrownRollerSkatingRinkNyImage.src} className="glightbox gallery-item" data-gallery="the-coliseum" data-title={"Mossy Roller Rink Barrier"}>
-  <Image 
-    src={overgrownRollerSkatingRinkNyImage} 
-    alt={"Mossy Roller Rink Barrier"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={abandonedRollerBladeWheelsImage.src} className="glightbox gallery-item" data-gallery="the-coliseum" data-title={"Seiko Inline Skate Wheels - 82A"}>
-  <Image 
-    src={abandonedRollerBladeWheelsImage} 
-    alt={"Seiko Inline Skate Wheels - 82A"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={abandonedRollerRinkLockerImage.src} className="glightbox gallery-item" data-gallery="the-coliseum" data-title={"Roller Rink Locker #13"}>
-  <Image 
-    src={abandonedRollerRinkLockerImage} 
-    alt={"Roller Rink Locker #13"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={abandonedRollerSkatesImage.src} className="glightbox gallery-item" data-gallery="the-coliseum" data-title={"\"Skate Room\" Rental Shop"}>
-  <Image 
-    src={abandonedRollerSkatesImage} 
-    alt={"\"Skate Room\" Rental Shop"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={childRollerSkatesCollapsedRollerSkatingRinkImage.src} className="glightbox gallery-item" data-gallery="the-coliseum" data-title={"Infant Roller Skate"}>
-  <Image 
-    src={childRollerSkatesCollapsedRollerSkatingRinkImage} 
-    alt={"Infant Roller Skate"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={skateShopSignAbandonedRollerRinkImage.src} className="glightbox gallery-item" data-gallery="the-coliseum" data-title={"\"Visit Our Skate Style Shop\""}>
-  <Image 
-    src={skateShopSignAbandonedRollerRinkImage} 
-    alt={"\"Visit Our Skate Style Shop\""}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={abandonedRollerRinkSignImage.src} className="glightbox gallery-item" data-gallery="the-coliseum" data-title={"NO LIABILITY FOR WANTING TO EXPLORE"}>
-  <Image 
-    src={abandonedRollerRinkSignImage} 
-    alt={"NO LIABILITY FOR WANTING TO EXPLORE"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={historicColiseumTrolleyPowerhouseImage.src} className="glightbox gallery-item" data-gallery="the-coliseum" data-title={"Ceres \"Coliseum\" Trolley Powerhouse (Date Unknown)"}>
-  <Image 
-    src={historicColiseumTrolleyPowerhouseImage} 
-    alt={"Ceres \"Coliseum\" Trolley Powerhouse (Date Unknown)"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={historicColiseumRollerRinkAieral1986Image.src} className="glightbox gallery-item" data-gallery="the-coliseum" data-title={"1986 Aerial Photograph"}>
-  <Image 
-    src={historicColiseumRollerRinkAieral1986Image} 
-    alt={"1986 Aerial Photograph"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={historicColisuemDrone2022Image.src} className="glightbox gallery-item" data-gallery="the-coliseum" data-title={"2022 Drone Photograph"}>
-  <Image 
-    src={historicColisuemDrone2022Image} 
-    alt={"2022 Drone Photograph"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-</div>
+<GalleryLightbox galleryId="the-coliseum" images={frontmatter.galleryImages} />
 

@@ -17,20 +17,38 @@ heroImage: ../../assets/images/als-toy-barn/abandoned-barn-find-in-the-woods-new
 heroImageAlt: "Abandoned barn hiding classic cars in the Finger Lakes region of New York"
 seoImage: ../../assets/images/als-toy-barn/abandoned-barn-find-in-the-woods-new-york.jpg
 canonicalURL: https://abandonedupstate.com/posts/als-toy-barn/
+galleryImages:
+  - src: '@/assets/images/als-toy-barn/barn-find-mercedes-190SL-in-the-woods-of-upstate-ny.jpg'
+    caption: Barn Find Mercedes & Lotus
+    seoCaption: Barn Find Mercedes & Lotus
+  - src: '@/assets/images/als-toy-barn/abandoned-mercedes-190SL-convertible.jpg'
+    caption: Mercedes 190 SL (1995 Registration)
+    seoCaption: Mercedes 190 SL (1995 Registration)
+  - src: '@/assets/images/als-toy-barn/abandoned-mercedes-190-SL-barnfind-low-miles.jpg'
+    caption: 1961 Mercedes 190 SL Dash
+    seoCaption: 1961 Mercedes 190 SL Dash
+  - src: '@/assets/images/als-toy-barn/abandoned-lotus-elan-first-generation-1960s-barn-find.jpg'
+    caption: Lotus Elan (Gen 1, 1962-1975)
+    seoCaption: Lotus Elan (Gen 1, 1962-1975)
+  - src: '@/assets/images/als-toy-barn/abandoned-jeep-grand-cherokee-2-door-barn-find.jpg'
+    caption: Jeep Cherokee 2 Door 4x4
+    seoCaption: Jeep Cherokee 2 Door 4x4
+  - src: '@/assets/images/als-toy-barn/abandoned-scat-hovercraft-overgrown.jpg'
+    caption: Scat Hoverboat
+    seoCaption: Scat Hoverboat
+  - src: '@/assets/images/als-toy-barn/abandoned-chevy-c60-finger-lakes-ny.jpg'
+    caption: Chevrolet 65 Heavy Duty Truck
+    seoCaption: Chevrolet 65 Heavy Duty Truck
+  - src: '@/assets/images/als-toy-barn/heavy-equpiment-abandoned-house-finger-lakes-region-ny.jpg'
+    caption: Kaiser 6x6 & Chevy C65
+    seoCaption: Kaiser 6x6 & Chevy C65
 ---
 
 
 import { Image } from "astro:assets";
+import GalleryLightbox from "@/components/GalleryLightbox.astro";
 
 import heroImage from '../../assets/images/als-toy-barn/abandoned-barn-find-in-the-woods-new-york.jpg';
-import barnFindMercedes190SlInTheWoodsOfUpstateNyImage from '../../assets/images/als-toy-barn/barn-find-mercedes-190SL-in-the-woods-of-upstate-ny.jpg';
-import abandonedMercedes190SlConvertibleImage from '../../assets/images/als-toy-barn/abandoned-mercedes-190SL-convertible.jpg';
-import abandonedMercedes190SlBarnfindLowMilesImage from '../../assets/images/als-toy-barn/abandoned-mercedes-190-SL-barnfind-low-miles.jpg';
-import abandonedLotusElanFirstGeneration1960SBarnFindImage from '../../assets/images/als-toy-barn/abandoned-lotus-elan-first-generation-1960s-barn-find.jpg';
-import abandonedJeepGrandCherokee2DoorBarnFindImage from '../../assets/images/als-toy-barn/abandoned-jeep-grand-cherokee-2-door-barn-find.jpg';
-import abandonedScatHovercraftOvergrownImage from '../../assets/images/als-toy-barn/abandoned-scat-hovercraft-overgrown.jpg';
-import abandonedChevyC60FingerLakesNyImage from '../../assets/images/als-toy-barn/abandoned-chevy-c60-finger-lakes-ny.jpg';
-import heavyEqupimentAbandonedHouseFingerLakesRegionNyImage from '../../assets/images/als-toy-barn/heavy-equpiment-abandoned-house-finger-lakes-region-ny.jpg';
 
 <Image 
   src={heroImage} 
@@ -47,112 +65,5 @@ import heavyEqupimentAbandonedHouseFingerLakesRegionNyImage from '../../assets/i
 Al's Toy Barn, located in Upstate New York's Finger Lakes region, sits near an abandoned farmhouse. Named after the scattered play toys, potential barn-find cars, and heavy equipment. Documents indicate that everything was left here in the fall of 1994.
 
 
-<div className="gallery gallery--two">
-
-<a href={barnFindMercedes190SlInTheWoodsOfUpstateNyImage.src} className="glightbox gallery-item" data-gallery="als-toy-barn" data-title={"Barn Find Mercedes & Lotus"}>
-  <Image 
-    src={barnFindMercedes190SlInTheWoodsOfUpstateNyImage} 
-    alt={"Barn Find Mercedes & Lotus"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="eager"
-    fetchpriority="high"
-  />
-</a>
-
-<a href={abandonedMercedes190SlConvertibleImage.src} className="glightbox gallery-item" data-gallery="als-toy-barn" data-title={"Mercedes 190 SL (1995 Registration)"}>
-  <Image 
-    src={abandonedMercedes190SlConvertibleImage} 
-    alt={"Mercedes 190 SL (1995 Registration)"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={abandonedMercedes190SlBarnfindLowMilesImage.src} className="glightbox gallery-item" data-gallery="als-toy-barn" data-title={"1961 Mercedes 190 SL Dash"}>
-  <Image 
-    src={abandonedMercedes190SlBarnfindLowMilesImage} 
-    alt={"1961 Mercedes 190 SL Dash"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={abandonedLotusElanFirstGeneration1960SBarnFindImage.src} className="glightbox gallery-item" data-gallery="als-toy-barn" data-title={"Lotus Elan (Gen 1, 1962-1975)"}>
-  <Image 
-    src={abandonedLotusElanFirstGeneration1960SBarnFindImage} 
-    alt={"Lotus Elan (Gen 1, 1962-1975)"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={abandonedJeepGrandCherokee2DoorBarnFindImage.src} className="glightbox gallery-item" data-gallery="als-toy-barn" data-title={"Jeep Cherokee 2 Door 4x4"}>
-  <Image 
-    src={abandonedJeepGrandCherokee2DoorBarnFindImage} 
-    alt={"Jeep Cherokee 2 Door 4x4"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={abandonedScatHovercraftOvergrownImage.src} className="glightbox gallery-item" data-gallery="als-toy-barn" data-title={"Scat Hoverboat"}>
-  <Image 
-    src={abandonedScatHovercraftOvergrownImage} 
-    alt={"Scat Hoverboat"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={abandonedChevyC60FingerLakesNyImage.src} className="glightbox gallery-item" data-gallery="als-toy-barn" data-title={"Chevrolet 65 Heavy Duty Truck"}>
-  <Image 
-    src={abandonedChevyC60FingerLakesNyImage} 
-    alt={"Chevrolet 65 Heavy Duty Truck"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={heavyEqupimentAbandonedHouseFingerLakesRegionNyImage.src} className="glightbox gallery-item" data-gallery="als-toy-barn" data-title={"Kaiser 6x6 & Chevy C65"}>
-  <Image 
-    src={heavyEqupimentAbandonedHouseFingerLakesRegionNyImage} 
-    alt={"Kaiser 6x6 & Chevy C65"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-</div>
+<GalleryLightbox galleryId="als-toy-barn" images={frontmatter.galleryImages} />
 

@@ -16,21 +16,21 @@ const { images, columns = 3, gap = "1rem" } = Astro.props;
 
 <div class="gallery" style={`--columns: ${columns}; --gap: ${gap};`}>
   {images.map((image, index) => (
-    <a 
-      href={image.src} 
+    <a
+      href={image.src}
       class="glightbox gallery-item"
       data-gallery="gallery"
-      data-title={image.title}
-      data-description={image.description}
+      data-caption={image.title}
+      data-seo-caption={image.description}
     >
-      <img 
-        src={image.thumb || image.src} 
-        alt={image.alt || `Gallery image ${index + 1}`}
+      <img
+        src={image.thumb || image.src}
+        alt={image.alt || image.description || image.title || `Gallery image ${index + 1}`}
         loading="lazy"
         class="gallery-image"
       />
       {image.title && (
-        <div class="gallery-caption">
+        <div class="gallery-caption" data-gallery-caption>
           {image.title}
         </div>
       )}

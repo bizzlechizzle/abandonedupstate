@@ -16,24 +16,62 @@ heroImageAlt: "Abandoned farmhouse known as the Cadillac House in New York's Fin
 seoImage: ../../assets/images/the-cadillac-house/historic-cadillac-farmhouse-fingerlakes.jpg
 canonicalURL: https://abandonedupstate.com/posts/the-cadillac-house/
 author: Bryant Neal
+galleryImages:
+  - src: "@/assets/images/the-cadillac-house/abandoned-overgrown-porch-cadillac-house.jpg"
+    caption: "Overgrown Greek Revival Porch"
+    seoCaption: "Overgrown Greek Revival Porch"
+  - src: "@/assets/images/the-cadillac-house/upside-down-piano-collapsed-cadillac-house.jpg"
+    caption: "Upside Down Piano"
+    seoCaption: "Upside Down Piano"
+  - src: "@/assets/images/the-cadillac-house/ornate-fireplace-abandoned-caddillac-house.jpg"
+    caption: "Greek Key Fireplace Surround"
+    seoCaption: "Greek Key Fireplace Surround"
+  - src: "@/assets/images/the-cadillac-house/retro-red-dishwasher-abandoned-+cadillac-house.jpg"
+    caption: "Red Vintage Dishwasher"
+    seoCaption: "Red Vintage Dishwasher"
+  - src: "@/assets/images/the-cadillac-house/trashed-abandoend-cadilliac-house.jpg"
+    caption: "White Greek Revival Farmhouse Door"
+    seoCaption: "White Greek Revival Farmhouse Door"
+  - src: "@/assets/images/the-cadillac-house/abandoned-curved-staircase-cadillac-house.jpg"
+    caption: "Continuous Half-Turn Staircase"
+    seoCaption: "Continuous Half-Turn Staircase"
+  - src: "@/assets/images/the-cadillac-house/abandoned-1971-cadillac-eldorado-convertible.jpg"
+    caption: "Overgrown Cadillac Convertible"
+    seoCaption: "Overgrown Cadillac Convertible"
+  - src: "@/assets/images/the-cadillac-house/abandoned-land-yacht-caddy-overgrown-house-finger-lakes.jpg"
+    caption: "Cypress Green Metallic Cadillac"
+    seoCaption: "Cypress Green Metallic Cadillac"
+  - src: "@/assets/images/the-cadillac-house/abandoned-1971-cadillac-eldorado-convertible-cypress-green-metallic.jpg"
+    caption: "1971 Cadillac Eldorado Convertible"
+    seoCaption: "1971 Cadillac Eldorado Convertible"
+  - src: "@/assets/images/the-cadillac-house/seneca-county-farmhouse-abandoned.jpg"
+    caption: "Overgrown 1800s Farmhouse"
+    seoCaption: "Overgrown 1800s Farmhouse"
+  - src: "@/assets/images/the-cadillac-house/historic-photograph-cadillac-house-1988.jpg"
+    caption: "1988 Aerial Photo"
+    seoCaption: "1988 Aerial Photo"
+  - src: "@/assets/images/the-cadillac-house/historic-cadillac-house-1938.jpg"
+    caption: "1938 Aerial Photo"
+    seoCaption: "1938 Aerial Photo"
 ---
 
 
 import { Image } from "astro:assets";
+import GalleryLightbox from "@/components/GalleryLightbox.astro";
 
 import heroImage from '../../assets/images/the-cadillac-house/historic-cadillac-farmhouse-fingerlakes.jpg';
-import abandonedOvergrownPorchCadillacHouseImage from '../../assets/images/the-cadillac-house/abandoned-overgrown-porch-cadillac-house.jpg';
-import upsideDownPianoCollapsedCadillacHouseImage from '../../assets/images/the-cadillac-house/upside-down-piano-collapsed-cadillac-house.jpg';
-import ornateFireplaceAbandonedCaddillacHouseImage from '../../assets/images/the-cadillac-house/ornate-fireplace-abandoned-caddillac-house.jpg';
-import retroRedDishwasherAbandonedCadillacHouseImage from '../../assets/images/the-cadillac-house/retro-red-dishwasher-abandoned-+cadillac-house.jpg';
-import trashedAbandoendCadilliacHouseImage from '../../assets/images/the-cadillac-house/trashed-abandoend-cadilliac-house.jpg';
-import abandonedCurvedStaircaseCadillacHouseImage from '../../assets/images/the-cadillac-house/abandoned-curved-staircase-cadillac-house.jpg';
-import abandoned1971CadillacEldoradoConvertibleImage from '../../assets/images/the-cadillac-house/abandoned-1971-cadillac-eldorado-convertible.jpg';
-import abandonedLandYachtCaddyOvergrownHouseFingerLakesImage from '../../assets/images/the-cadillac-house/abandoned-land-yacht-caddy-overgrown-house-finger-lakes.jpg';
-import abandoned1971CadillacEldoradoConvertibleCypressGreenMetallicImage from '../../assets/images/the-cadillac-house/abandoned-1971-cadillac-eldorado-convertible-cypress-green-metallic.jpg';
-import senecaCountyFarmhouseAbandonedImage from '../../assets/images/the-cadillac-house/seneca-county-farmhouse-abandoned.jpg';
-import historicPhotographCadillacHouse1988Image from '../../assets/images/the-cadillac-house/historic-photograph-cadillac-house-1988.jpg';
-import historicCadillacHouse1938Image from '../../assets/images/the-cadillac-house/historic-cadillac-house-1938.jpg';
+
+
+
+
+
+
+
+
+
+
+
+
 
 <Image 
   src={heroImage} 
@@ -50,164 +88,5 @@ import historicCadillacHouse1938Image from '../../assets/images/the-cadillac-hou
 The Cadillac House is an abandoned residence situated in the Finger Lakes Region of Upstate New York. Constructed in 1840, the house follows the Farmhouse Greek Revival Style. The name "The Cadillac House" stems from the presence of a forgotten Cadillac Eldorado found in the garage. The property owner resides out of state and has a history of unpaid back taxes dating back to the 1980s. Evidently, this house, likely the owner's childhood home, has remained vacant since their parents passed away.
 
 
-<div className="gallery gallery--two">
-
-<a href={abandonedOvergrownPorchCadillacHouseImage.src} className="glightbox gallery-item" data-gallery="the-cadillac-house" data-title={"Overgrown Greek Revival Porch"}>
-  <Image 
-    src={abandonedOvergrownPorchCadillacHouseImage} 
-    alt={"Overgrown Greek Revival Porch"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="eager"
-    fetchpriority="high"
-  />
-</a>
-
-<a href={upsideDownPianoCollapsedCadillacHouseImage.src} className="glightbox gallery-item" data-gallery="the-cadillac-house" data-title={"Upside Down Piano"}>
-  <Image 
-    src={upsideDownPianoCollapsedCadillacHouseImage} 
-    alt={"Upside Down Piano"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={ornateFireplaceAbandonedCaddillacHouseImage.src} className="glightbox gallery-item" data-gallery="the-cadillac-house" data-title={"Greek Key Fireplace Surround"}>
-  <Image 
-    src={ornateFireplaceAbandonedCaddillacHouseImage} 
-    alt={"Greek Key Fireplace Surround"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={retroRedDishwasherAbandonedCadillacHouseImage.src} className="glightbox gallery-item" data-gallery="the-cadillac-house" data-title={"Red Vintage Dishwasher"}>
-  <Image 
-    src={retroRedDishwasherAbandonedCadillacHouseImage} 
-    alt={"Red Vintage Dishwasher"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={trashedAbandoendCadilliacHouseImage.src} className="glightbox gallery-item" data-gallery="the-cadillac-house" data-title={"White Greek Revival Farmhouse Door"}>
-  <Image 
-    src={trashedAbandoendCadilliacHouseImage} 
-    alt={"White Greek Revival Farmhouse Door"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={abandonedCurvedStaircaseCadillacHouseImage.src} className="glightbox gallery-item" data-gallery="the-cadillac-house" data-title={"Continuous Half-Turn Staircase"}>
-  <Image 
-    src={abandonedCurvedStaircaseCadillacHouseImage} 
-    alt={"Continuous Half-Turn Staircase"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={abandoned1971CadillacEldoradoConvertibleImage.src} className="glightbox gallery-item" data-gallery="the-cadillac-house" data-title={"Overgrown Cadillac Convertible"}>
-  <Image 
-    src={abandoned1971CadillacEldoradoConvertibleImage} 
-    alt={"Overgrown Cadillac Convertible"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={abandonedLandYachtCaddyOvergrownHouseFingerLakesImage.src} className="glightbox gallery-item" data-gallery="the-cadillac-house" data-title={"Cypress Green Metallic Cadillac"}>
-  <Image 
-    src={abandonedLandYachtCaddyOvergrownHouseFingerLakesImage} 
-    alt={"Cypress Green Metallic Cadillac"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={abandoned1971CadillacEldoradoConvertibleCypressGreenMetallicImage.src} className="glightbox gallery-item" data-gallery="the-cadillac-house" data-title={"1971 Cadillac Eldorado Convertible"}>
-  <Image 
-    src={abandoned1971CadillacEldoradoConvertibleCypressGreenMetallicImage} 
-    alt={"1971 Cadillac Eldorado Convertible"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={senecaCountyFarmhouseAbandonedImage.src} className="glightbox gallery-item" data-gallery="the-cadillac-house" data-title={"Overgrown 1800s Farmhouse"}>
-  <Image 
-    src={senecaCountyFarmhouseAbandonedImage} 
-    alt={"Overgrown 1800s Farmhouse"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={historicPhotographCadillacHouse1988Image.src} className="glightbox gallery-item" data-gallery="the-cadillac-house" data-title={"1988 Aerial Photo"}>
-  <Image 
-    src={historicPhotographCadillacHouse1988Image} 
-    alt={"1988 Aerial Photo"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={historicCadillacHouse1938Image.src} className="glightbox gallery-item" data-gallery="the-cadillac-house" data-title={"1938 Aerial Photo"}>
-  <Image 
-    src={historicCadillacHouse1938Image} 
-    alt={"1938 Aerial Photo"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-</div>
+<GalleryLightbox galleryId="the-cadillac-house" images={frontmatter.galleryImages} />
 

@@ -8,13 +8,32 @@
   
   function syncLightboxCaptions(root = document) {
     const links = root.querySelectorAll('a.glightbox');
+
     links.forEach(link => {
       const img = link.querySelector('img');
-      if (!link.dataset.title && img?.alt) {
-        link.dataset.title = img.alt;
+      const caption = link.dataset.caption;
+      const seoCaption = link.dataset.seoCaption;
+      const visibleCaption = link.querySelector('[data-gallery-caption]');
+
+      if (caption) {
+        link.dataset.title = caption;
+        if (visibleCaption && visibleCaption.textContent !== caption) {
+          visibleCaption.textContent = caption;
+        }
       }
-      if (img?.alt && !link.dataset.description) {
-        link.dataset.description = img.alt;
+
+      if (seoCaption) {
+        link.dataset.description = seoCaption;
+      } else if (caption && !link.dataset.description) {
+        link.dataset.description = caption;
+      }
+
+      if (img) {
+        if (seoCaption) {
+          img.alt = seoCaption;
+        } else if (caption && !img.alt) {
+          img.alt = caption;
+        }
       }
     });
   }
