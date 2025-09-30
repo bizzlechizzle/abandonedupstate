@@ -16,24 +16,62 @@ heroImageAlt: "Abandoned Columbus School exterior in Rome, New York"
 seoImage: ../../assets/images/columbus-school/historic-exploring-abandoned-columbus-school.jpg
 canonicalURL: https://abandonedupstate.com/posts/columbus-school/
 author: Bryant Neal
+galleryImages:
+  - src: "@/assets/images/columbus-school/historic-photo-columbus-school-1945.jpg"
+    caption: "Columbus School - 1945"
+    seoCaption: "Columbus School - 1945"
+  - src: "@/assets/images/columbus-school/historic-columbus-school-room-class-photo.jpg"
+    caption: "1955 Class Photograph"
+    seoCaption: "1955 Class Photograph"
+  - src: "@/assets/images/columbus-school/historic-photo-columbus-school-2012.jpg"
+    caption: "2012 For Sale Listing"
+    seoCaption: "2012 For Sale Listing"
+  - src: "@/assets/images/columbus-school/abandoned-cafetorium-columbus-school.jpg"
+    caption: "Elementary Auditorium & Cafeteria"
+    seoCaption: "Elementary Auditorium & Cafeteria"
+  - src: "@/assets/images/columbus-school/abandoned-cafetorium-elementary-school-rome.jpg"
+    caption: "Blue Cafetorium"
+    seoCaption: "Blue Cafetorium"
+  - src: "@/assets/images/columbus-school/abandoned-staircase-columbus-school.jpg"
+    caption: "Yellow and Blue Stairwell"
+    seoCaption: "Yellow and Blue Stairwell"
+  - src: "@/assets/images/columbus-school/abandoned-hallway-abandoned-columbus-school.jpg"
+    caption: "Wall Hooks Only (No Lockers)"
+    seoCaption: "Wall Hooks Only (No Lockers)"
+  - src: "@/assets/images/columbus-school/classroom-desk-abandoned-columbus-school.jpg"
+    caption: "Metal Desk in Upstairs Classroom"
+    seoCaption: "Metal Desk in Upstairs Classroom"
+  - src: "@/assets/images/columbus-school/abandoned-hallway-coat-hooks-elementary-school.jpg"
+    caption: "Projection Room Hallway"
+    seoCaption: "Projection Room Hallway"
+  - src: "@/assets/images/columbus-school/broken-doors-columbus-elementary-school.jpg"
+    caption: "Paint Peeled Hallway"
+    seoCaption: "Paint Peeled Hallway"
+  - src: "@/assets/images/columbus-school/chair-ladder-abandoned-rome-new-york-school.jpg"
+    caption: "Modern Chair Art Display"
+    seoCaption: "Modern Chair Art Display"
+  - src: "@/assets/images/columbus-school/basketball-hoop-abandoned-columbus-school.jpg"
+    caption: "Columbus Cougars Gymnasium"
+    seoCaption: "Columbus Cougars Gymnasium"
 ---
 
 
 import { Image } from "astro:assets";
+import GalleryLightbox from "@/components/GalleryLightbox.astro";
 
 import heroImage from '../../assets/images/columbus-school/historic-exploring-abandoned-columbus-school.jpg';
-import historicPhotoColumbusSchool1945Image from '../../assets/images/columbus-school/historic-photo-columbus-school-1945.jpg';
-import historicColumbusSchoolRoomClassPhotoImage from '../../assets/images/columbus-school/historic-columbus-school-room-class-photo.jpg';
-import historicPhotoColumbusSchool2012Image from '../../assets/images/columbus-school/historic-photo-columbus-school-2012.jpg';
-import abandonedCafetoriumColumbusSchoolImage from '../../assets/images/columbus-school/abandoned-cafetorium-columbus-school.jpg';
-import abandonedCafetoriumElementarySchoolRomeImage from '../../assets/images/columbus-school/abandoned-cafetorium-elementary-school-rome.jpg';
-import abandonedStaircaseColumbusSchoolImage from '../../assets/images/columbus-school/abandoned-staircase-columbus-school.jpg';
-import abandonedHallwayAbandonedColumbusSchoolImage from '../../assets/images/columbus-school/abandoned-hallway-abandoned-columbus-school.jpg';
-import classroomDeskAbandonedColumbusSchoolImage from '../../assets/images/columbus-school/classroom-desk-abandoned-columbus-school.jpg';
-import abandonedHallwayCoatHooksElementarySchoolImage from '../../assets/images/columbus-school/abandoned-hallway-coat-hooks-elementary-school.jpg';
-import brokenDoorsColumbusElementarySchoolImage from '../../assets/images/columbus-school/broken-doors-columbus-elementary-school.jpg';
-import chairLadderAbandonedRomeNewYorkSchoolImage from '../../assets/images/columbus-school/chair-ladder-abandoned-rome-new-york-school.jpg';
-import basketballHoopAbandonedColumbusSchoolImage from '../../assets/images/columbus-school/basketball-hoop-abandoned-columbus-school.jpg';
+
+
+
+
+
+
+
+
+
+
+
+
 
 <Image 
   src={heroImage} 
@@ -50,164 +88,5 @@ import basketballHoopAbandonedColumbusSchoolImage from '../../assets/images/colu
 Columbus School is an abandoned elementary school situated on the east side of Rome, New York. Established in 1923, it was named Columbus School following written requests from students in November of the same year. Operating for several decades, the school remained open until the late 1990s and continued to serve various purposes for the local community, including functioning as an interim place station into the early 2000s. Despite its closure, Columbus School has been bought and relisted for sale multiple times, yet it remains unrepurposed.
 
 
-<div className="gallery gallery--two">
-
-<a href={historicPhotoColumbusSchool1945Image.src} className="glightbox gallery-item" data-gallery="columbus-school" data-title={"Columbus School - 1945"}>
-  <Image 
-    src={historicPhotoColumbusSchool1945Image} 
-    alt={"Columbus School - 1945"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="eager"
-    fetchpriority="high"
-  />
-</a>
-
-<a href={historicColumbusSchoolRoomClassPhotoImage.src} className="glightbox gallery-item" data-gallery="columbus-school" data-title={"1955 Class Photograph"}>
-  <Image 
-    src={historicColumbusSchoolRoomClassPhotoImage} 
-    alt={"1955 Class Photograph"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={historicPhotoColumbusSchool2012Image.src} className="glightbox gallery-item" data-gallery="columbus-school" data-title={"2012 For Sale Listing"}>
-  <Image 
-    src={historicPhotoColumbusSchool2012Image} 
-    alt={"2012 For Sale Listing"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={abandonedCafetoriumColumbusSchoolImage.src} className="glightbox gallery-item" data-gallery="columbus-school" data-title={"Elementary Auditorium & Cafeteria"}>
-  <Image 
-    src={abandonedCafetoriumColumbusSchoolImage} 
-    alt={"Elementary Auditorium & Cafeteria"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={abandonedCafetoriumElementarySchoolRomeImage.src} className="glightbox gallery-item" data-gallery="columbus-school" data-title={"Blue Cafetorium"}>
-  <Image 
-    src={abandonedCafetoriumElementarySchoolRomeImage} 
-    alt={"Blue Cafetorium"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={abandonedStaircaseColumbusSchoolImage.src} className="glightbox gallery-item" data-gallery="columbus-school" data-title={"Yellow and Blue Stairwell"}>
-  <Image 
-    src={abandonedStaircaseColumbusSchoolImage} 
-    alt={"Yellow and Blue Stairwell"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={abandonedHallwayAbandonedColumbusSchoolImage.src} className="glightbox gallery-item" data-gallery="columbus-school" data-title={"Wall Hooks Only (No Lockers)"}>
-  <Image 
-    src={abandonedHallwayAbandonedColumbusSchoolImage} 
-    alt={"Wall Hooks Only (No Lockers)"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={classroomDeskAbandonedColumbusSchoolImage.src} className="glightbox gallery-item" data-gallery="columbus-school" data-title={"Metal Desk in Upstairs Classroom"}>
-  <Image 
-    src={classroomDeskAbandonedColumbusSchoolImage} 
-    alt={"Metal Desk in Upstairs Classroom"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={abandonedHallwayCoatHooksElementarySchoolImage.src} className="glightbox gallery-item" data-gallery="columbus-school" data-title={"Projection Room Hallway"}>
-  <Image 
-    src={abandonedHallwayCoatHooksElementarySchoolImage} 
-    alt={"Projection Room Hallway"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={brokenDoorsColumbusElementarySchoolImage.src} className="glightbox gallery-item" data-gallery="columbus-school" data-title={"Paint Peeled Hallway"}>
-  <Image 
-    src={brokenDoorsColumbusElementarySchoolImage} 
-    alt={"Paint Peeled Hallway"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={chairLadderAbandonedRomeNewYorkSchoolImage.src} className="glightbox gallery-item" data-gallery="columbus-school" data-title={"Modern Chair Art Display"}>
-  <Image 
-    src={chairLadderAbandonedRomeNewYorkSchoolImage} 
-    alt={"Modern Chair Art Display"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={basketballHoopAbandonedColumbusSchoolImage.src} className="glightbox gallery-item" data-gallery="columbus-school" data-title={"Columbus Cougars Gymnasium"}>
-  <Image 
-    src={basketballHoopAbandonedColumbusSchoolImage} 
-    alt={"Columbus Cougars Gymnasium"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-</div>
+<GalleryLightbox galleryId="columbus-school" images={frontmatter.galleryImages} />
 

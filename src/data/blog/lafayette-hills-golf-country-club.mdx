@@ -17,22 +17,54 @@ heroImageAlt: "View of the abandoned LaFayette Hills Golf Country Club clubhouse
 seoImage: ../../assets/images/lafayette-hills-country-club/golf-shoes-abandoned-country-club-ny.jpg
 canonicalURL: https://abandonedupstate.com/posts/lafayette-hills-golf-country-club/
 author: Bryant Neal
+galleryImages:
+  - src: "@/assets/images/lafayette-hills-country-club/abandoned-lafayette-hills-golf-country-club-syracuse.jpg"
+    caption: "Clubhouse Exterior"
+    seoCaption: "Exterior of the LaFayette Hills Golf & Country Club clubhouse"
+  - src: "@/assets/images/lafayette-hills-country-club/country-club-lobby-abandoned-ny.jpg"
+    caption: "Lobby"
+    seoCaption: "Lobby space inside the LaFayette Hills clubhouse with lounge chairs"
+  - src: "@/assets/images/lafayette-hills-country-club/golf-shoe-rental-lafayette-hills-golf-country-club.jpg"
+    caption: "Shoe Rental"
+    seoCaption: "Golf shoe rental shelves inside the abandoned country club"
+  - src: "@/assets/images/lafayette-hills-country-club/golf-shoes-abandoned-country-club-ny.jpg"
+    caption: "Golf Shoes"
+    seoCaption: "Abandoned golf shoes left on the pro shop floor"
+  - src: "@/assets/images/lafayette-hills-country-club/abandoned-bar-golf-coarse-upstate-ny.jpg"
+    caption: "Club Bar"
+    seoCaption: "Abandoned bar counter inside the LaFayette Hills country club"
+  - src: "@/assets/images/lafayette-hills-country-club/abandoned-board-room-syracuse-ny.jpg"
+    caption: "Board Room"
+    seoCaption: "Board room table and chairs left in disarray"
+  - src: "@/assets/images/lafayette-hills-country-club/abandoned-lafayette-hills-country-club.jpg"
+    caption: "Fairway View"
+    seoCaption: "Overgrown golf course at LaFayette Hills"
+  - src: "@/assets/images/lafayette-hills-country-club/abandoned-pool-lafayette-hills-golf-country-club.jpg"
+    caption: "Pool Deck"
+    seoCaption: "Abandoned swimming pool at LaFayette Hills Golf & Country Club"
+  - src: "@/assets/images/lafayette-hills-country-club/snack-shack-lafayette-hills-golf-country-club.jpg"
+    caption: "Snack Shack"
+    seoCaption: "Snack shack service window along the golf course"
+  - src: "@/assets/images/lafayette-hills-country-club/tennis-court-lafayette-hills-golf-country-club-syr-ny.jpg"
+    caption: "Tennis Court"
+    seoCaption: "Tennis court with overgrown surface at the club"
 ---
 
 
 import { Image } from 'astro:assets';
+import GalleryLightbox from "@/components/GalleryLightbox.astro";
 
 import heroImage from '../../assets/images/lafayette-hills-country-club/abandoned-syracuse-ny-lafayette-hills-gold-country-club.jpg';
-import galleryExterior from '../../assets/images/lafayette-hills-country-club/abandoned-lafayette-hills-golf-country-club-syracuse.jpg';
-import galleryLobby from '../../assets/images/lafayette-hills-country-club/country-club-lobby-abandoned-ny.jpg';
-import galleryShoeRental from '../../assets/images/lafayette-hills-country-club/golf-shoe-rental-lafayette-hills-golf-country-club.jpg';
-import galleryShoes from '../../assets/images/lafayette-hills-country-club/golf-shoes-abandoned-country-club-ny.jpg';
-import galleryBar from '../../assets/images/lafayette-hills-country-club/abandoned-bar-golf-coarse-upstate-ny.jpg';
-import galleryBoardRoom from '../../assets/images/lafayette-hills-country-club/abandoned-board-room-syracuse-ny.jpg';
-import galleryCourse from '../../assets/images/lafayette-hills-country-club/abandoned-lafayette-hills-country-club.jpg';
-import galleryPool from '../../assets/images/lafayette-hills-country-club/abandoned-pool-lafayette-hills-golf-country-club.jpg';
-import gallerySnackShack from '../../assets/images/lafayette-hills-country-club/snack-shack-lafayette-hills-golf-country-club.jpg';
-import galleryTennis from '../../assets/images/lafayette-hills-country-club/tennis-court-lafayette-hills-golf-country-club-syr-ny.jpg';
+
+
+
+
+
+
+
+
+
+
 
 <Image 
   src={heroImage} 
@@ -49,140 +81,7 @@ import galleryTennis from '../../assets/images/lafayette-hills-country-club/tenn
 LaFayette Hills Golf & Country Club, nestled in Jamesville, New York, was a semi-private golf course established in 1923. It featured an 18-hole layout designed by Seymour Dunn, covering a span of 6550 yards with a par of 71. Despite its historical charm and available amenities like a driving range and clubhouse facilities, the club faced a sharp decline in membership, culminating in its closure. The club’s last known operations suggest dwindling support and financial instability, which was exacerbated by a tax dispute with the city of Syracuse and a significant drop in membership from 350 to zero by 2013
 
 
-<div className="gallery gallery--two">
-
-<a href={galleryExterior.src} className="glightbox gallery-item" data-gallery="lafayette-hills" data-title="Clubhouse Exterior">
-  <Image 
-    src={galleryExterior} 
-    alt="Exterior of the LaFayette Hills Golf & Country Club clubhouse"
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="eager"
-    fetchpriority="high"
-  />
-</a>
-
-<a href={galleryLobby.src} className="glightbox gallery-item" data-gallery="lafayette-hills" data-title="Lobby">
-  <Image 
-    src={galleryLobby} 
-    alt="Lobby space inside the LaFayette Hills clubhouse with lounge chairs"
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={galleryShoeRental.src} className="glightbox gallery-item" data-gallery="lafayette-hills" data-title="Shoe Rental">
-  <Image 
-    src={galleryShoeRental} 
-    alt="Golf shoe rental shelves inside the abandoned country club"
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={galleryShoes.src} className="glightbox gallery-item" data-gallery="lafayette-hills" data-title="Golf Shoes">
-  <Image 
-    src={galleryShoes} 
-    alt="Abandoned golf shoes left on the pro shop floor"
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={galleryBar.src} className="glightbox gallery-item" data-gallery="lafayette-hills" data-title="Club Bar">
-  <Image 
-    src={galleryBar} 
-    alt="Abandoned bar counter inside the LaFayette Hills country club"
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={galleryBoardRoom.src} className="glightbox gallery-item" data-gallery="lafayette-hills" data-title="Board Room">
-  <Image 
-    src={galleryBoardRoom} 
-    alt="Board room table and chairs left in disarray"
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={galleryCourse.src} className="glightbox gallery-item" data-gallery="lafayette-hills" data-title="Fairway View">
-  <Image 
-    src={galleryCourse} 
-    alt="Overgrown golf course at LaFayette Hills"
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={galleryPool.src} className="glightbox gallery-item" data-gallery="lafayette-hills" data-title="Pool Deck">
-  <Image 
-    src={galleryPool} 
-    alt="Abandoned swimming pool at LaFayette Hills Golf & Country Club"
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={gallerySnackShack.src} className="glightbox gallery-item" data-gallery="lafayette-hills" data-title="Snack Shack">
-  <Image 
-    src={gallerySnackShack} 
-    alt="Snack shack service window along the golf course"
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={galleryTennis.src} className="glightbox gallery-item" data-gallery="lafayette-hills" data-title="Tennis Court">
-  <Image 
-    src={galleryTennis} 
-    alt="Tennis court with overgrown surface at the club"
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-</div>
+<GalleryLightbox galleryId="lafayette-hills" images={frontmatter.galleryImages} />
 
 <div style={{textAlign: 'center', margin: '3rem 0 1rem'}}>
   <em>Disclaimer: Exploring abandoned buildings can be dangerous and/or illegal. The Abandoned Upstate Project does not condone or encourage any illegal activities. All the places explored and documented are done so with the utmost caution and care. Explore only where it is legally allowed.</em>

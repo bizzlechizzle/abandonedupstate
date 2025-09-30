@@ -17,22 +17,54 @@ heroImageAlt: "Abandoned Wiscoy School District 9 entrances in Allegany County, 
 seoImage: ../../assets/images/wiscoy-school/wiscoy-school-exterior-overgrown-summer-2023.jpg
 canonicalURL: https://abandonedupstate.com/posts/wiscoy-school-district-9/
 author: Bryant Neal
+galleryImages:
+  - src: "@/assets/images/wiscoy-school/wiscoy-school-exterior-side-spring-2020.jpg"
+    caption: "South Exterior Wall"
+    seoCaption: "South exterior wall of the abandoned Wiscoy Schoolhouse in Allegany County, New York"
+  - src: "@/assets/images/wiscoy-school/wiscoy-school-interior-side-entrance.jpg"
+    caption: "Side Entrance Interior - Vintage Bandsaw and OHV Engine"
+    seoCaption: "Hoarded side entrance at Wiscoy School with a vintage bandsaw and small gasoline engine"
+  - src: "@/assets/images/wiscoy-school/wiscoy-school-interior-small-classroom.jpg"
+    caption: "Small Class Room"
+    seoCaption: "Small classroom at Wiscoy School filled with boxes and stored items in Upstate, NY"
+  - src: "@/assets/images/wiscoy-school/wiscoy-school-interior-classroom-divider.jpg"
+    caption: "Classroom Divider"
+    seoCaption: "Wooden divider separating the two rooms of the Wiscoy two-room schoolhouse located in WNY"
+  - src: "@/assets/images/wiscoy-school/wiscoy-school-interior-main-classroom.jpg"
+    caption: "Hoarded Main Class Room - Seperate Entrances"
+    seoCaption: "Main classroom of the 1880 Wiscoy School, cluttered with materials and showing structural decay; separate entrances visible"
+  - src: "@/assets/images/wiscoy-school/wiscoy-school-exterior-overgrown-summer-2023.jpg"
+    caption: "Summer 2023 - Overgrown Exterior"
+    seoCaption: "Overgrown exterior of the Wiscoy two-room schoolhouse, summer 2023"
+  - src: "@/assets/images/wiscoy-school/wiscoy-school-exterior-winter-2006-jim-gelser.jpg"
+    caption: "Winter 2006 *Photo by Jim Gelser*"
+    seoCaption: "Abandoned Wiscoy Schoolhouse from Allegany Histocial Society - Winter 2006, Jim Gelser"
+  - src: "@/assets/images/wiscoy-school/wiscoy-school-exterior-tax-image-2009.jpg"
+    caption: "August 2009 *Image Courtesy of Allegany County*"
+    seoCaption: "=Overgrown Wiscoy School (District 9) - Allegany County Tax Records - Summer 2009"
+  - src: "@/assets/images/wiscoy-school/wiscoy-school-exterior-tax-image-2015.jpg"
+    caption: "July 2015 *Image Courtesy of Allegany County*"
+    seoCaption: "Abandoned Wiscoy School - Allegany County Tax Records - Summer 2015"
+  - src: "@/assets/images/wiscoy-school/wiscoy-school-exterior-tax-image-2022.jpg"
+    caption: "June 2022 *Image Courtesy of Allegany County*"
+    seoCaption: "Historic Wiscoy Schoolhouse - Allegany County Tax Records - Summer 2022"
 ---
 
 
 import { Image } from 'astro:assets';
+import GalleryLightbox from "@/components/GalleryLightbox.astro";
 
 import heroImage from '../../assets/images/wiscoy-school/wiscoy-school-exterior-front-entrances.jpg';
-import exterior1 from '../../assets/images/wiscoy-school/wiscoy-school-exterior-side-spring-2020.jpg';
-import exterior2 from '../../assets/images/wiscoy-school/wiscoy-school-exterior-overgrown-summer-2023.jpg';
-import interior1 from '../../assets/images/wiscoy-school/wiscoy-school-interior-side-entrance.jpg';
-import interior2 from '../../assets/images/wiscoy-school/wiscoy-school-interior-small-classroom.jpg';
-import interior3 from '../../assets/images/wiscoy-school/wiscoy-school-interior-classroom-divider.jpg';
-import interior4 from '../../assets/images/wiscoy-school/wiscoy-school-interior-main-classroom.jpg';
-import historic1 from '../../assets/images/wiscoy-school/wiscoy-school-exterior-winter-2006-jim-gelser.jpg';
-import historic2 from '../../assets/images/wiscoy-school/wiscoy-school-exterior-tax-image-2009.jpg';
-import historic3 from '../../assets/images/wiscoy-school/wiscoy-school-exterior-tax-image-2015.jpg';
-import historic4 from '../../assets/images/wiscoy-school/wiscoy-school-exterior-tax-image-2022.jpg';
+
+
+
+
+
+
+
+
+
+
 
 <Image 
   src={heroImage} 
@@ -48,140 +80,7 @@ import historic4 from '../../assets/images/wiscoy-school/wiscoy-school-exterior-
 
 The Wiscoy School, also known as District #9, is a two room schoolhouse in Wiscoy, Caneadea, Allegany County, New York, built in 1880. It was last sold for $1,400 in 2020. Former student Gary Nevinger recalls his time there, and there's a shared desire among residents to restore it and transform it into a museum, but it currently serves as storage and is deteriorating.
 
-<div className="gallery gallery--two">
-
-<a href={exterior1.src} className="glightbox gallery-item" data-gallery="wiscoy-school" data-title="South Exterior Wall">
-  <Image 
-    src={exterior1} 
-    alt="South exterior wall of the abandoned Wiscoy Schoolhouse in Allegany County, New York" 
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={75}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="eager"
-    fetchpriority="high"
-  />
-</a>
-
-<a href={interior1.src} className="glightbox gallery-item" data-gallery="wiscoy-school" data-title="Side Entrance Interior - Vintage Bandsaw and OHV Engine">
-  <Image 
-    src={interior1} 
-    alt="Hoarded side entrance at Wiscoy School with a vintage bandsaw and small gasoline engine" 
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={75}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={interior2.src} className="glightbox gallery-item" data-gallery="wiscoy-school" data-title="Small Class Room">
-  <Image 
-    src={interior2} 
-    alt="Small classroom at Wiscoy School filled with boxes and stored items in Upstate, NY" 
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={75}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={interior3.src} className="glightbox gallery-item" data-gallery="wiscoy-school" data-title="Classroom Divider">
-  <Image 
-    src={interior3} 
-    alt="Wooden divider separating the two rooms of the Wiscoy two-room schoolhouse located in WNY" 
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={75}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={interior4.src} className="glightbox gallery-item" data-gallery="wiscoy-school" data-title="Hoarded Main Class Room - Seperate Entrances">
-  <Image 
-    src={interior4} 
-    alt="Main classroom of the 1880 Wiscoy School, cluttered with materials and showing structural decay; separate entrances visible" 
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={75}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={exterior2.src} className="glightbox gallery-item" data-gallery="wiscoy-school" data-title="Summer 2023 - Overgrown Exterior">
-  <Image 
-    src={exterior2} 
-    alt="Overgrown exterior of the Wiscoy two-room schoolhouse, summer 2023" 
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={75}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={historic1.src} className="glightbox gallery-item" data-gallery="wiscoy-school" data-title="Winter 2006 *Photo by Jim Gelser*">
-  <Image 
-    src={historic1} 
-    alt="Abandoned Wiscoy Schoolhouse from Allegany Histocial Society - Winter 2006, Jim Gelser" 
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={75}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={historic2.src} className="glightbox gallery-item" data-gallery="wiscoy-school" data-title="August 2009 *Image Courtesy of Allegany County*">
-  <Image 
-    src={historic2} 
-    alt="=Overgrown Wiscoy School (District 9) - Allegany County Tax Records - Summer 2009" 
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={75}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={historic3.src} className="glightbox gallery-item" data-gallery="wiscoy-school" data-title="July 2015 *Image Courtesy of Allegany County*">
-  <Image 
-    src={historic3} 
-    alt="Abandoned Wiscoy School - Allegany County Tax Records - Summer 2015" 
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={75}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={historic4.src} className="glightbox gallery-item" data-gallery="wiscoy-school" data-title="June 2022 *Image Courtesy of Allegany County*">
-  <Image 
-    src={historic4} 
-    alt="Historic Wiscoy Schoolhouse - Allegany County Tax Records - Summer 2022" 
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={75}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-</div>
+<GalleryLightbox galleryId="wiscoy-school" images={frontmatter.galleryImages} />
 
 <div aria-hidden="true" style={{ height: 0 }} />
 

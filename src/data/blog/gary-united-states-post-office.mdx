@@ -16,23 +16,58 @@ heroImageAlt: "Abandoned United States Post Office in downtown Gary, Indiana"
 seoImage: ../../assets/images/gary-united-states-post-office/hero-historic-abandoned-gary-indiana-post-office-exterior.jpg
 canonicalURL: https://abandonedupstate.com/posts/gary-united-states-post-office/
 author: Jessica Olson
+galleryImages:
+  - src: "@/assets/images/gary-united-states-post-office/historic-postcard-gary-indiana-post-office.jpg"
+    caption: "Gary Post Office Postcard (Date Unknown)"
+    seoCaption: "Gary Post Office Postcard (Date Unknown)"
+  - src: "@/assets/images/gary-united-states-post-office/1998-gary-indiana-aerial-photograph.jpg"
+    caption: "Aerial Photograph - 1998"
+    seoCaption: "Aerial Photograph - 1998"
+  - src: "@/assets/images/gary-united-states-post-office/abandoned-post-office-loading-dock-gary-indiana.jpg"
+    caption: "Loading Dock"
+    seoCaption: "Loading Dock"
+  - src: "@/assets/images/gary-united-states-post-office/pink-tile-abandoned-post-office-gary-indiana.jpg"
+    caption: "Pink Subway Tiles"
+    seoCaption: "Pink Subway Tiles"
+  - src: "@/assets/images/gary-united-states-post-office/abandoned-gary-indiana-post-office.jpg"
+    caption: "Moss Covered Sorting Room"
+    seoCaption: "Moss Covered Sorting Room"
+  - src: "@/assets/images/gary-united-states-post-office/abandoned-post-office-cabinets.jpg"
+    caption: "Service Counter"
+    seoCaption: "Service Counter"
+  - src: "@/assets/images/gary-united-states-post-office/abandoned-post-office-great-seal-safe-gary-indiana.jpg"
+    caption: "Post Office Safe"
+    seoCaption: "Post Office Safe"
+  - src: "@/assets/images/gary-united-states-post-office/shattered-windows-gary-indiana-post-office.jpg"
+    caption: "Glass Partition Wall"
+    seoCaption: "Glass Partition Wall"
+  - src: "@/assets/images/gary-united-states-post-office/gary-indiana-abandoned-hallway.jpg"
+    caption: "Graffiti Covered Hallway"
+    seoCaption: "Graffiti Covered Hallway"
+  - src: "@/assets/images/gary-united-states-post-office/staircase-graffiti-gary-united-states-post-office.jpg"
+    caption: "U-Shaped Stairs"
+    seoCaption: "U-Shaped Stairs"
+  - src: "@/assets/images/gary-united-states-post-office/abnadoned-desk-gary-indiana.jpg"
+    caption: "Why is There a Desk Here?"
+    seoCaption: "Why is There a Desk Here?"
 ---
 
 
 import { Image } from "astro:assets";
+import GalleryLightbox from "@/components/GalleryLightbox.astro";
 
 import heroImage from '../../assets/images/gary-united-states-post-office/hero-historic-abandoned-gary-indiana-post-office-exterior.jpg';
-import historicPostcardGaryIndianaPostOfficeImage from '../../assets/images/gary-united-states-post-office/historic-postcard-gary-indiana-post-office.jpg';
-import _1998GaryIndianaAerialPhotographImage from '../../assets/images/gary-united-states-post-office/1998-gary-indiana-aerial-photograph.jpg';
-import abandonedPostOfficeLoadingDockGaryIndianaImage from '../../assets/images/gary-united-states-post-office/abandoned-post-office-loading-dock-gary-indiana.jpg';
-import pinkTileAbandonedPostOfficeGaryIndianaImage from '../../assets/images/gary-united-states-post-office/pink-tile-abandoned-post-office-gary-indiana.jpg';
-import abandonedGaryIndianaPostOfficeImage from '../../assets/images/gary-united-states-post-office/abandoned-gary-indiana-post-office.jpg';
-import abandonedPostOfficeCabinetsImage from '../../assets/images/gary-united-states-post-office/abandoned-post-office-cabinets.jpg';
-import abandonedPostOfficeGreatSealSafeGaryIndianaImage from '../../assets/images/gary-united-states-post-office/abandoned-post-office-great-seal-safe-gary-indiana.jpg';
-import shatteredWindowsGaryIndianaPostOfficeImage from '../../assets/images/gary-united-states-post-office/shattered-windows-gary-indiana-post-office.jpg';
-import garyIndianaAbandonedHallwayImage from '../../assets/images/gary-united-states-post-office/gary-indiana-abandoned-hallway.jpg';
-import staircaseGraffitiGaryUnitedStatesPostOfficeImage from '../../assets/images/gary-united-states-post-office/staircase-graffiti-gary-united-states-post-office.jpg';
-import abnadonedDeskGaryIndianaImage from '../../assets/images/gary-united-states-post-office/abnadoned-desk-gary-indiana.jpg';
+
+
+
+
+
+
+
+
+
+
+
 import newspaperArticlesGaryIndianaPostOffice1935Image from '../../assets/images/gary-united-states-post-office/newspaper-articles-gary-indiana-post-office-1935-1936.jpg';
 
 <Image 
@@ -52,163 +87,4 @@ Gary United States Post Office - 2009
 The Gary United States Post Office is located in the heart of Gary, Indiana.  This Art Moderne style building designed by Howard Lovewell Cheney was built in 1936 as part of FDR's New Deal.  Due to its machine based sorting capabilities, this facility processed mail for a significant portion of Northwestern Indiana. The rapid decline in the U.S. Steel industry would hit Gary hard, leading to this buildings abandonment in the fall of 1974.
 
 
-<div className="gallery gallery--two">
-
-<a href={historicPostcardGaryIndianaPostOfficeImage.src} className="glightbox gallery-item" data-gallery="gary-united-states-post-office" data-title={"Gary Post Office Postcard (Date Unknown)"}>
-  <Image 
-    src={historicPostcardGaryIndianaPostOfficeImage} 
-    alt={"Gary Post Office Postcard (Date Unknown)"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="eager"
-    fetchpriority="high"
-  />
-</a>
-
-<a href={_1998GaryIndianaAerialPhotographImage.src} className="glightbox gallery-item" data-gallery="gary-united-states-post-office" data-title={"Aerial Photograph - 1998"}>
-  <Image 
-    src={_1998GaryIndianaAerialPhotographImage} 
-    alt={"Aerial Photograph - 1998"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={abandonedPostOfficeLoadingDockGaryIndianaImage.src} className="glightbox gallery-item" data-gallery="gary-united-states-post-office" data-title={"Loading Dock"}>
-  <Image 
-    src={abandonedPostOfficeLoadingDockGaryIndianaImage} 
-    alt={"Loading Dock"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={pinkTileAbandonedPostOfficeGaryIndianaImage.src} className="glightbox gallery-item" data-gallery="gary-united-states-post-office" data-title={"Pink Subway Tiles"}>
-  <Image 
-    src={pinkTileAbandonedPostOfficeGaryIndianaImage} 
-    alt={"Pink Subway Tiles"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={abandonedGaryIndianaPostOfficeImage.src} className="glightbox gallery-item" data-gallery="gary-united-states-post-office" data-title={"Moss Covered Sorting Room"}>
-  <Image 
-    src={abandonedGaryIndianaPostOfficeImage} 
-    alt={"Moss Covered Sorting Room"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={abandonedPostOfficeCabinetsImage.src} className="glightbox gallery-item" data-gallery="gary-united-states-post-office" data-title={"Service Counter"}>
-  <Image 
-    src={abandonedPostOfficeCabinetsImage} 
-    alt={"Service Counter"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={abandonedPostOfficeGreatSealSafeGaryIndianaImage.src} className="glightbox gallery-item" data-gallery="gary-united-states-post-office" data-title={"Post Office Safe"}>
-  <Image 
-    src={abandonedPostOfficeGreatSealSafeGaryIndianaImage} 
-    alt={"Post Office Safe"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={shatteredWindowsGaryIndianaPostOfficeImage.src} className="glightbox gallery-item" data-gallery="gary-united-states-post-office" data-title={"Glass Partition Wall"}>
-  <Image 
-    src={shatteredWindowsGaryIndianaPostOfficeImage} 
-    alt={"Glass Partition Wall"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={garyIndianaAbandonedHallwayImage.src} className="glightbox gallery-item" data-gallery="gary-united-states-post-office" data-title={"Graffiti Covered Hallway"}>
-  <Image 
-    src={garyIndianaAbandonedHallwayImage} 
-    alt={"Graffiti Covered Hallway"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={staircaseGraffitiGaryUnitedStatesPostOfficeImage.src} className="glightbox gallery-item" data-gallery="gary-united-states-post-office" data-title={"U-Shaped Stairs"}>
-  <Image 
-    src={staircaseGraffitiGaryUnitedStatesPostOfficeImage} 
-    alt={"U-Shaped Stairs"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={abnadonedDeskGaryIndianaImage.src} className="glightbox gallery-item" data-gallery="gary-united-states-post-office" data-title={"Why is There a Desk Here?"}>
-  <Image 
-    src={abnadonedDeskGaryIndianaImage} 
-    alt={"Why is There a Desk Here?"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={newspaperArticlesGaryIndianaPostOffice1935Image.src} className="glightbox gallery-item" data-gallery="gary-united-states-post-office" data-title={"Newspaper Articles About \"Gary's New Post Office\""}>
-  <Image 
-    src={newspaperArticlesGaryIndianaPostOffice1935Image} 
-    alt={"Newspaper Articles About \"Gary's New Post Office\""}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-</div>
+<GalleryLightbox galleryId="gary-united-states-post-office" images={frontmatter.galleryImages} />

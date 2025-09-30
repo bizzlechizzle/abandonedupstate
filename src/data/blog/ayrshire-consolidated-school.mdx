@@ -15,17 +15,55 @@ heroImageAlt: "Abandoned Ayrshire Consolidated School playground and addition in
 seoImage: ../../assets/images/ayrshire-consolidated-school/hero-ayrshire-consolidated-school-metal-slides-and-new-addition.jpg
 canonicalURL: https://abandonedupstate.com/ayrshire-consolidated-school/
 author: Jessica Olson
+galleryImages:
+  - src: "@/assets/images/ayrshire-consolidated-school/ayrshire-consolidated-school-interior-blue-classroom.jpg"
+    caption: "Blue Classroom"
+    seoCaption: "Silver Creek Consolidated School - Date Unknown"
+  - src: "@/assets/images/ayrshire-consolidated-school/ayrshire-consolidated-school-interior-blue-bathroom.jpg"
+    caption: "Ayrshire Consolidated School - Spring 2018"
+    seoCaption: "Ayrshire Consolidated School - Spring 2018"
+  - src: "@/assets/images/ayrshire-consolidated-school/abandoned-bathroom-stalls-ayrshire-iowa-school.jpg"
+    caption: "Bathroom Stalls"
+    seoCaption: "Bathroom Stalls"
+  - src: "@/assets/images/ayrshire-consolidated-school/abandoned-blue-classroom-ayrshire-consolidated-school-iowa.jpg"
+    caption: "Blue Classroom"
+    seoCaption: "Blue Classroom"
+  - src: "@/assets/images/ayrshire-consolidated-school/abandoned-classroom-ayrshire-consolidated-school.jpg"
+    caption: "Green Classroom"
+    seoCaption: "Green Classroom"
+  - src: "@/assets/images/ayrshire-consolidated-school/abandoned-classroom-chalkboard-coral-ayrshire-iowa.jpg"
+    caption: "Coral Hallway Classroom"
+    seoCaption: "Coral Hallway Classroom"
+  - src: "@/assets/images/ayrshire-consolidated-school/abandoned-classroom-curtains-chair-ayrshire-consolidated-school.jpg"
+    caption: "Basement Classroom"
+    seoCaption: "Basement Classroom"
+  - src: "@/assets/images/ayrshire-consolidated-school/abandoned-school-practice-book.jpg"
+    caption: "Writing Practice Book"
+    seoCaption: "Writing Practice Book"
+  - src: "@/assets/images/ayrshire-consolidated-school/abandoned-stage-gymnasium-ayrshire-school-iowa.jpg"
+    caption: "Gymatorium"
+    seoCaption: "Gymatorium"
+  - src: "@/assets/images/ayrshire-consolidated-school/abandoned-school-science-lab-iowa.jpg"
+    caption: "Upstairs Science Lab"
+    seoCaption: "Upstairs Science Lab"
+  - src: "@/assets/images/ayrshire-consolidated-school/ayrshire-consolidated-school-class-of-1956.jpg"
+    caption: "Class of 1956"
+    seoCaption: "Class of 1956"
+  - src: "@/assets/images/ayrshire-consolidated-school/ayrshire-consolidated-school-class-of-1927.jpg"
+    caption: "Class of 1927"
+    seoCaption: "Class of 1927"
 ---
 
 
 import { Image } from "astro:assets";
+import GalleryLightbox from "@/components/GalleryLightbox.astro";
 
 import heroImage from '../../assets/images/ayrshire-consolidated-school/ayrshire-consolidated-school-exterior-main.jpg';
 
 import exterior1 from '../../assets/images/ayrshire-consolidated-school/ayrshire-consolidated-school-exterior-main.jpg';
 
-import interior1 from '../../assets/images/ayrshire-consolidated-school/ayrshire-consolidated-school-interior-blue-classroom.jpg';
-import interior2 from '../../assets/images/ayrshire-consolidated-school/ayrshire-consolidated-school-interior-blue-bathroom.jpg';
+
+
 
 import historic1 from '../../assets/images/ayrshire-consolidated-school/ayrshire-consolidated-school-exterior-historical.jpg';
 
@@ -33,16 +71,16 @@ import historic1 from '../../assets/images/ayrshire-consolidated-school/ayrshire
 import historic12 from '../../assets/images/ayrshire-consolidated-school/hero-ayrshire-consolidated-school-metal-slides-and-new-addition.jpg';
 import ayrshireConsolidatedSchoolExteriorIowaImage from '../../assets/images/ayrshire-consolidated-school/ayrshire-consolidated-school-exterior-iowa.jpg';
 import ayrshireConsolidatedSchoolSilverLakeIowaImage from '../../assets/images/ayrshire-consolidated-school/ayrshire-consolidated-school-silver-lake-iowa.jpg';
-import abandonedBathroomStallsAyrshireIowaSchoolImage from '../../assets/images/ayrshire-consolidated-school/abandoned-bathroom-stalls-ayrshire-iowa-school.jpg';
-import abandonedBlueClassroomAyrshireConsolidatedSchoolIowaImage from '../../assets/images/ayrshire-consolidated-school/abandoned-blue-classroom-ayrshire-consolidated-school-iowa.jpg';
-import abandonedClassroomAyrshireConsolidatedSchoolImage from '../../assets/images/ayrshire-consolidated-school/abandoned-classroom-ayrshire-consolidated-school.jpg';
-import abandonedClassroomChalkboardCoralAyrshireIowaImage from '../../assets/images/ayrshire-consolidated-school/abandoned-classroom-chalkboard-coral-ayrshire-iowa.jpg';
-import abandonedClassroomCurtainsChairAyrshireConsolidatedSchoolImage from '../../assets/images/ayrshire-consolidated-school/abandoned-classroom-curtains-chair-ayrshire-consolidated-school.jpg';
-import abandonedSchoolPracticeBookImage from '../../assets/images/ayrshire-consolidated-school/abandoned-school-practice-book.jpg';
-import abandonedStageGymnasiumAyrshireSchoolIowaImage from '../../assets/images/ayrshire-consolidated-school/abandoned-stage-gymnasium-ayrshire-school-iowa.jpg';
-import abandonedSchoolScienceLabIowaImage from '../../assets/images/ayrshire-consolidated-school/abandoned-school-science-lab-iowa.jpg';
-import ayrshireConsolidatedSchoolClassOf1956Image from '../../assets/images/ayrshire-consolidated-school/ayrshire-consolidated-school-class-of-1956.jpg';
-import ayrshireConsolidatedSchoolClassOf1927Image from '../../assets/images/ayrshire-consolidated-school/ayrshire-consolidated-school-class-of-1927.jpg';
+
+
+
+
+
+
+
+
+
+
 
 <Image 
   src={heroImage} 
@@ -59,163 +97,4 @@ import ayrshireConsolidatedSchoolClassOf1927Image from '../../assets/images/ayrs
 Ayrshire Consolidated School, situated in Palo Alto County, Iowa, has remained abandoned for over four decades. Erected around 1920, the school flourished as one of two educational institutions in Ayrshire, undergoing expansion with a substantial gym addition in 1968. Corresponding with the abandonment of the Chicago and North Western Railways lines, the school officially closed its doors in 1982.
 
 
-<div className="gallery gallery--two">
-
-<a href={interior1.src} className="glightbox gallery-item" data-gallery="ayrshire-consolidated-school" data-title={"Blue Classroom"}>
-  <Image 
-    src={interior1} 
-    alt={"Silver Creek Consolidated School - Date Unknown"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="eager"
-    fetchpriority="high"
-  />
-</a>
-
-<a href={interior2.src} className="glightbox gallery-item" data-gallery="ayrshire-consolidated-school" data-title={"Ayrshire Consolidated School - Spring 2018"}>
-  <Image 
-    src={interior2} 
-    alt={"Ayrshire Consolidated School - Spring 2018"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={abandonedBathroomStallsAyrshireIowaSchoolImage.src} className="glightbox gallery-item" data-gallery="ayrshire-consolidated-school" data-title={"Bathroom Stalls"}>
-  <Image 
-    src={abandonedBathroomStallsAyrshireIowaSchoolImage} 
-    alt={"Bathroom Stalls"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={abandonedBlueClassroomAyrshireConsolidatedSchoolIowaImage.src} className="glightbox gallery-item" data-gallery="ayrshire-consolidated-school" data-title={"Blue Classroom"}>
-  <Image 
-    src={abandonedBlueClassroomAyrshireConsolidatedSchoolIowaImage} 
-    alt={"Blue Classroom"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={abandonedClassroomAyrshireConsolidatedSchoolImage.src} className="glightbox gallery-item" data-gallery="ayrshire-consolidated-school" data-title={"Green Classroom"}>
-  <Image 
-    src={abandonedClassroomAyrshireConsolidatedSchoolImage} 
-    alt={"Green Classroom"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={abandonedClassroomChalkboardCoralAyrshireIowaImage.src} className="glightbox gallery-item" data-gallery="ayrshire-consolidated-school" data-title={"Coral Hallway Classroom"}>
-  <Image 
-    src={abandonedClassroomChalkboardCoralAyrshireIowaImage} 
-    alt={"Coral Hallway Classroom"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={abandonedClassroomCurtainsChairAyrshireConsolidatedSchoolImage.src} className="glightbox gallery-item" data-gallery="ayrshire-consolidated-school" data-title={"Basement Classroom"}>
-  <Image 
-    src={abandonedClassroomCurtainsChairAyrshireConsolidatedSchoolImage} 
-    alt={"Basement Classroom"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={abandonedSchoolPracticeBookImage.src} className="glightbox gallery-item" data-gallery="ayrshire-consolidated-school" data-title={"Writing Practice Book"}>
-  <Image 
-    src={abandonedSchoolPracticeBookImage} 
-    alt={"Writing Practice Book"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={abandonedStageGymnasiumAyrshireSchoolIowaImage.src} className="glightbox gallery-item" data-gallery="ayrshire-consolidated-school" data-title={"Gymatorium"}>
-  <Image 
-    src={abandonedStageGymnasiumAyrshireSchoolIowaImage} 
-    alt={"Gymatorium"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={abandonedSchoolScienceLabIowaImage.src} className="glightbox gallery-item" data-gallery="ayrshire-consolidated-school" data-title={"Upstairs Science Lab"}>
-  <Image 
-    src={abandonedSchoolScienceLabIowaImage} 
-    alt={"Upstairs Science Lab"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={ayrshireConsolidatedSchoolClassOf1956Image.src} className="glightbox gallery-item" data-gallery="ayrshire-consolidated-school" data-title={"Class of 1956"}>
-  <Image 
-    src={ayrshireConsolidatedSchoolClassOf1956Image} 
-    alt={"Class of 1956"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-<a href={ayrshireConsolidatedSchoolClassOf1927Image.src} className="glightbox gallery-item" data-gallery="ayrshire-consolidated-school" data-title={"Class of 1927"}>
-  <Image 
-    src={ayrshireConsolidatedSchoolClassOf1927Image} 
-    alt={"Class of 1927"}
-    className="gallery-image" 
-    style={{width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '8px', transition: 'transform 0.3s ease'}}
-    quality={80}
-    widths={[300, 600, 900]}
-    sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-    loading="lazy"
-  />
-</a>
-
-</div>
+<GalleryLightbox galleryId="ayrshire-consolidated-school" images={frontmatter.galleryImages} />

@@ -26,6 +26,15 @@ const blog = defineCollection({
       heroImageCaption: z.string().optional(),
       seoImage: image().or(z.string()).optional(),
       ogImage: image().or(z.string()).optional(),
+      galleryImages: z
+        .array(
+          z.object({
+            src: z.string(),
+            caption: z.string(),
+            seoCaption: z.string(),
+          })
+        )
+        .default([]),
       canonicalURL: z.string().optional(),
       hideEditPost: z.boolean().optional(),
       timezone: z.string().optional(),

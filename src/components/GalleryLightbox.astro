@@ -1,0 +1,91 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+export interface GalleryImageDefinition {
+  src: string;
+  caption: string;
+  seoCaption: string;
+}
+
+export interface Props {
+  galleryId: string;
+  images: GalleryImageDefinition[];
+  class?: string;
+  widths?: number[];
+  sizes?: string;
+  quality?: number;
+  aspectRatio?: string;
+  noAnchor?: boolean;
+}
+
+const {
+  galleryId,
+  images,
+  class: className = "gallery gallery--two",
+  widths = [300, 600, 900],
+  sizes = "(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw",
+  quality = 80,
+  aspectRatio = "16 / 9",
+  noAnchor = false,
+} = Astro.props as Props;
+
+const resolvedImages = await Promise.all(
+  images.map(async (image) => {
+    const module = await import(/* @vite-ignore */ image.src);
+    const metadata = (module.default ?? module) as ImageMetadata;
+    return {
+      ...image,
+      metadata,
+    };
+  })
+);
+---
+<div class={className} data-no-anchor={noAnchor ? "true" : undefined}>
+  {resolvedImages.map(({ metadata, caption, seoCaption }, index) => {
+    const finalCaption = caption ?? "";
+    const finalSeoCaption = seoCaption || finalCaption || `Gallery image ${index + 1}`;
+
+    return (
+      <a
+        href={metadata.src}
+        class="glightbox gallery-item"
+        data-gallery={galleryId}
+        data-caption={finalCaption || undefined}
+        data-seo-caption={finalSeoCaption}
+      >
+        <Image
+          src={metadata}
+          alt={finalSeoCaption}
+          class="gallery-image"
+          style={{
+            width: "100%",
+            aspectRatio,
+            objectFit: "cover",
+            borderRadius: "8px",
+            transition: "transform 0.3s ease",
+          }}
+          quality={quality}
+          widths={widths}
+          sizes={sizes}
+          loading={index === 0 ? "eager" : "lazy"}
+          fetchpriority={(index === 0 ? "high" : undefined) as "high" | undefined}
+        />
+        {finalCaption && (
+          <span class="gallery-caption" data-gallery-caption>
+            {finalCaption}
+          </span>
+        )}
+      </a>
+    );
+  })}
+</div>
+
+<style>
+  .gallery-caption[data-gallery-caption] {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+  }
+</style>
