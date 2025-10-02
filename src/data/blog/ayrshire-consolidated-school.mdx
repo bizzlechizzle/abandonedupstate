@@ -93,12 +93,12 @@ export const heroLightboxSeoCaption =
   data-gallery="ayrshire-consolidated-school"
   data-caption={heroLightboxCaption || undefined}
   data-seo-caption={heroLightboxSeoCaption}
-  style={{ display: 'block' }}
+  style={{ display: 'block', margin: '2rem 0' }}
 >
   <Image
     src={heroGalleryImage.src}
     alt={heroLightboxSeoCaption}
-    style={{ width: '100%', borderRadius: '8px', margin: '2rem 0' }}
+    style={{ width: '100%', borderRadius: 'inherit' }}
     quality={85}
     loading="eager"
     fetchpriority="high"
@@ -112,7 +112,7 @@ export const heroLightboxSeoCaption =
 
 Ayrshire Consolidated School, situated in Palo Alto County, Iowa, has remained abandoned for over four decades. Erected around 1920, the school flourished as one of two educational institutions in Ayrshire, undergoing expansion with a substantial gym addition in 1968. Corresponding with the abandonment of the Chicago and North Western Railways lines, the school officially closed its doors in 1982.
 
-<div class="my-2"></div>
+<div class="my-12"></div>
 
 {(() => {
   const galleryImages = Array.isArray(frontmatter.galleryImages)
