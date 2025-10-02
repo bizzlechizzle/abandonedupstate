@@ -2,10 +2,12 @@
 import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
 
+type GallerySource = string | ImageMetadata;
+
 export interface GalleryImageDefinition {
-  src: string;
-  caption: string;
-  seoCaption: string;
+  src: GallerySource;
+  caption?: string;
+  seoCaption?: string;
 }
 
 export interface Props {
@@ -19,6 +21,43 @@ export interface Props {
   noAnchor?: boolean;
 }
 
+const imageModules = import.meta.glob(
+  "../assets/images/**/*.{jpg,jpeg,png,webp,avif,gif}",
+  {
+    eager: true,
+    import: "default",
+  }
+);
+
+const normalizePath = (src: string) => {
+  if (src.startsWith("@/")) {
+    return src.replace(/^@\//, "../");
+  }
+
+  if (src.startsWith("/src/")) {
+    return src.replace(/^\/src\//, "../");
+  }
+
+  return src;
+};
+
+const resolveMetadata = (src: GallerySource): ImageMetadata => {
+  if (typeof src !== "string") {
+    return src;
+  }
+
+  const normalized = normalizePath(src);
+  const metadata = imageModules[normalized];
+
+  if (!metadata) {
+    throw new Error(
+      `GalleryLightbox: image "${src}" was not found. Ensure the path points to a file under src/assets/images.`
+    );
+  }
+
+  return metadata as ImageMetadata;
+};
+
 const {
   galleryId,
   images,
@@ -26,33 +65,44 @@ const {
   widths = [300, 600, 900],
   sizes = "(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw",
   quality = 80,
-  aspectRatio = "16 / 9",
+  aspectRatio,
   noAnchor = false,
 } = Astro.props as Props;
 
-const resolvedImages = await Promise.all(
-  images.map(async (image) => {
-    const module = await import(/* @vite-ignore */ image.src);
-    const metadata = (module.default ?? module) as ImageMetadata;
-    return {
-      ...image,
-      metadata,
-    };
-  })
-);
+const resolvedImages = images.map(image => {
+  const metadata = resolveMetadata(image.src);
+  const naturalAspect =
+    typeof metadata.width === "number" && typeof metadata.height === "number"
+      ? `${metadata.width} / ${metadata.height}`
+      : undefined;
+  const resolvedAspect = aspectRatio ?? naturalAspect ?? "16 / 9";
+
+  return {
+    ...image,
+    metadata,
+    resolvedAspect,
+  };
+});
 ---
 <div class={className} data-no-anchor={noAnchor ? "true" : undefined}>
-  {resolvedImages.map(({ metadata, caption, seoCaption }, index) => {
+  {resolvedImages.map(({ metadata, caption, seoCaption, resolvedAspect }, index) => {
     const finalCaption = caption ?? "";
     const finalSeoCaption = seoCaption || finalCaption || `Gallery image ${index + 1}`;
+    const Tag = (noAnchor ? "div" : "a") as "div" | "a";
+    const baseClass = "gallery-item" + (noAnchor ? "" : " glightbox");
+    const interactiveProps = noAnchor
+      ? { tabindex: -1 as const }
+      : {
+          href: metadata.src,
+          "data-gallery": galleryId,
+          "data-caption": finalCaption || undefined,
+        } as const;
 
     return (
-      <a
-        href={metadata.src}
-        class="glightbox gallery-item"
-        data-gallery={galleryId}
-        data-caption={finalCaption || undefined}
+      <Tag
+        class={baseClass}
         data-seo-caption={finalSeoCaption}
+        {...interactiveProps}
       >
         <Image
           src={metadata}
@@ -60,7 +110,7 @@ const resolvedImages = await Promise.all(
           class="gallery-image"
           style={{
             width: "100%",
-            aspectRatio,
+            aspectRatio: resolvedAspect,
             objectFit: "cover",
             borderRadius: "8px",
             transition: "transform 0.3s ease",
@@ -71,12 +121,12 @@ const resolvedImages = await Promise.all(
           loading={index === 0 ? "eager" : "lazy"}
           fetchpriority={(index === 0 ? "high" : undefined) as "high" | undefined}
         />
-        {finalCaption && (
+        {noAnchor && finalCaption && (
           <span class="gallery-caption" data-gallery-caption>
             {finalCaption}
           </span>
         )}
-      </a>
+      </Tag>
     );
   })}
 </div>

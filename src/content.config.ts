@@ -32,6 +32,7 @@ const blog = defineCollection({
             src: z.string(),
             caption: z.string(),
             seoCaption: z.string(),
+            historical: z.boolean().optional(),
           })
         )
         .default([]),

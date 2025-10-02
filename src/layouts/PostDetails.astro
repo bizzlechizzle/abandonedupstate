@@ -325,29 +325,45 @@ const nextPost =
 
 <style is:global>
 /* Gallery layout */
+
 .gallery-item {
   position: relative;
   display: block;
   overflow: hidden;
   cursor: pointer;
   border-radius: 0.75rem;
-  background-color: var(--background);
+  background-color: transparent;
+  box-shadow: 0 8px 18px rgba(17, 24, 39, 0.12);
+  transition: box-shadow 0.3s ease;
+  --gallery-aspect-width: 16;
+  --gallery-aspect-height: 9;
+  aspect-ratio: var(--gallery-aspect-width) / var(--gallery-aspect-height);
+  line-height: 0;
+}
+
+.gallery-item > picture,
+.gallery-item > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .gallery-image {
-  display: block;
   width: 100%;
-  height: auto !important;
-  aspect-ratio: 16 / 9;
+  height: 100% !important;
   object-fit: cover;
   border-radius: inherit;
-  box-shadow: 0 8px 18px rgba(17, 24, 39, 0.12);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.gallery-item:hover {
+  box-shadow: 0 16px 32px rgba(17, 24, 39, 0.16);
 }
 
 .gallery-item:hover .gallery-image {
   transform: scale(1.02);
-  box-shadow: 0 16px 32px rgba(17, 24, 39, 0.16);
   filter: saturate(1.02);
 }
 

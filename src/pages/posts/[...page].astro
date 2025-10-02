@@ -21,7 +21,7 @@ const { page } = Astro.props;
 <Layout title={`Locations | ${SITE.title}`}>
   <Header />
   <Main pageTitle="Locations">
-    <ul>
+    <ul class="space-y-8">
       {page.data.map(data => <Card {...data} />)}
     </ul>
   </Main>

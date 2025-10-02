@@ -39,7 +39,7 @@ const { page, authorName } = Astro.props;
     pageDesc={`Stories written by ${authorName}.`}
   >
     <h1 slot="title" transition:name={author}>{`Author:${authorName}`}</h1>
-    <ul>
+    <ul class="space-y-8">
       {page.data.map(data => <Card {...data} />)}
     </ul>
   </Main>
