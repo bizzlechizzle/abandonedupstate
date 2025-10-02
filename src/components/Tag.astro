@@ -3,9 +3,12 @@ export interface Props {
   tag: string;
   tagName: string;
   size?: "sm" | "lg";
+  href?: string;
 }
 
-const { tag, tagName, size = "sm" } = Astro.props;
+const { tag, tagName, size = "sm", href } = Astro.props;
+
+const resolvedHref = href ?? `/tags/${tag}/`;
 ---
 
 <li
@@ -15,7 +18,7 @@ const { tag, tagName, size = "sm" } = Astro.props;
   ]}
 >
   <a
-    href={`/tags/${tag}/`}
+    href={resolvedHref}
     transition:name={tag}
     class:list={[
       "relative pe-2 text-lg underline decoration-dashed group-hover:-top-0.5 group-hover:text-accent focus-visible:p-1 focus-visible:no-underline",

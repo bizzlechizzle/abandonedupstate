@@ -1,18 +1,83 @@
 ---
 import "@pagefind/default-ui/css/ui.css";
+import { getCollection } from "astro:content";
 import Main from "@/layouts/Main.astro";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
+import Tag from "@/components/Tag.astro";
+import getUniqueTags from "@/utils/getUniqueTags";
+import getUniqueStates from "@/utils/getUniqueStates";
+import getUniqueCategories from "@/utils/getUniqueCategories";
 import { SITE } from "@/config";
 
 const backUrl = SITE.showBackButton ? `${Astro.url.pathname}` : "/";
+
+const posts = await getCollection("blog");
+const tags = getUniqueTags(posts);
+
+const stateSummaries = getUniqueStates(posts);
+const states = stateSummaries.map(({ label, slug }) => ({
+  label,
+  slug,
+  href: `/states/${slug}/`,
+}));
+
+const categorySummaries = getUniqueCategories(posts);
+const categories = categorySummaries.map(({ label, slug }) => ({
+  label,
+  slug,
+  href: `/categories/${slug}/`,
+}));
 ---
 
 <Layout title={`Search | ${SITE.title}`}>
   <Header />
-  <Main pageTitle="Search" pageDesc="Search any location ...">
-    <div id="pagefind-search" transition:persist data-backurl={backUrl}></div>
+  <Main pageTitle="Search">
+    <div
+      id="pagefind-search"
+      class="search-module"
+      transition:persist
+      data-backurl={backUrl}
+    ></div>
+
+    {states.length > 0 && (
+      <section class="search-section" aria-label="Browse by state">
+        <h2 class="search-section__heading">Browse by state</h2>
+        <ul class="search-section__list">
+          {states.map(state => (
+            <Tag tag={state.slug} tagName={state.label} size="lg" href={state.href} />
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {categories.length > 0 && (
+      <section class="search-section" aria-label="Browse by category">
+        <h2 class="search-section__heading">Browse by category</h2>
+        <ul class="search-section__list">
+          {categories.map(category => (
+            <Tag
+              tag={category.slug}
+              tagName={category.label}
+              size="lg"
+              href={category.href}
+            />
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {tags.length > 0 && (
+      <section class="search-section" aria-label="Browse by tag">
+        <h2 class="search-section__heading">Browse by tag</h2>
+        <ul class="search-section__list">
+          {tags.map(({ tag, tagName }) => (
+            <Tag tag={tag} tagName={tagName} size="lg" />
+          ))}
+        </ul>
+      </section>
+    )}
   </Main>
   <Footer />
 </Layout>
@@ -32,15 +97,15 @@ const backUrl = SITE.showBackButton ? `${Astro.url.pathname}` : "/";
       // @ts-expect-error — Missing types for @pagefind/default-ui package.
       const { PagefindUI } = await import("@pagefind/default-ui");
 
-      // Display warning inn dev mode
-      if (import.meta.env.DEV) {
-        pageFindSearch.innerHTML = `
-            <div class="bg-muted/75 rounded p-4 space-y-4 mb-4">
-              <p><strong>DEV mode Warning! </strong>You need to build the project at least once to see the search results during development.</p>
-              <code class="block bg-black text-white px-2 py-1 rounded">pnpm run build</code>
-            </div>
-          `;
-      }
+      const updateQueryParam = (term: string) => {
+        if (term.trim() !== "") {
+          params.set("q", term);
+          history.replaceState(history.state, "", "?" + params.toString());
+        } else {
+          params.delete("q");
+          history.replaceState(history.state, "", window.location.pathname);
+        }
+      };
 
       // Init pagefind ui
       const search = new PagefindUI({
@@ -48,8 +113,7 @@ const backUrl = SITE.showBackButton ? `${Astro.url.pathname}` : "/";
         showSubResults: true,
         showImages: false,
         processTerm: function (term: string) {
-          params.set("q", term); // Update the `q` parameter in the URL
-          history.replaceState(history.state, "", "?" + params.toString()); // Push the new URL without reloading
+          updateQueryParam(term);
 
           const backUrl = pageFindSearch?.dataset?.backurl;
           sessionStorage.setItem("backUrl", backUrl + "?" + params.toString());
@@ -58,6 +122,10 @@ const backUrl = SITE.showBackButton ? `${Astro.url.pathname}` : "/";
         },
       });
 
+      // Expose for debugging / programmatic calls
+      (window as typeof window & { __pagefindSearch?: unknown }).__pagefindSearch =
+        search;
+
       // If search param exists (eg: search?q=astro), trigger search
       const query = params.get("q");
       if (query) {
@@ -65,14 +133,25 @@ const backUrl = SITE.showBackButton ? `${Astro.url.pathname}` : "/";
       }
 
       // Reset search param if search input is cleared
-      const searchInput = document.querySelector(".pagefind-ui__search-input");
-      const clearButton = document.querySelector(".pagefind-ui__search-clear");
+      const searchInput = document.querySelector<HTMLInputElement>(
+        ".pagefind-ui__search-input"
+      );
+      const clearButton = document.querySelector<HTMLButtonElement>(
+        ".pagefind-ui__search-clear"
+      );
       searchInput?.addEventListener("input", resetSearchParam);
       clearButton?.addEventListener("click", resetSearchParam);
 
       function resetSearchParam(e: Event) {
-        if ((e.target as HTMLInputElement)?.value.trim() === "") {
-          history.replaceState(history.state, "", window.location.pathname);
+        if (e.target instanceof HTMLInputElement) {
+          if (e.target.value.trim() === "") {
+            updateQueryParam("");
+          }
+          return;
+        }
+
+        if (e.target instanceof HTMLButtonElement) {
+          updateQueryParam("");
         }
       }
     });
@@ -90,6 +169,39 @@ const backUrl = SITE.showBackButton ? `${Astro.url.pathname}` : "/";
 </script>
 
 <style is:global>
+  #main-content > h1 {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 2.5rem;
+  }
+
+  .search-module {
+    display: block;
+    margin-bottom: 3rem;
+  }
+
+  .search-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .search-section__heading {
+    font-family: var(--font-heading);
+    font-size: clamp(1.25rem, 1.1rem + 1.2vw, 1.6rem);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 1rem;
+  }
+
+  .search-section__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
   #pagefind-search {
     --pagefind-ui-font: var(--font-body);
     --pagefind-ui-text: var(--foreground);

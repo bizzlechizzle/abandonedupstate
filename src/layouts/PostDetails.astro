@@ -40,6 +40,62 @@ const {
   displayTitleInLayout,
 } = post.data;
 
+const rawState = typeof (post.data as Record<string, unknown>).state === "string"
+  ? ((post.data as Record<string, unknown>).state as string)
+  : undefined;
+const rawCategory = (() => {
+  const dataRecord = post.data as Record<string, unknown>;
+  const categoryValue = dataRecord.category ?? dataRecord.catagory;
+  return typeof categoryValue === "string" ? categoryValue : undefined;
+})();
+
+type TaxonomyItem = {
+  label: string;
+  slug: string;
+  href: string;
+};
+
+const taxonomyItems: TaxonomyItem[] = [];
+const taxonomySeen = new Set<string>();
+
+const pushTaxonomyItem = (
+  label: string | undefined,
+  hrefFactory: (clean: string, slug: string) => string
+) => {
+  const clean = typeof label === "string" ? label.trim() : "";
+  if (!clean) return;
+  const normalized = clean.toLowerCase();
+  if (taxonomySeen.has(normalized)) return;
+  taxonomySeen.add(normalized);
+  const slug = slugifyStr(clean);
+  taxonomyItems.push({ label: clean, slug, href: hrefFactory(clean, slug) });
+};
+
+const pushMultiple = (
+  source: string | string[] | undefined,
+  hrefFactory: (clean: string, slug: string) => string
+) => {
+  if (Array.isArray(source)) {
+    source.forEach(value => pushMultiple(value, hrefFactory));
+    return;
+  }
+
+  if (typeof source === "string") {
+    source
+      .split(",")
+      .map(part => part.trim())
+      .filter(Boolean)
+      .forEach(part => pushTaxonomyItem(part, hrefFactory));
+  }
+};
+
+pushMultiple(rawState, (_, slug) => `/states/${slug}/`);
+pushMultiple(rawCategory, (_, slug) => `/categories/${slug}/`);
+
+if (Array.isArray(tags)) {
+  pushMultiple(tags, (_, slug) => `/tags/${slug}/`);
+}
+
 const showLayoutTitle = displayTitleInLayout !== false;
 
 const { Content } = await render(post);
@@ -141,7 +197,9 @@ const nextPost =
 
     <div class="mt-4 mb-8 flex flex-col gap-3 sm:my-8 sm:flex-row sm:items-center sm:justify-between">
       <ul class="flex flex-wrap items-center gap-2">
-        {tags.map(tag => <Tag tag={slugifyStr(tag)} tagName={tag} />)}
+        {taxonomyItems.map(item => (
+          <Tag tag={item.slug} tagName={item.label} href={item.href} />
+        ))}
       </ul>
       <a
         class="text-xs uppercase tracking-[0.2em] text-accent underline-offset-4 hover:underline sm:text-sm"
@@ -458,7 +516,7 @@ const nextPost =
   observer.observe(document.body, { childList: true, subtree: true });
   
   function applyProtection() {
-    const images = document.querySelectorAll('.gallery-image, .glightbox img, img[src*="dw-winkleman"]');
+    const images = document.querySelectorAll('.gallery-image, .glightbox img, img[src*="dw-winkelman"]');
     
     images.forEach(img => {
       img.addEventListener('contextmenu', disableRightClick, true);
