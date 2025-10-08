@@ -8,7 +8,7 @@ A custom Astro-powered archive documenting abandoned and historic locations thro
 - [TypeScript](https://www.typescriptlang.org/) for type safety
 - [Tailwind CSS](https://tailwindcss.com/) for utility-first styling
 - [Pagefind](https://pagefind.app/) for fast static search
-- Markdown/MDX content stored under `src/data/blog`
+- Markdown/MDX content stored under `src/locations`
 
 ## Getting Started
 
@@ -32,7 +32,7 @@ The site runs at `http://localhost:4321/` by default. Hot reloading is enabled f
 
 ## Content & Media
 
-- Location writeups live in `src/data/blog/*.mdx`.
+- Location writeups live in `src/locations/*.mdx`.
 - Images are organized per location inside `src/assets/images/`.
 - Frontmatter supports fields like `featured`, `featuredCaption`, `tags`, and `ogImage` for tailored presentation and OG metadata.
 
@@ -48,7 +48,7 @@ The site runs at `http://localhost:4321/` by default. Hot reloading is enabled f
 │   ├── pages/               # Route definitions
 │   ├── styles/              # Global and typography CSS
 │   ├── utils/               # Helper utilities
-│   └── data/blog/           # MDX content for each location
+│   └── locations/           # MDX content for each location
 ├── astro.config.ts          # Astro configuration
 ├── tailwind config files    # Tailwind & ESLint setup
 └── README.md                # Project documentation

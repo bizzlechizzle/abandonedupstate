@@ -8,6 +8,10 @@ export interface GalleryImageDefinition {
   src: GallerySource;
   caption?: string;
   seoCaption?: string;
+  sourceurl?: string;
+  source?: string;
+  historical?: boolean;
+  position?: string;
 }
 
 export interface Props {
@@ -78,24 +82,38 @@ const resolvedImages = images.map(image => {
   const resolvedAspect = aspectRatio ?? naturalAspect ?? "16 / 9";
 
   return {
-    ...image,
+    caption: image.caption,
+    seoCaption: image.seoCaption,
+    sourceurl: image.sourceurl,
+    source: image.source,
+    position: image.position,
     metadata,
     resolvedAspect,
   };
 });
 ---
 <div class={className} data-no-anchor={noAnchor ? "true" : undefined}>
-  {resolvedImages.map(({ metadata, caption, seoCaption, resolvedAspect }, index) => {
+  {resolvedImages.map(({ metadata, caption, seoCaption, resolvedAspect, sourceurl, source, position }, index) => {
     const finalCaption = caption ?? "";
     const finalSeoCaption = seoCaption || finalCaption || `Gallery image ${index + 1}`;
     const Tag = (noAnchor ? "div" : "a") as "div" | "a";
     const baseClass = "gallery-item" + (noAnchor ? "" : " glightbox");
+    // Build GLightbox description string (escape HTML entities to prevent breaking attributes)
+    const escapeHtml = (str: string) => str.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    let glightboxDesc = "";
+    if (finalCaption) glightboxDesc += `title: ${escapeHtml(finalCaption)}`;
+    if (source) {
+      if (glightboxDesc) glightboxDesc += "; ";
+      glightboxDesc += `description: ${escapeHtml(source)}`;
+    }
+
     const interactiveProps = noAnchor
       ? { tabindex: -1 as const }
       : {
           href: metadata.src,
           "data-gallery": galleryId,
-          "data-caption": finalCaption || undefined,
+          "data-glightbox": glightboxDesc || undefined,
+          "data-source-url": sourceurl || undefined,
         } as const;
 
     return (
@@ -112,6 +130,7 @@ const resolvedImages = images.map(image => {
             width: "100%",
             aspectRatio: resolvedAspect,
             objectFit: "cover",
+            objectPosition: position || "center",
             transition: "transform 0.3s ease",
           }}
           quality={quality}

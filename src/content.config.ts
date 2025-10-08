@@ -2,7 +2,7 @@ import { defineCollection, z } from "astro:content";
 import { glob } from "astro/loaders";
 import { SITE } from "@/config";
 
-export const BLOG_PATH = "src/data/blog";
+export const BLOG_PATH = "src/locations";
 
 const blog = defineCollection({
   loader: glob({ pattern: "**/[^_]*.{md,mdx}", base: `./${BLOG_PATH}` }),
@@ -21,7 +21,14 @@ const blog = defineCollection({
       displayTitleInLayout: z.boolean().optional(),
       draft: z.boolean().optional(),
       state: z.string().optional(),
+      county: z.string().optional(),
+      city: z.string().optional(),
+      region: z.string().optional().nullable(),
       category: z.string().optional(),
+      status: z.string().optional(),
+      built_year: z.number().optional(),
+      abandoned_year: z.number().optional(),
+      lastmod: z.date().optional().nullable(),
       tags: z.array(z.string()).default(["others"]),
       heroImage: image().or(z.string()).optional(),
       heroImageAlt: z.string().optional(),

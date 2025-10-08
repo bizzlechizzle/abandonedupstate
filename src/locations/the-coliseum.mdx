@@ -1,0 +1,162 @@
+---
+title: The Coliseum
+seoTitle: The Coliseum Roller Rink Ruins | Abandoned Upstate
+pubDatetime: 2022-07-09 02:59:00-04:00
+description: Steam Powerhouse Turned Roller Rink
+seoDescription: See the Coliseum in Western New York—a former trolley powerhouse turned roller rink now collapsing into a moss-covered relic.
+featured: false
+draft: false
+state: new york
+
+county: chautauqua
+city: dunkirk
+region: 
+category: businesses
+status: abandoned
+
+built_year: 1907
+abandoned_year: 1985
+lastmod: 2025-10-06T09:00:00-05:00
+tags:
+- roller rinks
+heroImage: ../assets/images/the-coliseum/the-coliseum-exterior-abandoned-roller-skating-rinak.jpg
+heroImageAlt: "Abandoned Coliseum roller rink and former trolley powerhouse in Western New York"
+seoImage: ../assets/images/the-coliseum/the-coliseum-interior-collapsed-roller-rink.jpg
+canonicalURL: https://abandonedupstate.com/the-coliseum/
+author: Bryant Neal
+galleryImages:
+  - src: "@/assets/images/the-coliseum/the-coliseum-interior-overgrown-bench.jpg"
+    caption: "Overgrown Green Benches"
+    seoCaption: "Overgrown Green Benches"
+  - src: "@/assets/images/the-coliseum/the-coliseum-interior-collapsed-roller-rink.jpg"
+    caption: "Collapsed North Wall"
+    seoCaption: "Collapsed North Wall"
+  - src: "@/assets/images/the-coliseum/the-coliseum-interior-overgrown-roller-skating-rink.jpg"
+    caption: "Mossy Roller Rink Barrier"
+    seoCaption: "Mossy Roller Rink Barrier"
+  - src: "@/assets/images/the-coliseum/the-coliseum-interior-roller-blade-wheels.jpg"
+    caption: "Seiko Inline Skate Wheels - 82A"
+    seoCaption: "Seiko Inline Skate Wheels - 82A"
+  - src: "@/assets/images/the-coliseum/the-coliseum-interior-locker.jpg"
+    caption: "Roller Rink Locker #13"
+    seoCaption: "Roller Rink Locker #13"
+  - src: "@/assets/images/the-coliseum/the-coliseum-interior-child-roller-skates.jpg"
+    caption: "Infant Roller Skate"
+    seoCaption: "Infant Roller Skate"
+  - src: "@/assets/images/the-coliseum/the-coliseum-interior-sign.jpg"
+    caption: "NO LIABILITY FOR WANTING TO EXPLORE"
+    seoCaption: "NO LIABILITY FOR WANTING TO EXPLORE"
+  - src: "@/assets/images/the-coliseum/the-coliseum-interior-roller-skates.jpg"
+    caption: "Roller Skates Left Behind"
+    seoCaption: "Roller skates left behind inside the Coliseum roller rink"
+  - src: "@/assets/images/the-coliseum/the-coliseum-interior-skate-shop-sign.jpg"
+    caption: "Skate Shop Sign"
+    seoCaption: "Skate Shop Sign inside the abandoned Coliseum roller rink"
+  - src: "@/assets/images/the-coliseum/the-coliseum-exterior-drone-2022.jpg"
+    caption: "2022 Drone Photograph"
+    seoCaption: "2022 Drone Photograph"
+  - src: "@/assets/images/the-coliseum/the-coliseum-historic-1989-aerial.jpg"
+    caption: "1989 Aerial Photograph"
+    seoCaption: "1989 Aerial Photograph"
+    historical: true
+    source: Image courtesy of Vintage Aerial
+    sourceurl: https://vintageaerial.com/photos/pennsylvania/mckean/1986/ZMC/3/30  
+  - src: "@/assets/images/the-coliseum/the-coliseum-historic-1906-powerhouse.jpg"
+    caption: "Two boilers and two reciprocating steam engines - 1906 Ceres Powerhouse"
+    seoCaption: "Historic 1906 Photograph of the Ceres Powerhouse Interior with Boilers and Steam Engines - Courtesy of Ray Payne"
+    historical: true
+    source: Image Courtesy of Ray Payne
+    sourceurl: https://www.oleantimesherald.com/2019/03/07/the-trolley-days-of-the-ceres-coliseum/)
+    position: "center bottom"
+  - src: "@/assets/images/the-coliseum/the-coliseum-historic-historic-trolley-powerhouse.jpg"
+    caption: "Trolley Engines & Ceres Powerhouse"
+    seoCaption: "Historic trolley and powerhouse - exterior photograph of the Ceres Powerhouse - date unknown Image Courtesy of Bolivar Free Library "
+    historical: true
+    source: Image Courtesy of Bolivar Free Library
+    sourceurl: https://www.oleantimesherald.com/2019/03/07/the-trolley-days-of-the-ceres-coliseum/)
+  - src: "@/assets/images/the-coliseum/the-coliseum-historic-skaters.jpg"
+    caption: "Historic Skaters at The Coliseum"
+    seoCaption: "Historic skaters inside The Coliseum roller rink"
+    historical: true
+    source: Image courtesy of Facebook
+    sourceurl: https://www.facebook.com/groups/293933732138/
+---
+
+import { Image } from "astro:assets";
+import GalleryLightbox from "@/components/GalleryLightbox.astro";
+
+import heroImage from '../assets/images/the-coliseum/the-coliseum-exterior-abandoned-roller-skating-rinak.jpg';
+
+export const heroGalleryImage = {
+  src: heroImage,
+  caption: "Coliseum roller rink exterior",
+  seoCaption: "Abandoned Coliseum roller rink exterior in Ceres, New York",
+  position:"center top",
+};
+
+export const heroLightboxCaption = heroGalleryImage.caption || frontmatter.heroImageCaption || '';
+export const heroLightboxSeoCaption =
+  heroGalleryImage.seoCaption || frontmatter.heroImageAlt || frontmatter.title;
+
+<a
+  href={heroGalleryImage.src.src}
+  class="glightbox gallery-item"
+  data-gallery="the-coliseum"
+  data-caption={heroLightboxCaption || undefined}
+  data-seo-caption={heroLightboxSeoCaption}
+  style={{ display: 'block', margin: '2rem 0' }}
+>
+  <Image
+    src={heroGalleryImage.src}
+    alt={heroLightboxSeoCaption}
+    style={{ width: '100%', borderRadius: 'inherit' }}
+    quality={85}
+    loading="eager"
+    fetchpriority="high"
+  />
+</a>
+
+<div class="my-4"></div>
+
+# {frontmatter.title}
+<p className="post-tagline" style={{ color: '#b9975c' }}>{frontmatter.description}</p>
+
+The Coliseum stands as an abandoned roller rink in Ceres, New York. Initially constructed in 1902, this brick structure served as a natural gas steam powerhouse to fuel the Olean - Bradford trolley line. In 1928, the building underwent a transformation, shedding its industrial past to become "The Coliseum at Ceres, Allegany County's newest and finest ballroom." Over the years, the structure hosted various businesses and venues before eventually settling into its role as the roller rink known today as "The Coliseum." However, the business met an unfortunate end in June 2005 when a tractor-trailer veered off the road, colliding with the north side brick wall and erupting into flames.
+
+{(() => {
+  const galleryImages = Array.isArray(frontmatter.galleryImages)
+    ? frontmatter.galleryImages
+    : [];
+  const primaryImages = galleryImages.filter(image => !image?.historical);
+  const historicalImages = galleryImages.filter(image => image?.historical);
+
+  return (
+    <>
+      {primaryImages.length > 0 && (
+        <GalleryLightbox galleryId="the-coliseum" images={primaryImages} />
+      )}
+
+      {historicalImages.length > 0 && (
+        <section className="historical-gallery">
+          <p className="historical-gallery__label">Historical images</p>
+          <GalleryLightbox
+            galleryId="the-coliseum"
+            images={historicalImages}
+            class="gallery gallery--two historical-gallery__grid"
+          />
+        </section>
+      )}
+    </>
+  );
+})()}
+
+## Sources
+
+- [Vintage Aerial - Allegany County](https://vintageaerial.com/photos/new-york/allegany/)
+- [Facebook - The Coliseum Memories](https://www.facebook.com/groups/293933732138/)
+- [Olean Times Herald - The trolley days of the Ceres Coliseum](https://www.oleantimesherald.com/2019/03/07/the-trolley-days-of-the-ceres-coliseum/)
+- [Olean Times Herald - The heydays of the Ceres Coliseum](https://www.oleantimesherald.com/2019/03/07/the-heydays-of-the-ceres-coliseum/)
+- [Olean Times Herald - Gone in a Flash](https://www.oleantimesherald.com/2019/03/10/gone-in-a-flash-the-accident-that-closed-the-coliseum/)
+- [Railroad.net - Ceres Coliseum Discussion](https://railroad.net/cere-s-colisium-former-trolley-powerhouse-and-round-house-t15050.html)
+
+<div class="my-12"></div>

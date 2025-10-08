@@ -5,7 +5,7 @@
 <script>
   import GLightbox from 'glightbox';
   import 'glightbox/dist/css/glightbox.min.css';
-  
+
   function syncLightboxCaptions(root = document) {
     const links = Array.from(
       root.querySelectorAll<HTMLAnchorElement>('a.glightbox')
@@ -13,39 +13,46 @@
 
     links.forEach(link => {
       const img = link.querySelector('img');
-      const caption = link.dataset.caption?.trim();
       const seoCaption = link.dataset.seoCaption?.trim();
       const visibleCaption = link.querySelector('[data-gallery-caption]');
 
-      if (caption) {
-        link.dataset.title = caption;
-        if (visibleCaption && visibleCaption.textContent !== caption) {
-          visibleCaption.textContent = caption;
+      // If data-glightbox already exists (from GalleryLightbox component), skip
+      if (!link.dataset.glightbox) {
+        // Handle old data-caption format (hero images, etc)
+        const caption = link.dataset.caption?.trim();
+        if (caption) {
+          const escapeHtml = (str: string) => str.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+          link.dataset.glightbox = `title: ${escapeHtml(caption)}`;
         }
-      } else {
-        link.removeAttribute('data-title');
       }
 
-      link.removeAttribute('data-description');
-      delete link.dataset.description;
-
-      if (img) {
-        if (seoCaption) {
-          img.alt = seoCaption;
-        } else if (caption && !img.alt) {
-          img.alt = caption;
+      // Sync visible gallery caption if needed
+      if (visibleCaption) {
+        const glightboxAttr = link.dataset.glightbox;
+        if (glightboxAttr) {
+          const titleMatch = glightboxAttr.match(/title:\s*([^;]+)/);
+          if (titleMatch && titleMatch[1] && visibleCaption.textContent !== titleMatch[1]) {
+            visibleCaption.textContent = titleMatch[1].trim();
+          }
         }
+      }
+
+      // Set SEO alt text on images
+      if (img && seoCaption) {
+        img.alt = seoCaption;
       }
     });
   }
 
   function initGLightbox() {
     syncLightboxCaptions();
+
     // Initialize GLightbox
     const lightbox = GLightbox({
       touchNavigation: true,
       loop: true,
       autoplayVideos: true,
+      descPosition: 'bottom',
       plyr: {
         css: 'https://cdn.plyr.io/3.6.8/plyr.css',
         js: 'https://cdn.plyr.io/3.6.8/plyr.js',
@@ -76,28 +83,39 @@
 
   // Initialize on page load
   document.addEventListener('DOMContentLoaded', initGLightbox);
-  
+
   // Re-initialize after page transitions
   document.addEventListener('astro:page-load', initGLightbox);
 </script>
 
-<style>
-  /* Custom GLightbox styles for Abandoned Upstate theme */
-  .glightbox-clean .gslide-description {
-    background: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    padding: 15px;
-    font-size: 14px;
-    line-height: 1.4;
-    border-radius: 4px;
+<style is:global>
+  /* Caption styling */
+  .glightbox-clean .gslide-title {
+    margin-bottom: 4px !important;
   }
-  
+
+  /* Source text styling - non-clickable */
+  .glightbox-clean .gslide-desc {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 0.85em !important;
+    pointer-events: none !important;
+    cursor: default !important;
+  }
+
+  .glightbox-clean .gslide-desc a {
+    pointer-events: none !important;
+    cursor: default !important;
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+
+  /* Navigation buttons */
   .glightbox-clean .gprev,
   .glightbox-clean .gnext {
     background: rgba(0, 0, 0, 0.6);
     border-radius: 50%;
   }
-  
+
   .glightbox-clean .gprev:hover,
   .glightbox-clean .gnext:hover {
     background: rgba(0, 0, 0, 0.8);
