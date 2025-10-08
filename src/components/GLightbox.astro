@@ -6,6 +6,26 @@
   import GLightbox from 'glightbox';
   import 'glightbox/dist/css/glightbox.min.css';
 
+  const escapeHtml = (str: string) =>
+    str
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+
+  const buildSourceDescription = (link: HTMLAnchorElement) => {
+    const isHistorical = link.dataset.historical === 'true';
+    const source = link.dataset.source?.trim();
+
+    if (!isHistorical || !source) {
+      return '';
+    }
+
+    const sourceUrl = link.dataset.sourceUrl?.trim();
+    return sourceUrl ? `Source: ${source} (${sourceUrl})` : `Source: ${source}`;
+  };
+
   function syncLightboxCaptions(root = document) {
     const links = Array.from(
       root.querySelectorAll<HTMLAnchorElement>('a.glightbox')
@@ -35,6 +55,27 @@
             visibleCaption.textContent = titleMatch[1].trim();
           }
         }
+      }
+
+      // Ensure historical image sources are reflected in GLightbox metadata
+      const sourceDescription = buildSourceDescription(link);
+      if (sourceDescription) {
+        const glightboxAttr = link.dataset.glightbox || '';
+        const sanitizedDescription = escapeHtml(sourceDescription);
+
+        if (/description:\s*/.test(glightboxAttr)) {
+          link.dataset.glightbox = glightboxAttr.replace(
+            /description:\s*([^;]*)(;|$)/,
+            `description: ${sanitizedDescription}$2`
+          );
+        } else if (glightboxAttr) {
+          link.dataset.glightbox = `${glightboxAttr}; description: ${sanitizedDescription}`;
+        } else {
+          link.dataset.glightbox = `description: ${sanitizedDescription}`;
+        }
+
+        // Provide fallback for GLightbox's native data-description parsing
+        link.dataset.description = sourceDescription;
       }
 
       // Set SEO alt text on images

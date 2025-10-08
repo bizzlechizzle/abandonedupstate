@@ -86,6 +86,7 @@ const resolvedImages = images.map(image => {
     seoCaption: image.seoCaption,
     sourceurl: image.sourceurl,
     source: image.source,
+    historical: Boolean(image.historical),
     position: image.position,
     metadata,
     resolvedAspect,
@@ -93,18 +94,32 @@ const resolvedImages = images.map(image => {
 });
 ---
 <div class={className} data-no-anchor={noAnchor ? "true" : undefined}>
-  {resolvedImages.map(({ metadata, caption, seoCaption, resolvedAspect, sourceurl, source, position }, index) => {
+  {resolvedImages.map(({ metadata, caption, seoCaption, resolvedAspect, sourceurl, source, position, historical }, index) => {
     const finalCaption = caption ?? "";
     const finalSeoCaption = seoCaption || finalCaption || `Gallery image ${index + 1}`;
     const Tag = (noAnchor ? "div" : "a") as "div" | "a";
     const baseClass = "gallery-item" + (noAnchor ? "" : " glightbox");
     // Build GLightbox description string (escape HTML entities to prevent breaking attributes)
-    const escapeHtml = (str: string) => str.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    const escapeHtml = (str: string) =>
+      str
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
     let glightboxDesc = "";
     if (finalCaption) glightboxDesc += `title: ${escapeHtml(finalCaption)}`;
-    if (source) {
+    const trimmedSource = source?.trim() || "";
+    const trimmedSourceUrl = sourceurl?.trim() || "";
+    const isHistorical = Boolean(historical);
+    const hasSource = trimmedSource.length > 0;
+    const shouldShowSource = isHistorical && hasSource;
+    const descriptionText = shouldShowSource
+      ? `Source: ${trimmedSource}${trimmedSourceUrl ? ` (${trimmedSourceUrl})` : ""}`
+      : "";
+    if (descriptionText) {
       if (glightboxDesc) glightboxDesc += "; ";
-      glightboxDesc += `description: ${escapeHtml(source)}`;
+      glightboxDesc += `description: ${escapeHtml(descriptionText)}`;
     }
 
     const interactiveProps = noAnchor
@@ -113,7 +128,10 @@ const resolvedImages = images.map(image => {
           href: metadata.src,
           "data-gallery": galleryId,
           "data-glightbox": glightboxDesc || undefined,
-          "data-source-url": sourceurl || undefined,
+          "data-description": descriptionText || undefined,
+          "data-source": trimmedSource || undefined,
+          "data-source-url": trimmedSourceUrl || undefined,
+          "data-historical": shouldShowSource ? "true" : undefined,
         } as const;
 
     return (
